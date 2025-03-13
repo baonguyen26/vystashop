@@ -1,9 +1,10 @@
 import React from "react";
 
-import { logo_icon } from ".";
+import { logo_icon, arrow_icon } from ".";
 
 const icon = {
   logo_icon,
+  arrow_icon
 } satisfies Record<
   string,
   React.FunctionComponent<React.SVGProps<SVGSVGElement>>

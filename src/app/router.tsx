@@ -11,6 +11,24 @@ export const createRouter = () => {
         const { AppRouterRoot } = await import("./routes/root");
         return { Component: AppRouterRoot };
       },
+      children: [
+        {
+          path: "",
+          lazy: async () => {
+            const { ContentRoot } = await import("./routes/app/content-root");
+            return { Component: ContentRoot };
+          },
+          children: [
+            {
+              path: "/",
+              lazy: async () => {
+                const  { HomePage } = await import("./routes/app/HomePage");
+                return { Component: HomePage };
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       path: "*",

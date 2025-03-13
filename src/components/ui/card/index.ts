@@ -1,1 +1,3 @@
-export * from "./card-product";
+import ProductCard from "./card-product";
+
+export default ProductCard;
