@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 @layer base {
-  /* @theme {
-    --font-inter: "Montserrat", "sans-serif";
-    --animate-wave: wave 1.5s ease-in-out infinite alternate;
+  @theme {
+    --font-montserrat: "Montserrat", "sans-serif";
+    /* --animate-wave: wave 1.5s ease-in-out infinite alternate;
 
     @keyframes wave {
       0%, 100% {
@@ -13,15 +13,15 @@
       50% {
         transform: translateY(-5px);
       }
-    }
-  } */
+    } */
+  }
   html {
     scroll-behavior: smooth;
   }
-  /* 
+  
   body {
-    @apply font-inter min-[1440px]:max-w-[1540px] mx-auto;
-  } */
+    @apply font-montserrat min-[1440px]:max-w-[1540px] mx-auto;
+  }
 
   /* Custom Scrollbar */
   .custom-scrollbar::-webkit-scrollbar {

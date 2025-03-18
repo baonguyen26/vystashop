@@ -1,7 +1,16 @@
 import React from "react";
 
-
-export {
+import {
+  ic_arrow,
+  ic_dot_green,
+  ic_enjoy_blue,
+  ic_lang,
+  ic_logo,
+  ic_menu,
+  ic_order_blue,
+  ic_search_black,
+  ic_search_blue,
+  ic_uk,
   logo_icon,
   apple_brand,
   nike_brand,
@@ -18,6 +27,16 @@ export {
 } from ".";
 
 const icon = {
+  ic_arrow,
+  ic_dot_green,
+  ic_enjoy_blue,
+  ic_lang,
+  ic_logo,
+  ic_menu,
+  ic_order_blue,
+  ic_search_black,
+  ic_search_blue,
+  ic_uk,
   logo_icon,
   apple_brand,
   nike_brand,
@@ -31,11 +50,7 @@ const icon = {
   twitter,
   google,
   arrow_icon
-} satisfies Record<
-  string,
-  React.FunctionComponent<React.SVGProps<SVGSVGElement>>
->;
-
+} satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
   iconName: keyof typeof icon;
@@ -44,9 +59,7 @@ type ReactIconProps = React.SVGProps<SVGSVGElement> & {
 };
 
 /**
- * generator svg icon
- * @param param0
- * @returns
+ * Generator SVG Icon
  */
 export const LocalIcon = ({
   iconName,
@@ -55,11 +68,11 @@ export const LocalIcon = ({
   ...props
 }: ReactIconProps) => {
   const Comp = icon[iconName];
-  return (
+  return Comp ? (
     <Comp
       {...(height !== "auto" && { height })}
       {...(width !== "auto" && { width })}
       {...props}
     />
-  );
+  ) : null;
 };

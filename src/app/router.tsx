@@ -13,17 +13,17 @@ export const createRouter = () => {
       },
       children: [
         {
-          path: "",
+          path: "app", 
           lazy: async () => {
             const { ContentRoot } = await import("./routes/app/content-root");
             return { Component: ContentRoot };
           },
           children: [
             {
-              path: "/",
+              path: "home", 
               lazy: async () => {
-                const { HomePage } = await import("./routes/app/HomePage");
-                return { Component: HomePage };
+                const { HomeRouter } = await import("./routes/app/home");
+                return { Component: HomeRouter };
               },
             },
             {
