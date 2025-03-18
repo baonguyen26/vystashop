@@ -11,6 +11,15 @@ export const createRouter = () => {
         const { AppRouterRoot } = await import("./routes/root");
         return { Component: AppRouterRoot };
       },
+      children: [
+        {
+          path: "",
+          lazy: async () => {
+            const { HomeRouter } = await import("./routes/app/home");
+            return { Component: HomeRouter };
+          },
+        },
+      ],
     },
     {
       path: "*",
