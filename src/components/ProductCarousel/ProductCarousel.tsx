@@ -69,7 +69,7 @@ const data: IProduct[] = [
   },
 ];
 
-const ProductCarousel = ({
+export const ProductCarousel = memo(({
   scrollRef,
 }: {
   scrollRef: RefObject<HTMLDivElement | null>;
@@ -112,6 +112,4 @@ const ProductCarousel = ({
       ))}
     </div>
   );
-};
-
-export default memo(ProductCarousel);
+});

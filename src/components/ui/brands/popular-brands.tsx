@@ -3,13 +3,13 @@ import { BRAND_PROPERTIES } from "src/constants/brand-properties";
 
 export const PopularBrands = () => {
   return (
-    <>
-      <h2 className="text-2xl font-bold mb-5 px-[100px] ">Popular Brands</h2>
-      <div className="flex gap-3 px-[100px] items-center justify-between">
-        {BRAND_PROPERTIES.map((brand) => (
+    <div className="flex flex-col gap-[20px] px-[100px]">
+      <h2 className="text-2xl font-bold ">Popular Brands</h2>
+      <div className="flex gap-3 items-center justify-between">
+        {BRAND_PROPERTIES.map((brand, index) => (
           <div
             className="flex flex-col gap-5"
-            key={brand.brand_name}
+            key={index}
           >
             <div
               className="place-items-center place-content-center w-50 h-30 rounded-xl"
@@ -27,6 +27,6 @@ export const PopularBrands = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };

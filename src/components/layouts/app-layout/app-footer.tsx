@@ -8,22 +8,22 @@ export const AppFooter = () => {
         <div className="flex gap-20">
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
-            {FIRST_COLUMN_CONTENT.map((item) => (
-              <p className="text-sm">{item.title}</p>
+            {FIRST_COLUMN_CONTENT.map((item, index) => (
+              <p className="text-sm" key={index}>{item.title}</p>
             ))}
           </div>
 
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
-            {SECOND_COLUMN_CONTENT.map((item) => (
-              <p className="text-sm">{item.title}</p>
+            {SECOND_COLUMN_CONTENT.map((item, index) => (
+              <p className="text-sm" key={index}>{item.title}</p>
             ))}
           </div>
         </div>
         <div className="flex flex-col items-center gap-5">
           <div className="flex gap-4">
-            {LOGO_FOOTER.map((item) => (
-              <LocalIcon iconName={item} />
+            {LOGO_FOOTER.map((item, index) => (
+              <LocalIcon iconName={item} key={index}/>
             ))}
           </div>
           <LocalIcon
