@@ -1,9 +1,15 @@
 import React from "react";
 
-import { logo_icon } from ".";
+import { logo_icon, apple_brand, nike_brand, dyson_brand, lego_brand, aeg_brand, michael_kors_brand } from ".";
 
 const icon = {
   logo_icon,
+  apple_brand,
+  nike_brand,
+  dyson_brand,
+  lego_brand,
+  aeg_brand,
+  michael_kors_brand,
 } satisfies Record<
   string,
   React.FunctionComponent<React.SVGProps<SVGSVGElement>>
