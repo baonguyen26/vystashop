@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 /**
- *
+ * Tạo router chính của ứng dụng
  */
 export const createRouter = () => {
   return createBrowserRouter([
@@ -13,11 +13,27 @@ export const createRouter = () => {
       },
       children: [
         {
-          path: "",
+          path: "app", 
           lazy: async () => {
-            const { HomeRouter } = await import("./routes/app/home");
-            return { Component: HomeRouter };
+            const { ContentRoot } = await import("./routes/app/content-root");
+            return { Component: ContentRoot };
           },
+          children: [
+            {
+              path: "home", 
+              lazy: async () => {
+                const { HomeRouter } = await import("./routes/app/home");
+                return { Component: HomeRouter };
+              },
+            },
+            {
+              path: "test",
+              lazy: async () => {
+                const { Test } = await import("./routes/app/page");
+                return { Component: Test };
+              },
+            },
+          ],
         },
       ],
     },
