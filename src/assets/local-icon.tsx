@@ -15,6 +15,9 @@ import {
   google
 } from ".";
 
+import { logo_icon, apple_brand, nike_brand, dyson_brand, lego_brand, aeg_brand, michael_kors_brand } from ".";
+
+
 const icon = {
   logo_icon,
   apple_brand,

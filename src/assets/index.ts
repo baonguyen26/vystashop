@@ -25,3 +25,6 @@ export {
   linkedin,
   google
 };
+
+
+export { logo_icon, apple_brand, nike_brand, dyson_brand, lego_brand, aeg_brand, michael_kors_brand };
