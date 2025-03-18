@@ -1,9 +1,28 @@
 import React from "react";
 
-import { logo_icon } from ".";
+import { ic_arrow,
+  ic_dot_green,
+  ic_enjoy_blue,
+  ic_lang,
+  ic_logo,
+  ic_menu,
+  ic_order_blue,
+  ic_search_black,
+  ic_search_blue,
+  ic_uk
+ } from ".";
 
 const icon = {
-  logo_icon,
+  ic_arrow,
+  ic_dot_green,
+  ic_enjoy_blue,
+  ic_lang,
+  ic_logo,
+  ic_menu,
+  ic_order_blue,
+  ic_search_black,
+  ic_search_blue,
+  ic_uk,
 } satisfies Record<
   string,
   React.FunctionComponent<React.SVGProps<SVGSVGElement>>
