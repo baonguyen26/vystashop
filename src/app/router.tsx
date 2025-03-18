@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 /**
- *
+ * Tạo router chính của ứng dụng
  */
 export const createRouter = () => {
   return createBrowserRouter([
@@ -15,9 +15,25 @@ export const createRouter = () => {
         {
           path: "",
           lazy: async () => {
-            const { Test } = await import("./routes/app/page");
-            return { Component: Test };
+            const { ContentRoot } = await import("./routes/app/content-root");
+            return { Component: ContentRoot };
           },
+          children: [
+            {
+              path: "/",
+              lazy: async () => {
+                const { HomePage } = await import("./routes/app/HomePage");
+                return { Component: HomePage };
+              },
+            },
+            {
+              path: "test",
+              lazy: async () => {
+                const { Test } = await import("./routes/app/page");
+                return { Component: Test };
+              },
+            },
+          ],
         },
       ],
     },

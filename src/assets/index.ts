@@ -1,4 +1,5 @@
 import logo_icon from "./logo.svg?react";
+import arrow_icon from "./Arrow_left.svg?react";
 import apple_brand from "./apple_brand.svg?react";
 import nike_brand from "./nike_brand.svg?react";
 import dyson_brand from "./dyson_brand.svg?react";
@@ -26,5 +27,5 @@ export {
   google
 };
 
-
+export { arrow_icon } ;
 export { logo_icon, apple_brand, nike_brand, dyson_brand, lego_brand, aeg_brand, michael_kors_brand };

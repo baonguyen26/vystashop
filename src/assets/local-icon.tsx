@@ -1,6 +1,7 @@
 import React from "react";
 
-import {
+
+export {
   logo_icon,
   apple_brand,
   nike_brand,
@@ -12,11 +13,9 @@ import {
   instagram,
   linkedin,
   twitter,
-  google
+  google,
+  arrow_icon
 } from ".";
-
-import { logo_icon, apple_brand, nike_brand, dyson_brand, lego_brand, aeg_brand, michael_kors_brand } from ".";
-
 
 const icon = {
   logo_icon,
@@ -30,11 +29,13 @@ const icon = {
   instagram,
   linkedin,
   twitter,
-  google
+  google,
+  arrow_icon
 } satisfies Record<
   string,
   React.FunctionComponent<React.SVGProps<SVGSVGElement>>
 >;
+
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
   iconName: keyof typeof icon;
