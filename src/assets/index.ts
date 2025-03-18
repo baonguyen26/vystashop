@@ -9,7 +9,6 @@ import ic_search_black from "./ic-search-black.svg?react";
 import ic_search_blue from "./ic-search-blue.svg?react";
 import ic_menu from "./ic-menu.svg?react";
 
-import logo_icon from "./logo.svg?react";
 import arrow_icon from "./Arrow_left.svg?react";
 import apple_brand from "./apple_brand.svg?react";
 import nike_brand from "./nike_brand.svg?react";
@@ -34,7 +33,6 @@ export {
   ic_search_black,
   ic_search_blue,
   ic_menu,
-  logo_icon,
   arrow_icon,
   apple_brand,
   nike_brand,

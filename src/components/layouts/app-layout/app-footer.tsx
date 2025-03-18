@@ -1,10 +1,10 @@
 import { LocalIcon } from "src/assets/local-icon";
-import { FIRST_COLUMN_CONTENT, LOGO_FOOTER, SECOND_COLUMN_CONTENT } from "src/constant/footer-content";
+import { FIRST_COLUMN_CONTENT, LOGO_FOOTER, SECOND_COLUMN_CONTENT } from "src/constants/footer-content";
 
 export const AppFooter = () => {
   return (
     <footer>
-      <div className="py-13 flex justify-between">
+      <div className="py-13 px-[100px] flex justify-between">
         <div className="flex gap-20">
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>

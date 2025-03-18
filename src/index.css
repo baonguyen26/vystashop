@@ -41,7 +41,7 @@
     background: #f0f0f0;
   }
 }
-/* 
+
 @layer components {
   .container {
     @apply min-[1440px]:max-w-[1440px] mx-auto;
@@ -50,4 +50,4 @@
   .content-container {
     @apply px-24;
   }
-} */
+}

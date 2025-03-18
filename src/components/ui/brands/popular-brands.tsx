@@ -1,11 +1,11 @@
 import { LocalIcon } from "src/assets/local-icon";
-import { BRAND_PROPERTIES } from "src/constant/brand-properties";
+import { BRAND_PROPERTIES } from "src/constants/brand-properties";
 
 export const PopularBrands = () => {
   return (
     <>
-      <h2 className="text-2xl font-bold mb-5">Popular Brands</h2>
-      <div className="flex gap-3 items-center justify-between">
+      <h2 className="text-2xl font-bold mb-5 px-[100px] ">Popular Brands</h2>
+      <div className="flex gap-3 px-[100px] items-center justify-between">
         {BRAND_PROPERTIES.map((brand) => (
           <div
             className="flex flex-col gap-5"
