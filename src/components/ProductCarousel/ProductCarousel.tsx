@@ -1,7 +1,7 @@
 import { memo, RefObject, useEffect, useRef } from "react";
 import { IProduct } from "src/types/product.type";
 import ProductCard from "../ui/card";
-import { TIME_CAROUSEL } from "src/constants";
+import { TIME_CAROUSEL } from "src/constants/TimeInterval";
 
 const data: IProduct[] = [
   {
