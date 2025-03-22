@@ -70,11 +70,26 @@ export const AppFooter = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className="py-8">
         <p className="text-center text-[##3A4B55]">
           Copyright © 2020-2025 -Vysta. -
-          <span className="underline">Privacy Policy</span> -
-          <span className="underline">Terms and Conditions</span>
+          <Link
+            to="https://www.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Privacy Policy
+          </Link>{" "}
+          -
+          <Link
+            to="https://www.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Terms and Conditions
+          </Link>
         </p>
       </div>
     </footer>
