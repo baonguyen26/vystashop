@@ -1,1 +1,1 @@
-export * from './popular-brands';
+export * from './brands';

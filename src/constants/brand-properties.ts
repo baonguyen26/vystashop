@@ -1,4 +1,4 @@
-type BrandProperties = {
+export type BrandProperties = {
   brand_icon:
     | "apple_brand"
     | "nike_brand"
