@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
-import { FIRST_COLUMN_CONTENT, LOGO_FOOTER, SECOND_COLUMN_CONTENT } from "src/constants/footer-content";
+import {
+  FIRST_COLUMN_CONTENT,
+  LOGO_FOOTER_CONTENT,
+  SECOND_COLUMN_CONTENT,
+} from "src/constants/footer-content";
 
 export const AppFooter = () => {
   return (
@@ -9,28 +14,60 @@ export const AppFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
             {FIRST_COLUMN_CONTENT.map((item, index) => (
-              <p className="text-sm" key={index}>{item.title}</p>
+              <Link
+                to={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm"
+                key={index}
+              >
+                {item.title}
+              </Link>
             ))}
           </div>
 
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
             {SECOND_COLUMN_CONTENT.map((item, index) => (
-              <p className="text-sm" key={index}>{item.title}</p>
+              <Link
+                to={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm"
+                key={index}
+              >
+                {item.title}
+              </Link>
             ))}
           </div>
         </div>
         <div className="flex flex-col items-center gap-5">
           <div className="flex gap-4">
-            {LOGO_FOOTER.map((item, index) => (
-              <LocalIcon iconName={item} key={index}/>
+            {LOGO_FOOTER_CONTENT.map((item, index) => (
+              <Link
+                to={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+              >
+                <LocalIcon
+                  iconName={item.logo}
+                  key={index}
+                />
+              </Link>
             ))}
           </div>
-          <LocalIcon
-            iconName="google"
-            width={68}
-            height={70}
-          />
+          <Link
+            to="https://www.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LocalIcon
+              iconName="google"
+              width={68}
+              height={70}
+            />
+          </Link>
         </div>
       </div>
       <div>
