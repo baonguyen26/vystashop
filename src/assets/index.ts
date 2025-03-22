@@ -44,5 +44,40 @@ export {
   instagram,
   twitter,
   linkedin,
-  google
+  google,
+};
+
+//Category Image
+import im_gaming from "./im-gaming.png";
+import im_music from "./im-music.png";
+import im_electronic from "./im-electronic.png";
+import im_toy from "./im-toy.png";
+import im_hobby from "./im-hobby.png";
+import im_baby from "./im-baby.png";
+import im_health from "./im-health.png";
+import im_clothing from "./im-clothing.png";
+import im_sport from "./im-sport.png";
+import im_office from "./im-office.png";
+import im_food from "./im-food.png";
+import im_lifestyle from "./im-lifestyle.png";
+import im_garden from "./im-garden.png";
+import im_pet from "./im-pet.png";
+import im_car from "./im-car.png";
+
+export {
+  im_gaming,
+  im_music,
+  im_electronic,
+  im_toy,
+  im_hobby,
+  im_baby,
+  im_health,
+  im_clothing,
+  im_sport,
+  im_office,
+  im_food,
+  im_lifestyle,
+  im_garden,
+  im_pet,
+  im_car,
 };
