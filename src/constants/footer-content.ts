@@ -1,68 +1,68 @@
 export const FIRST_COLUMN_CONTENT = [
   {
     title: "Impressum",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "FAQ",
-    url: "",
+    url: "https://growwithvysta.com/#faq",
   },
   {
     title: "About Us",
-    url: "",
+    url: "https://growwithvysta.com/#about",
   },
   {
     title: "Merchants",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "Brands",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
 ];
 
 export const SECOND_COLUMN_CONTENT = [
   {
     title: "Our Services",
-    url: "",
+    url: "https://growwithvysta.com/#services",
   },
   {
     title: "Comparison Shopping Platform",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "Managed Ads",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "Premium CSS",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "Register Webshop",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     title: "Contact Us",
-    url: "",
+    url: "https://growwithvysta.com/",
   },
 ];
 
 export const LOGO_FOOTER_CONTENT = [
   {
     logo: "facebook" as const,
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     logo: "linkedin" as const,
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     logo: "twitter" as const,
-    url: "",
+    url: "https://growwithvysta.com/",
   },
   {
     logo: "instagram" as const,
-    url: "",
+    url: "https://growwithvysta.com/",
   },
 ];

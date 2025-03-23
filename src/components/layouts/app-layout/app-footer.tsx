@@ -63,7 +63,7 @@ export const AppFooter = () => {
             ))}
           </div>
           <Link
-            to="https://www.google.com/"
+            to="https://growwithvysta.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +79,7 @@ export const AppFooter = () => {
         <p className="text-xs text-center text-[##3A4B55]">
           Copyright © 2020-2025 -Vysta. -
           <Link
-            to="https://www.google.com/"
+            to="https://growwithvysta.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -88,7 +88,7 @@ export const AppFooter = () => {
           </Link>{" "}
           -
           <Link
-            to="https://www.google.com/"
+            to="https://growwithvysta.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
