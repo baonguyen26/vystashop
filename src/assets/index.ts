@@ -22,6 +22,9 @@ import twitter from "./twitter.svg?react";
 import linkedin from "./linkedin.svg?react";
 import google from "./google.svg?react";
 
+import ic_close from "./ic-close.svg?react";
+import ic_arrow_category from "./ic-arrow-category.svg?react";
+
 export {
   ic_logo,
   ic_uk,
@@ -45,6 +48,8 @@ export {
   twitter,
   linkedin,
   google,
+  ic_close,
+  ic_arrow_category
 };
 
 //Category Image
