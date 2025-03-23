@@ -19,6 +19,13 @@ export const createRouter = () => {
             return { Component: HomeRouter };
           },
         },
+        {
+          path: "/products",
+          lazy: async () => {
+            const { ProductsRouter } = await import("./routes/app/products-page");
+            return { Component: ProductsRouter };
+          },
+        },
       ],
     },
     {
