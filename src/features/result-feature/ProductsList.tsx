@@ -9,6 +9,7 @@ export const ProductsList = () => {
     const products = data?.data || [];
     const totalProducts = data?.total || 0;
 
+
     
 
     return (
