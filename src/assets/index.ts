@@ -8,6 +8,7 @@ import ic_arrow from "./ic-arrow.svg?react";
 import ic_search_black from "./ic-search-black.svg?react";
 import ic_search_blue from "./ic-search-blue.svg?react";
 import ic_menu from "./ic-menu.svg?react";
+import ic_arrow_black from "./ic-arrow-black.svg?react";
 
 import arrow_icon from "./Arrow_left.svg?react";
 import apple_brand from "./apple_brand.svg?react";
@@ -22,7 +23,11 @@ import twitter from "./twitter.svg?react";
 import linkedin from "./linkedin.svg?react";
 import google from "./google.svg?react";
 
+import ic_close from "./ic-close.svg?react";
+import ic_arrow_category from "./ic-arrow-category.svg?react";
+
 export {
+  ic_arrow_black,
   ic_logo,
   ic_uk,
   ic_lang,
@@ -44,5 +49,42 @@ export {
   instagram,
   twitter,
   linkedin,
-  google
+  google,
+  ic_close,
+  ic_arrow_category
+};
+
+//Category Image
+import im_gaming from "./im-gaming.png";
+import im_music from "./im-music.png";
+import im_electronic from "./im-electronic.png";
+import im_toy from "./im-toy.png";
+import im_hobby from "./im-hobby.png";
+import im_baby from "./im-baby.png";
+import im_health from "./im-health.png";
+import im_clothing from "./im-clothing.png";
+import im_sport from "./im-sport.png";
+import im_office from "./im-office.png";
+import im_food from "./im-food.png";
+import im_lifestyle from "./im-lifestyle.png";
+import im_garden from "./im-garden.png";
+import im_pet from "./im-pet.png";
+import im_car from "./im-car.png";
+
+export {
+  im_gaming,
+  im_music,
+  im_electronic,
+  im_toy,
+  im_hobby,
+  im_baby,
+  im_health,
+  im_clothing,
+  im_sport,
+  im_office,
+  im_food,
+  im_lifestyle,
+  im_garden,
+  im_pet,
+  im_car,
 };

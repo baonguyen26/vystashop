@@ -20,10 +20,10 @@ export const createRouter = () => {
           },
         },
         {
-          path: "/products",
+          path: "results",
           lazy: async () => {
-            const { ProductsRouter } = await import("./routes/app/products-page");
-            return { Component: ProductsRouter };
+            const { ProductResultRouter } = await import("./routes/app/product-result");
+            return { Component: ProductResultRouter };
           },
         },
       ],

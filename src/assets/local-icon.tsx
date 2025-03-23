@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  ic_arrow_black,
   ic_arrow,
   ic_dot_green,
   ic_enjoy_blue,
@@ -22,10 +23,13 @@ import {
   linkedin,
   twitter,
   google,
-  arrow_icon
+  arrow_icon,
+  ic_close,
+  ic_arrow_category
 } from ".";
 
 const icon = {
+  ic_arrow_black,
   ic_arrow,
   ic_dot_green,
   ic_enjoy_blue,
@@ -47,7 +51,9 @@ const icon = {
   linkedin,
   twitter,
   google,
-  arrow_icon
+  arrow_icon,
+  ic_close,
+  ic_arrow_category
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
