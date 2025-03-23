@@ -23,7 +23,9 @@ import {
   linkedin,
   twitter,
   google,
-  arrow_icon
+  arrow_icon,
+  ic_close,
+  ic_arrow_category
 } from ".";
 
 const icon = {
@@ -49,7 +51,9 @@ const icon = {
   linkedin,
   twitter,
   google,
-  arrow_icon
+  arrow_icon,
+  ic_close,
+  ic_arrow_category
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
