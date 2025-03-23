@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { categories } from "src/constants/category-properties";
 
-export const Category = () => {
+export const CategoryDesktop = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   return (
@@ -14,7 +14,9 @@ export const Category = () => {
             className={`text-sm flex gap-5 items-center p-1 cursor-pointer hover:underline ${
               selectedCategory === category.name ? "bg-gray-300" : ""
             }`}
-            onClick={() => setSelectedCategory(category.name)}
+            onClick={() => {
+              setSelectedCategory(category.name);
+            }}
           >
             {category.icon}
             {category.name}
