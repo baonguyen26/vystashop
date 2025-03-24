@@ -8,7 +8,7 @@ export const HeroSection = () => {
 
   const handleSearch = (value: string) => {
     if (!value) return;
-    navigate("/results", { state: { searchValue: value } }); 
+    navigate("/results?title=" + value); 
   };
 
   return (
