@@ -14,13 +14,12 @@ export const ProductResultFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
             {FIRST_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0">
+              <div className="pl-4 md:pl-0" key={index}>
                 <Link
                   to={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm"
-                  key={index}
                 >
                   {item.title}
                 </Link>
@@ -31,13 +30,12 @@ export const ProductResultFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
             {SECOND_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0">
+              <div className="pl-4 md:pl-0" key={index}>
                 <Link
                   to={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm"
-                  key={index}
                 >
                   {item.title}
                 </Link>

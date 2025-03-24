@@ -32,11 +32,11 @@ export const PopularBrands: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[20px] px-[20px] md:px-[60px] lg:px-[100px]">
+    <div className="flex flex-col gap-[20px] px-[20px] md:px-[60px] lg:px-[100px] max-w-[1440px] mx-auto">
       <h2 className="text-2xl font-bold">Popular Brands</h2>
       <div
         ref={scrollContainerRef}
-        className="flex justify-baseline gap-3 lg:gap-[52px] items-center overflow-x-auto scroll-smooth whitespace-nowrap"
+        className="flex gap-[14px] items-center overflow-x-auto scroll-smooth whitespace-nowrap"
       >
         {BRAND_PROPERTIES.map((brand, index) => (
           <div

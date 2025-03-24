@@ -3,10 +3,10 @@ import { DropdownMenu } from "../dropdown-menu";
 
 export const SortDropdown = () => {
   return (
-    <div className="flex items-center gap-[10px]">
-    <span>
-        Sort by:
-    </span>
+    <div className="flex items-center justify-end gap-[10px] w-full mt-[20px] pb-[20px] border-b-1 border-gray-700">
+      <span>
+          Sort by:
+      </span>
       <DropdownMenu
         items={SORT}
         onChange={(item) => {
