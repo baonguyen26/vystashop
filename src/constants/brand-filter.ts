@@ -2,43 +2,27 @@ import { checkboxItemProps } from "src/components/ui";
 
 export const brandFilterAttributes: checkboxItemProps[] = [
     {
-        value: "brand1",
-        name: "brand 1"
+        value: "Nike",
+        name: "Nike"
     },
     {
-        value: "brand2",
-        name: "brand 2"
+        value: "Lorna Shore",
+        name: "Lorna Shore"
     },
     {
-        value: "brand3",
-        name: "brand 3"
+        value: "B CAR",
+        name: "B CAR"
     },
     {
-        value: "brand4",
-        name: "brand 4"
+        value: "Colop",
+        name: "Colop"
     },
     {
-        value: "brand5",
-        name: "brand 5"
+        value: "Clearance",
+        name: "Clearance"
     },
     {
-        value: "brand6",
-        name: "brand 6"
-    },
-    {
-        value: "brand7",
-        name: "brand 7"
-    },
-    {
-        value: "brand8",
-        name: "brand 8"
-    },
-    {
-        value: "brand9",
-        name: "brand 9"
-    },
-    {
-        value: "brand10",
-        name: "brand 10"
+        value: "Bud Ducks",
+        name: "Bud Ducks"
     }
 ];

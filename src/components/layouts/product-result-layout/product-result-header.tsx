@@ -20,7 +20,13 @@ export const ProductResultHeader = () => {
     <header className="bg-[#212225]">
       <nav className="flex justify-between items-center px-[100px] py-[12px]">
         <div className="flex items-center gap-[47px]">
-          <LocalIcon iconName="ic_logo" width={"auto"} height={"auto"} />
+          <a href="/">
+            <LocalIcon
+              iconName="ic_logo"
+              width={"auto"}
+              height={"auto"}
+            />
+          </a>
           <CategoriesDropdown />
         </div>
         <InputSearch onClickHandler={handleSearch} />
