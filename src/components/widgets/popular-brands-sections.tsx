@@ -36,7 +36,7 @@ export const PopularBrands: React.FC = () => {
       <h2 className="text-2xl font-bold">Popular Brands</h2>
       <div
         ref={scrollContainerRef}
-        className="flex gap-3 items-center overflow-x-auto scroll-smooth whitespace-nowrap"
+        className="flex justify-baseline gap-3 lg:gap-[52px] items-center overflow-x-auto scroll-smooth whitespace-nowrap"
       >
         {BRAND_PROPERTIES.map((brand, index) => (
           <div
