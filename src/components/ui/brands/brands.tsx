@@ -8,7 +8,7 @@ export const Brand = (brand: BrandProperties, index: number) => {
       key={index}
     >
       <div
-        className="place-items-center place-content-center w-45 h-30 rounded-xl"
+        className="place-items-center place-content-center w-[195px] h-[120px] rounded-xl"
         style={{ backgroundColor: brand.brand_color }}
       >
         <LocalIcon

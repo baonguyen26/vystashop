@@ -18,7 +18,7 @@ export const TopProductSection = () => {
   };
 
   return (
-    <div className="w-[100%] px-[20px] md:px-[60px] lg:px-[100px] flex flex-col gap-[20px]">
+    <div className="w-[100%] px-[20px] md:px-[60px] lg:px-[100px] flex flex-col gap-[20px] max-w-[1440px] mx-auto">
       <div className="w-[100%] flex items-center justify-between">
         <h2 className="text-[16px] sm:text-[24px] font-[700]">Top Products</h2>
         <div className="flex items-center gap-[20px]">
