@@ -17,6 +17,7 @@ export type DropdownMenuProps = {
   defaultExpanded?: boolean;
   className?: string;
   icon?: React.ReactNode;
+  querykey?: string;
 };
 
 export const DropdownMenu = ({
@@ -26,6 +27,7 @@ export const DropdownMenu = ({
   defaultExpanded = false,
   className,
   icon,
+  querykey,
 }: DropdownMenuProps) => {
   const [isExpanded, setExpanded] = useState<boolean>(defaultExpanded);
   const [selectedItem, setSelectedItem] = useState<DropdownMenuItem>(
@@ -34,7 +36,7 @@ export const DropdownMenu = ({
 
   const toggleExpanded = () => {
     if (!isExpanded) {
-      dropdownEventTarget.dispatchEvent(new Event("close-all")); 
+      dropdownEventTarget.dispatchEvent(new Event("close-all"));
     }
     setExpanded((prev) => !prev);
   };
@@ -78,18 +80,25 @@ export const DropdownMenu = ({
           className="flex items-center justify-between w-full gap-[10px]"
         >
           {selectedItem.name}
-          <LocalIcon
-            iconName="ic_arrow"
-            width={"auto"}
-            height={"auto"}
-            className={isExpanded ? "rotate-180" : ""}
-          />
+          {!querykey ? (
+            <LocalIcon
+              iconName="ic_arrow"
+              width={"auto"}
+              height={"auto"}
+              className={isExpanded ? "rotate-180" : ""}
+            />
+          ) : (
+            <LocalIcon
+              iconName="ic_arrow_black"
+              width={16}
+              height={16}
+              className={isExpanded ? "rotate-90" : "-rotate-90"}
+            />
+          )}
         </button>
       </div>
       {isExpanded && (
-        <div
-          className="z-10 absolute top-[45px] flex flex-col items-start border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white"
-        >
+        <div className="z-10 w-full absolute top-[45px] flex flex-col items-start border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white">
           {items.map((item, index) => (
             <button
               key={index}

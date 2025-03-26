@@ -8,6 +8,7 @@ import ic_arrow from "./ic-arrow.svg?react";
 import ic_search_black from "./ic-search-black.svg?react";
 import ic_search_blue from "./ic-search-blue.svg?react";
 import ic_menu from "./ic-menu.svg?react";
+import ic_arrow_black from "./ic-arrow-black.svg?react";
 
 import arrow_icon from "./Arrow_left.svg?react";
 import apple_brand from "./apple_brand.svg?react";
@@ -26,6 +27,7 @@ import ic_close from "./ic-close.svg?react";
 import ic_arrow_category from "./ic-arrow-category.svg?react";
 
 export {
+  ic_arrow_black,
   ic_logo,
   ic_uk,
   ic_lang,

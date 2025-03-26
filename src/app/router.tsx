@@ -19,6 +19,13 @@ export const createRouter = () => {
             return { Component: HomeRouter };
           },
         },
+        {
+          path: "results",
+          lazy: async () => {
+            const { ProductResultRouter } = await import("./routes/app/product-result");
+            return { Component: ProductResultRouter };
+          },
+        },
       ],
     },
     {

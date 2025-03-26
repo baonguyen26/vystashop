@@ -1,12 +1,12 @@
 import axios, { AxiosError } from "axios";
 
 export const apiClient = axios.create({
-  //   baseURL: "https://shopvysta-5cbj.onrender.com/api/v1/products",
-  withCredentials: true,
+    baseURL: "https://67cf1677823da0212a815bc7.mockapi.io/api/v1/products",
+    withCredentials: true,
 });
 
 apiClient.interceptors.response.use(
-  (response) => response.data,
+  (response) => response,
   (error: AxiosError) => {
     return Promise.reject(error);
   }
