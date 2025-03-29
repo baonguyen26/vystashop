@@ -1,13 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { ProductResultRouter } from "./product-result";
-
+import { ProductsRouter } from "./products-page";
 
 const meta = {
-    component: ProductResultRouter
-} satisfies Meta<typeof ProductResultRouter>;
+    component: ProductsRouter
+} satisfies Meta<typeof ProductsRouter>;
 
 export default meta;
 
-type Story = StoryObj<typeof ProductResultRouter>
+type Story = StoryObj<typeof ProductsRouter>
 
 export const Default: Story = {};

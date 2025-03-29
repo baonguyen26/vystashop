@@ -45,10 +45,7 @@ export const HeroSection = () => {
         </div>
         <div className="flex flex-col items-start gap-[50px] lg:flex-row">
           {boxIntroduceItems.map((item, index) => (
-            <BoxIntroduce
-              key={index}
-              {...item}
-            />
+            <BoxIntroduce key={index} {...item} />
           ))}
         </div>
       </div>
