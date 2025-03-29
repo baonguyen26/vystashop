@@ -19,7 +19,7 @@ const headerStyles = cva("bg-[#212225] relative", {
 const navStyles = cva("flex justify-between items-center", {
   variants: {
     mobile: {
-      true: "px-[20px] py-[12px]",
+      true: "",
       false: "py-[12px]",
     },
   },
@@ -42,10 +42,12 @@ export const AppHeader = () => {
       <nav className={navStyles({ mobile: isMobile })}>
         {isMobile ? (
           <>
-            <CategoriesDropdown />
-            <a href="/">
-              <LocalIcon iconName="ic_logo" width={60} height={60} />
-            </a>
+           <div className="flex items-center gap-[20px]">
+              <CategoriesDropdown />
+              <a href="/">
+                <LocalIcon iconName="ic_logo" width={60} height={60} />
+              </a>
+           </div>
             <div className={gapStyles({ mobile: isMobile })}>
               <CountriesDropdown />
             </div>

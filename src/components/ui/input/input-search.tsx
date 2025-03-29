@@ -27,7 +27,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
     return (
       <div
         ref={ref}
-        className={`flex justify-between items-center sm:w-[584px] h-[54px] px-[20px] bg-white rounded-[9999px] border-1 border-black/15 ${className}`}
+        className={`flex justify-between items-center sm:w-[0px] h-[54px] px-[20px] bg-white rounded-[9999px] border-1 border-black/15 ${className}`}
       >
         <input
           className="h-full outline-none focus:ring-0 focus:border-transparent"
