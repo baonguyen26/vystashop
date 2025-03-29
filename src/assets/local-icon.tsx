@@ -1,6 +1,9 @@
 import React from "react";
 
 import {
+  ic_location,
+  ic_language,
+  ic_cancel,
   ic_arrow_black,
   ic_arrow,
   ic_dot_green,
@@ -29,6 +32,9 @@ import {
 } from ".";
 
 const icon = {
+  ic_location,
+  ic_language,
+  ic_cancel,
   ic_arrow_black,
   ic_arrow,
   ic_dot_green,

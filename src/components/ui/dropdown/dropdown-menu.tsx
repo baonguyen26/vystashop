@@ -1,8 +1,30 @@
 import { useState, useEffect } from "react";
 import { LocalIcon } from "src/assets/local-icon";
 import { cn } from "src/utils/cn";
+import { cva, VariantProps } from "class-variance-authority";
 
 const dropdownEventTarget = new EventTarget();
+
+const dropdownMenuVariants = cva( 
+"relative flex flex-col gap-y-2 text-[16px] text-white font-[400] leading-[24px] dropdown-menu",
+  {
+  variants: {
+      variant: {
+          outlined:
+              "border border-primary bg-white text-primary hover:bg-black/10",
+          transparent:
+              "bg-[#ffff] text-[#0A65CC]",
+      },
+      size: {
+          sm: "h-8 px-3 text-sm",
+      },
+  },
+  // defaultVariants: {
+  //     variant: "outlined",
+  //     size: "sm",
+  // },
+});
+
 
 export type DropdownMenuItem = {
   value: string;
@@ -10,7 +32,7 @@ export type DropdownMenuItem = {
   icon?: React.ReactNode;
 };
 
-export type DropdownMenuProps = {
+export type DropdownMenuProps = VariantProps<typeof dropdownMenuVariants> &{
   items: DropdownMenuItem[];
   onChange: (item: DropdownMenuItem, index: number) => void;
   defaultItemIndex?: number;
@@ -28,6 +50,8 @@ export const DropdownMenu = ({
   className,
   icon,
   querykey,
+  variant,
+  size,
 }: DropdownMenuProps) => {
   const [isExpanded, setExpanded] = useState<boolean>(defaultExpanded);
   const [selectedItem, setSelectedItem] = useState<DropdownMenuItem>(
@@ -60,10 +84,7 @@ export const DropdownMenu = ({
 
   return (
     <div
-      className={cn(
-        "relative flex flex-col gap-y-2 text-[16px] text-white font-[400] leading-[24px] dropdown-menu",
-        className
-      )}
+      className={cn(dropdownMenuVariants({ variant, size, className }))}
     >
       <div
         className={cn(

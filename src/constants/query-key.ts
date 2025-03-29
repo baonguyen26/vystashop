@@ -6,6 +6,8 @@ export enum QUERY_KEY {
   SHOP = "shop",
   PRICE = "price",
   SORT = "sort",
+  ORDER = "order",
+  DISCOUNT = "discount",
   PAGE = "page",
 }
  
