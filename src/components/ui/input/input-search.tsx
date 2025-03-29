@@ -35,7 +35,6 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
         <input
           className="h-full outline-none focus:ring-0 focus:border-transparent"
           ref={inputRef}
-          ref={inputRef}
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
           {...props}
