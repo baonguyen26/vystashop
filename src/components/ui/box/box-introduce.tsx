@@ -6,7 +6,7 @@ export type BoxIntroduceProps = {
 
 export const BoxIntroduce = ({icon, title, text}:BoxIntroduceProps) => {
     return (
-        <div className="flex flex-col w-[300px] px-[24px] py-[20px] 
+        <div className="flex flex-col px-[30px] w-[250px] sm:w-[300px] sm:px-[24px] py-[20px]
         items-start gap-[10px] rounded-[16px] border-[0.3px]
           border-[rgba(0,0,0,0.15)] bg-white/10">
             <div className="flex justify-center items-center gap-[16px]
@@ -15,7 +15,7 @@ export const BoxIntroduce = ({icon, title, text}:BoxIntroduceProps) => {
                 {icon && icon}
                 {title && <h3>{title}</h3>}
             </div>
-            <div className="text-white text-[15.25px] font-[500] leading-[24px]">
+            <div className="text-white text-sm sm:text-[15.25px] font-[500] leading-[24px]">
                 {text && <p>{text}</p>}
             </div>
         </div>
