@@ -18,7 +18,6 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
     ref
   ) {
     const inputRef = useRef<HTMLInputElement>(null);
-
     const handleClick = () => {
       const value = inputRef.current?.value.trim();
       if (!value) return;

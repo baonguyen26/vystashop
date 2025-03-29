@@ -13,7 +13,7 @@ export const HeroSection = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center self-stretch bg-[#212225] px-[160px] py-[60px]">
-      <div className="absolute bottom-[-3.2px] left-[287px] h-[655px] w-[824px] rounded-[999px] bg-[#02A2EA] blur-[250px] opacity-[0.4]" />
+      <div className="absolute bottom-[-3.2px] sm:left-[287px] w-screen h-[655px] sm:w-[824px] rounded-[999px] bg-[#02A2EA] blur-[250px] opacity-[0.4]" />
       <div className="z-[2] flex flex-col items-center gap-[60px]">
         <div className="flex w-screen flex-col items-center gap-[50px] lg:w-[1108px]">
           <div className="flex w-screen flex-col items-center gap-[50px] lg:w-[825px]">
@@ -38,7 +38,6 @@ export const HeroSection = () => {
               for Google & Youtube Ads…
             </span>
           </div>
-
           <InputSearch
             className="w-[95%]"
             onClickHandler={handleSearch}
