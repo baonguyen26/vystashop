@@ -25,8 +25,14 @@ import google from "./google.svg?react";
 
 import ic_close from "./ic-close.svg?react";
 import ic_arrow_category from "./ic-arrow-category.svg?react";
+import ic_cancel from "./ic-cancel.svg?react";
+import ic_language from "./ic-language.svg?react";
+import ic_location from "./ic-location.svg?react";
 
 export {
+  ic_location,
+  ic_language,
+  ic_cancel,
   ic_arrow_black,
   ic_logo,
   ic_uk,

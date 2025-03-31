@@ -2,19 +2,19 @@ import { DropdownMenuItem } from "src/components/ui";
 
 export const SORT:DropdownMenuItem[]  = [
     {
-        value: "Relevance",
+        value: "relevance",
         name: "Relevance"
     },
     {
-        value: "Price ascending",
+        value: "asc",
         name: "Price ascending"
     },
     {
-        value: "Price descending",
+        value: "desc",
         name: "Price descending"
     },
     {
-        value: "Newly Added",
+        value: "new",
         name: "Newly Added"
     }
 ];

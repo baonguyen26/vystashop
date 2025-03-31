@@ -6,6 +6,7 @@ import { PRODUCTS_LIMIT } from "src/constants/TimeInterval";
 
 export const ProductsList = () => {
     const location = useLocation();
+    
     const [page, setPage] = useState(1);
 
     useEffect(() => {
