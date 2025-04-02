@@ -28,7 +28,7 @@ export const InputSearchLocal = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <input
-        className={cn(className, "rounded-[6px] border-[1px] border-gray-300")}
+        className={cn(className, "rounded-[6px] border-[1px] max-[800px]:w-full border-gray-300")}
         ref={ref}
         onChange={searchItemHandler}
         {...props}

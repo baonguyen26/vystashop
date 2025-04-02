@@ -11,8 +11,5 @@ type Story = StoryObj<typeof CountriesDropdown>;
 export const Default: Story = {};
 
 export const Style2: Story = {
-  args: {
-    variant: "filled",
-    size: "sm",
-  },
+
 };

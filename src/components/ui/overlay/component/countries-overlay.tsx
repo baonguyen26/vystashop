@@ -7,7 +7,7 @@ export const CountryOverlay = () => {
   const { dismiss } = useOverlay();
 
   return (
-    <div className="flex flex-col border-1 justify-center gap-[16px] rounded-[16px] h-[280px] px-[20px]">
+    <div className="flex w-full flex-col justify-center gap-[16px] rounded-[16px] h-[300px] px-[20px] bg-white">
       <div
         onClick={(e) => {
           e.stopPropagation();
@@ -17,7 +17,7 @@ export const CountryOverlay = () => {
       >
         <LocalIcon iconName="ic_cancel" />
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon
             iconName="ic_location"
@@ -25,9 +25,13 @@ export const CountryOverlay = () => {
             height={24}
           />
         </div>
-        <CountriesDropdown />
+        <CountriesDropdown
+          overlay={true}
+          arrowType="black"
+          className={"flex-grow h-full border-1 border-gray-400 rounded-[8px]"}
+        />
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon
             iconName="ic_language"
@@ -35,9 +39,18 @@ export const CountryOverlay = () => {
             height={24}
           />
         </div>
-        <LanguageDropdown />
+        <LanguageDropdown
+          overlay={true}
+          arrowType="black"
+          className={"flex-grow h-full border-1 border-gray-400 rounded-[8px]"}
+        />
       </div>
-      <Button className="h-[48px] font-bold bg-[#007DC2]">Apply</Button>
+      <Button
+        onClick={(e) => {
+          e.stopPropagation();
+          dismiss();
+        }}
+       className="h-[48px] font-bold bg-[#007DC2]">Apply</Button>
     </div>
   );
 };

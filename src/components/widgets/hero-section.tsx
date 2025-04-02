@@ -38,14 +38,24 @@ export const HeroSection = () => {
               for Google & Youtube Ads…
             </span>
           </div>
-          <InputSearch
-            className="w-[95%]"
-            onClickHandler={handleSearch}
-          />
+          <div className="flex justify-center w-full max-[640px]:px-2 max-[640px]:mt-[-50px]">
+            <InputSearch
+              className="max-[640px]:rounded-[8px] sm:w-[586px]"
+              onClickHandler={handleSearch}
+            />
+          </div>
         </div>
         <div className="grid gap-[20px] sm:gap-[40px] lg:gap-[50px] sm:grid-cols-2 lg:grid-cols-3 place-items-center">
           {boxIntroduceItems.map((item, index) => (
-            <BoxIntroduce key={index} {...item} className={index === 2 ? "sm:col-span-2 sm:justify-self-center lg:col-span-1" : ""}/>
+            <BoxIntroduce
+              key={index}
+              {...item}
+              className={
+                index === 2
+                  ? "sm:col-span-2 sm:justify-self-center lg:col-span-1"
+                  : ""
+              }
+            />
           ))}
         </div>
       </div>
