@@ -8,8 +8,6 @@ import { discountFilterAttribute } from "src/constants/discount-filter";
 import { LocalIcon } from "src/assets/local-icon";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useSearchParamsFilter } from "src/hooks";
-import { QUERY_KEY } from "src/constants/query-key";
 
 export const FilterMobile = ({
   open,
@@ -19,7 +17,6 @@ export const FilterMobile = ({
   setOpen: (item: boolean) => void;
 }) => {
   const [isClosing, setIsClosing] = useState(false);
-  const {setValues, getValueAsString} = useSearchParamsFilter(QUERY_KEY.TITLE);
 
   useEffect(() => {
     if (open) {
@@ -41,10 +38,14 @@ export const FilterMobile = ({
   };
 
   const clearFilter = () => {
-    const value = getValueAsString();
+    const searchName = window.location.search;
+    const value = searchName.split("&")[0];
     console.log(value);
-    if (!value) return;
-    setValues(value);
+    
+    if (value) {
+      const newUrl = `${window.location.pathname}${value}`;
+      window.history.pushState({}, "", newUrl);
+    }
   };
 
   return (

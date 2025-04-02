@@ -29,19 +29,27 @@ export const DiscountsFilter = ({
   useEffect(() => {
     const currentTitle = searchParams.get(QUERY_KEY.TITLE);
     const prevTitle = prevTitleRef.current;
-    console.log(currentTitle, prevTitle);
 
     if (currentTitle !== prevTitle) {
-        setSelected("");
-      deleteKey();
-      console.log("deleteKey");
+      setSelected("");
     }
     prevTitleRef.current = currentTitle;
   }, [searchParams]);
 
+  useEffect(() => {
+    if (selected === "") {
+      deleteKey();
+    }
+
+    // return () => {
+    //   deleteKey();
+    // }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
+
   const handleSelect = (item: discountFilterItems) => {
     setSelected((prev) => (prev === item.value ? "" : item.value));
-    selected === item.value ? deleteKey() : setValues(item.value);
+    return selected === item.value ? deleteKey() : setValues(item.value);
   };
 
   return (

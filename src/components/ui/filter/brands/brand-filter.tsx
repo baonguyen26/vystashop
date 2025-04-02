@@ -11,7 +11,7 @@ export type BrandFilterProps = {
 };
 
 export const BrandFilter = ({ items, className }: BrandFilterProps) => {
-  const [selectedValue, setSelectedValue] = useState<string | null>(null);
+  const [selectedValue, setSelectedValue] = useState<string | null>("");
   const [filteredItems, setFilteredItems] = useState<checkboxItemProps[]>(items);
 
   const { setValues, deleteKey } = useSearchParamsFilter(QUERY_KEY.BRAND);
@@ -28,14 +28,19 @@ export const BrandFilter = ({ items, className }: BrandFilterProps) => {
       deleteKey();
     }
     prevTitleRef.current = currentTitle;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]); 
 
   useEffect(() => {
     if (selectedValue === null) {
       deleteKey();
-    } else {
+    } else if (selectedValue !== "") {
       setValues(selectedValue);
     }
+    return () => {
+      deleteKey();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedValue]);
 
   const handleChange = ({ value }: checkboxItemProps) => {

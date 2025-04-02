@@ -67,7 +67,7 @@ export const CategoriesDropdown = () => {
 
       {selectedCategory && (
         <div
-          className="w-full absolute z-10 left-0 top-22 category-section"
+          className="w-full absolute z-10 left-0 top-24 category-section"
           onClick={(e) => e.stopPropagation()}
         >
           {isMobile ? (

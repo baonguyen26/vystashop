@@ -105,7 +105,7 @@ export const DropdownMenu = ({
       {isExpanded && (
         <div
           className="z-10 w-full absolute top-[45px] flex flex-col items-start 
-            border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white"
+            border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white h-[300px] scroll-smooth snap-y snap-mandatory overflow-auto"
         >
           {items.map((item, index) => (
             <button
