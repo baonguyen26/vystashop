@@ -26,6 +26,7 @@ export const CountryOverlay = () => {
           />
         </div>
         <CountriesDropdown
+          itemType="full"
           overlay={true}
           arrowType="black"
           className={"flex-grow h-full border-1 border-gray-400 rounded-[8px]"}

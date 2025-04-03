@@ -7,18 +7,22 @@ export const languagesItems: DropdownMenuItem[] = [
     },
     {
     value: "1",
-    name: "Vietnamese",
+    name: "Nederlands",
     },
     {
     value: "2",
-    name: "Australian",
+    name: "Deutsch",
     },  
     {
     value: "3",
-    name: "Indian",
+    name: "Suomi",
     },
     {
     value: "4",
-    name: "Italian",
+    name: "Norsk",
+    },
+    {
+    value: "5",
+    name: "Italiano",
     }
 ];

@@ -1,19 +1,21 @@
 import { DropdownMenu } from "../dropdown-menu";
-import { countriesItems } from "src/constants/countries";
+import { countriesItemsFull, countriesItemsAcronym } from "src/constants/countries";
 
 export const CountriesDropdown = ({
     className,
     arrowType,
     overlay,
+    itemType = "acronym"
   }: {
     className?: string;
     arrowType?: "default" | "black";
     overlay?: boolean;
+    itemType?: "full" | "acronym";
   }) => {
     return (
       <DropdownMenu
         arrowType={arrowType}
-        items={countriesItems}
+        items={itemType === "full" ? countriesItemsFull : countriesItemsAcronym}
         onChange={(item) => {
           console.log(item);
         }}
