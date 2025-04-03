@@ -28,8 +28,51 @@ import ic_arrow_category from "./ic-arrow-category.svg?react";
 import ic_cancel from "./ic-cancel.svg?react";
 import ic_language from "./ic-language.svg?react";
 import ic_location from "./ic-location.svg?react";
+import ic_at from "./ic-at.svg?react";
+import ic_be from "./ic-be.svg?react";
+import ic_cz from "./ic-cz.svg?react";
+import ic_dk from "./ic-dk.svg?react";
+import ic_fl from "./ic-fl.svg?react";
+import ic_fr from "./ic-fr.svg?react";
+import ic_de from "./ic-de.svg?react";
+import ic_gr from "./ic-gr.svg?react";
+import ic_hu from "./ic-hu.svg?react";
+import ic_ie from "./ic-ie.svg?react";
+import ic_it from "./ic-it.svg?react";
+import ic_nl from "./ic-nl.svg?react";
+import ic_no from "./ic-no.svg?react";
+import ic_pl from "./ic-pl.svg?react";
+import ic_pt from "./ic-pt.svg?react";
+import ic_ro from "./ic-ro.svg?react";
+import ic_sk from "./ic-sk.svg?react";
+import ic_es from "./ic-es.svg?react";
+import ic_se from "./ic-se.svg?react";
+import ic_ch from "./ic-ch.svg?react";
+
+
+
 
 export {
+  ic_se,
+  ic_cz,
+  ic_dk,
+  ic_fl,
+  ic_fr,
+  ic_at,
+  ic_be,
+  ic_hu,
+  ic_ie,
+  ic_it,
+  ic_nl,
+  ic_no,
+  ic_pl,
+  ic_pt,
+  ic_ro,
+  ic_sk,
+  ic_es,
+  ic_ch,
+  ic_gr,
+  ic_de,
   ic_location,
   ic_language,
   ic_cancel,

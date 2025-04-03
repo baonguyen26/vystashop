@@ -6,6 +6,8 @@ import {
 } from "src/components/ui";
 import { cva } from "class-variance-authority";
 import { useMediaQuery } from "react-responsive";
+import { CountryOverlay } from "src/components/ui";
+import { useOverlay } from "src/components/ui";
 
 const headerStyles = cva("bg-[#212225] relative", {
   variants: {
@@ -36,33 +38,51 @@ const gapStyles = cva("flex items-center", {
 
 export const AppHeader = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 900px)" });
+  const {display} = useOverlay();
 
   return (
     <header className={headerStyles({ mobile: isMobile })}>
       <nav className={navStyles({ mobile: isMobile })}>
         {isMobile ? (
           <>
-           <div className="flex items-center gap-[20px]">
+            <div className="flex items-center gap-[20px]">
               <CategoriesDropdown />
               <a href="/">
-                <LocalIcon iconName="ic_logo" width={60} height={60} />
+                <LocalIcon
+                  iconName="ic_logo"
+                  width={60}
+                  height={60}
+                />
               </a>
-           </div>
-            <div className={gapStyles({ mobile: isMobile })}>
-              <CountriesDropdown />
+            </div>
+            <div
+            onClick={(e) => {
+              e.stopPropagation();
+              display(<CountryOverlay />);
+            }}
+             className={gapStyles({ mobile: isMobile })}>
+              <CountriesDropdown className="text-white pointer-events-none"/>
             </div>
           </>
         ) : (
           <>
             <div className={gapStyles({ mobile: isMobile })}>
               <a href="/">
-                <LocalIcon iconName="ic_logo" width={"auto"} height={"auto"} />
+                <LocalIcon
+                  iconName="ic_logo"
+                  width={"auto"}
+                  height={"auto"}
+                />
               </a>
               <CategoriesDropdown />
             </div>
             <div className="flex items-center gap-[30px]">
-              <LanguageDropdown />
-              <CountriesDropdown />
+              <LanguageDropdown
+                className={"text-white"}
+              />
+              <CountriesDropdown
+                className={"text-white"}
+              />
             </div>
           </>
         )}

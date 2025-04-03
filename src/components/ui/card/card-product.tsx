@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { LocalIcon } from "src/assets/local-icon";
 import { IProduct } from "src/types/product.type";
 import { Button } from "../button";
@@ -7,6 +7,19 @@ interface ProductCardProps {
   product: IProduct;
   className?: string;
 }
+
+const ImageChecker = ({ url }: { url: string }) => {
+  const [isValid, setIsValid] = useState<boolean>(true);
+
+  return (
+    <img
+      className="w-auto h-[100%]"
+      src={url}
+      alt={isValid ? "" : "Not Found!"}
+      onError={() => setIsValid(false)}
+    />
+  );
+};
 
 const ProductCard = ({ product, className }: ProductCardProps) => {
   return (
@@ -19,11 +32,7 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
         target="_blank"
       >
         <figure className="w-[100%] h-[210px] flex items-center justify-center">
-          <img
-            className="w-auto h-[100%]"
-            src={product.image}
-            alt=""
-          />
+          <ImageChecker url={product.image}/>
         </figure>
         <h3 className="text-black h-[54px] text-[12px] font-[400] line-clamp-3 cursor-pointer mb-[12px]">
           {product.title}
