@@ -36,23 +36,38 @@ export const CategoriesDropdown = () => {
 
   return (
     <>
-      <div
-        onClick={toggleExpanded}
-        className="flex items-center gap-[16px] w-[143px] px-[15px] py-[10px] rounded-[46px] bg-[#00A1EA] hover:cursor-pointer category-section"
-      >
-        <LocalIcon
-          iconName="ic_menu"
-          width={"auto"}
-          height={"auto"}
-        />
-        <span className="text-[16px] text-white font-[400] leading-[24px]">
-          Categories
-        </span>
-      </div>
+      {isMobile ? (
+        <div>
+          <div
+            onClick={toggleExpanded}
+            className="p-2 bg-[#212225] category-section"
+          >
+            <LocalIcon
+              iconName="ic_menu"
+              width={"auto"}
+              height={"auto"}
+            />
+          </div>
+        </div>
+      ) : (
+        <div
+          onClick={toggleExpanded}
+          className="flex items-center gap-[16px] w-[143px] px-[15px] py-[10px] rounded-[46px] bg-[#00A1EA] hover:cursor-pointer category-section"
+        >
+          <LocalIcon
+            iconName="ic_menu"
+            width={"auto"}
+            height={"auto"}
+          />
+          <span className="text-[16px] text-white font-[400] leading-[24px]">
+            Categories
+          </span>
+        </div>
+      )}
 
       {selectedCategory && (
         <div
-          className="w-full absolute z-10 left-0 top-22 category-section"
+          className="w-full absolute z-10 left-0 top-24 category-section"
           onClick={(e) => e.stopPropagation()}
         >
           {isMobile ? (

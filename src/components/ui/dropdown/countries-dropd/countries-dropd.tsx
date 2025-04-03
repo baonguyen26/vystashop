@@ -1,14 +1,27 @@
 import { DropdownMenu } from "../dropdown-menu";
-import { countriesItems } from "src/constants/countries";
+import { countriesItemsFull, countriesItemsAcronym } from "src/constants/countries";
 
-export const CountriesDropdown = () => {
+export const CountriesDropdown = ({
+    className,
+    arrowType,
+    overlay,
+    itemType = "acronym"
+  }: {
+    className?: string;
+    arrowType?: "default" | "black";
+    overlay?: boolean;
+    itemType?: "full" | "acronym";
+  }) => {
     return (
-        <DropdownMenu
-            items={countriesItems}
-            onChange={(item) => {
-                console.log(item);
-            }}
-            className="w-fit"
-        />
-    )
-}
+      <DropdownMenu
+        arrowType={arrowType}
+        items={itemType === "full" ? countriesItemsFull : countriesItemsAcronym}
+        onChange={(item) => {
+          console.log(item);
+        }}
+        className={className}
+        overlay={overlay}
+      />
+    );
+  };
+  

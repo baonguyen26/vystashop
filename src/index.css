@@ -20,7 +20,7 @@
   }
   
   body {
-    @apply font-montserrat min-[1440px]:max-w-[1540px] mx-auto;
+    @apply font-montserrat min-[1440px]:max-w-full mx-auto;
   }
 
   /* Custom Scrollbar */

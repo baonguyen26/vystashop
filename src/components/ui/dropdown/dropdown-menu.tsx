@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { LocalIcon } from "src/assets/local-icon";
-import { cn } from "src/utils/cn";
 
 const dropdownEventTarget = new EventTarget();
 
@@ -17,6 +16,8 @@ export type DropdownMenuProps = {
   defaultExpanded?: boolean;
   className?: string;
   icon?: React.ReactNode;
+  arrowType?: "default" | "black";
+  overlay?: boolean;
 };
 
 export const DropdownMenu = ({
@@ -26,6 +27,8 @@ export const DropdownMenu = ({
   defaultExpanded = false,
   className,
   icon,
+  arrowType = "default",
+  overlay,
 }: DropdownMenuProps) => {
   const [isExpanded, setExpanded] = useState<boolean>(defaultExpanded);
   const [selectedItem, setSelectedItem] = useState<DropdownMenuItem>(
@@ -34,7 +37,7 @@ export const DropdownMenu = ({
 
   const toggleExpanded = () => {
     if (!isExpanded) {
-      dropdownEventTarget.dispatchEvent(new Event("close-all")); 
+      dropdownEventTarget.dispatchEvent(new Event("close-all"));
     }
     setExpanded((prev) => !prev);
   };
@@ -58,37 +61,51 @@ export const DropdownMenu = ({
 
   return (
     <div
-      className={cn(
-        "relative flex flex-col gap-y-2 text-[16px] text-white font-[400] leading-[24px] dropdown-menu",
-        className
-      )}
+      className={`relative flex flex-col gap-y-2 text-[16px] font-[400]
+        leading-[24px] dropdown-menu ${className}`}
     >
       <div
-        className={cn(
-          "flex items-center h-[auto] px-2 py-[7px]",
-          selectedItem.icon ? "gap-[4px]" : "gap-[14px]"
-        )}
+        className={`flex items-center h-full px-2 py-[7px] 
+          ${overlay ? "gap-[4px]" : "gap-[14px]"}`}
       >
         <figure>
-          {selectedItem.icon && selectedItem.icon}
+          {!overlay && selectedItem.icon && selectedItem.icon}
           {icon && icon}
         </figure>
         <button
           onClick={toggleExpanded}
           className="flex items-center justify-between w-full gap-[10px]"
         >
-          {selectedItem.name}
+          <div
+            className={`flex flex-col ${overlay ? "items-start flex-col leading-4.5" : ""} `}
+          >
+            <span className="text-[13px]">
+              {overlay ? (selectedItem.icon ? "Countries" : "Languages") : null}
+            </span>
+            <span className={`${overlay ? "font-[600]" : ""}`}>
+              {selectedItem.name}
+            </span>
+          </div>
           <LocalIcon
-            iconName="ic_arrow"
-            width={"auto"}
-            height={"auto"}
-            className={isExpanded ? "rotate-180" : ""}
+            iconName={arrowType === "black" ? "ic_arrow_black" : "ic_arrow"}
+            width={16}
+            height={16}
+            className={
+              arrowType === "black"
+                ? isExpanded
+                  ? "rotate-90"
+                  : "-rotate-90"
+                : isExpanded
+                  ? "rotate-180"
+                  : ""
+            }
           />
         </button>
       </div>
       {isExpanded && (
         <div
-          className="z-10 absolute top-[45px] flex flex-col items-start border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white"
+          className="z-10 w-full absolute top-[45px] flex flex-col items-start 
+            border border-black/15 rounded-[8px] px-2 py-2 text-black bg-white h-[300px] scroll-smooth snap-y snap-mandatory overflow-auto"
         >
           {items.map((item, index) => (
             <button
@@ -99,13 +116,12 @@ export const DropdownMenu = ({
                 onChange(item, index);
                 setExpanded(false);
               }}
-              className={cn(
-                "flex items-center gap-1 rounded-md px-4 py-2 text-left text-sm hover:bg-black/15 w-full",
-                item.value === selectedItem.value && "bg-black/10"
-              )}
+              className={`flex items-center gap-1 rounded-md px-4 py-2 text-left
+              text-black text-sm hover:bg-black/15 w-full 
+                ${item.value === selectedItem.value ? "bg-black/10" : ""}`}
               role="menuitem"
             >
-              {item.icon && item.icon}
+              {!overlay && item.icon && item.icon}
               {item.name}
             </button>
           ))}

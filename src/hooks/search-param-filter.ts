@@ -55,6 +55,7 @@ export const useSearchParamsFilter = (key: QUERY_KEY, separate = ",") => {
     });
   };
 
+
   return {
     searchParams,
     params,
