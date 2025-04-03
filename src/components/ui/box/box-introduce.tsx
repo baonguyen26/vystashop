@@ -2,7 +2,7 @@ export type BoxIntroduceProps = {
     icon: React.ReactNode;
     title: string;
     text: string;
-    className: string;
+    className?: string;
 };
 
 export const BoxIntroduce = ({icon, title, text, className}:BoxIntroduceProps) => {
