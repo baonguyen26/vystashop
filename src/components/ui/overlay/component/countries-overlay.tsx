@@ -1,5 +1,5 @@
 import { LocalIcon } from "src/assets/local-icon";
-import { CountriesDropdown, LanguageDropdown } from "../../dropdown";
+import {  LanguageDropdown } from "../../dropdown";
 import { Button } from "../../button";
 import { useOverlay } from "../use-overlay";
 
@@ -17,7 +17,7 @@ export const CountryOverlay = () => {
       >
         <LocalIcon iconName="ic_cancel" />
       </div>
-      <div className="flex items-center gap-[10px]">
+      {/* <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon
             iconName="ic_location"
@@ -31,7 +31,7 @@ export const CountryOverlay = () => {
           arrowType="black"
           className={"flex-grow h-full border-1 border-gray-400 rounded-[8px]"}
         />
-      </div>
+      </div> */}
       <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon

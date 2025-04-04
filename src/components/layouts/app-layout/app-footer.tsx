@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
-import { CountriesDropdown } from "src/components/ui";
+// import { CountriesDropdown } from "src/components/ui";
 import {
   FIRST_COLUMN_CONTENT,
   LOGO_FOOTER_CONTENT,
@@ -48,7 +48,7 @@ export const AppFooter = () => {
         </div>
 
         <div className="flex flex-col pt-10 md:pt-0 items-center gap-5">
-          <CountriesDropdown className="w-[230px] border-1 border-gray-400 bg-white" itemType="full" arrowType="black"/>
+          {/* <CountriesDropdown className="w-[230px] border-1 border-gray-400 bg-white" itemType="full" arrowType="black"/> */}
           <div className="flex gap-4">
             {LOGO_FOOTER_CONTENT.map((item, index) => (
               <Link

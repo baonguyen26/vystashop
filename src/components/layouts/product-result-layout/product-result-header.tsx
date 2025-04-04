@@ -1,6 +1,6 @@
 import { LocalIcon } from "src/assets/local-icon";
 import {
-  CountriesDropdown,
+  // CountriesDropdown,
   LanguageDropdown,
   CategoriesDropdown,
   InputSearch,
@@ -71,7 +71,7 @@ export const ProductResultHeader = () => {
               }}
               className={gapStyles({ mobile: isMobile })}
             >
-              <CountriesDropdown className={"text-white pointer-events-none"} />
+              <LanguageDropdown className={"text-white pointer-events-none"} />
             </div>
           </>
         ) : (
@@ -89,7 +89,7 @@ export const ProductResultHeader = () => {
             <InputSearch onClickHandler={handleSearch} className="max-[1110px]:hidden"/>
             <div className="flex items-center gap-[30px]">
               <LanguageDropdown className={"text-white"} />
-              <CountriesDropdown className={"text-white"} />
+              {/* <CountriesDropdown className={"text-white"} /> */}
             </div>
           </>
         )}
