@@ -11,6 +11,7 @@ import { cva } from "class-variance-authority";
 import { useMediaQuery } from "react-responsive";
 import { useOverlay } from "src/components/ui";
 import { CountryOverlay } from "src/components/ui";
+import { useTranslation } from "react-i18next";
 
 const headerStyles = cva("flex flex-col gap-[6px] justify-center w-full bg-[#212225] relative", {
   variants: {
@@ -49,6 +50,8 @@ export const ProductResultHeader = () => {
     setValues(value);
   };
 
+  const { t } = useTranslation();
+
   return (
     <header className={headerStyles({ mobile: isMobile })}>
       <nav className={navStyles({ mobile: isMobile })}>
@@ -86,7 +89,11 @@ export const ProductResultHeader = () => {
               </a>
               <CategoriesDropdown />
             </div>
-            <InputSearch onClickHandler={handleSearch} className="max-[1110px]:hidden"/>
+            <InputSearch 
+              onClickHandler={handleSearch} 
+              className="max-[1110px]:hidden"
+              placeholder={t("introduce_items.search.title")}
+            />
             <div className="flex items-center gap-[30px]">
               <LanguageDropdown className={"text-white"} />
               {/* <CountriesDropdown className={"text-white"} /> */}
@@ -94,7 +101,11 @@ export const ProductResultHeader = () => {
           </>
         )}
       </nav>
-      <InputSearch onClickHandler={handleSearch} className="flex max-[1110px]:rounded-[8px] max-[1110px]:flex min-[1110px]:hidden" />
+      <InputSearch 
+        onClickHandler={handleSearch} 
+        className="flex max-[1110px]:rounded-[8px] max-[1110px]:flex min-[1110px]:hidden" 
+        placeholder={t("introduce_items.search.title")}
+      />
     </header>
   );
 };

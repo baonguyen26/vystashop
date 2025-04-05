@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Categorieën",
+    "gaming": {
+      "title": "Gamen",
+      "subcategories": {
+        "video-games": "Videospellen",
+        "gaming-consoles": "Spelcomputers",
+        "gaming-accessories": "Gamen Accessoires"
+      }
+    },
+    "entertainment": {
+      "title": "Muziek, Films & TV",
+      "subcategories": {
+        "music": "Muziek",
+        "movies-series": "Films & Series"
+      }
+    },
+    "electronics": {
+      "title": "Elektronica",
+      "subcategories": {
+        "computers-accessories": "Computers & Accessoires",
+        "audio-video": "Audio & Video",
+        "cameras-photography": "Camera's & Fotografie",
+        "phones": "Telefoons & Accessoires",
+        "tablets": "Tablets",
+        "appliances": "Huishoudapparaten",
+        "kitchen-electronics": "Keukenapparatuur",
+        "smart-home": "Slimme apparaten",
+        "personal-care-electronics": "Persoonlijke Verzorging Elektronica"
+      }
+    },
+    "toys": {
+      "title": "Speelgoed & Spellen",
+      "subcategories": {
+        "indoor-toys": "Binnenspeelgoed",
+        "outdoor-toys": "Buitenspeelgoed"
+      }
+    },
+    "hobby": {
+      "title": "Hobby & Feest",
+      "subcategories": {
+        "hobbies-crafts": "Hobby's & Ambachten",
+        "party-costumes": "Feest & Kostuums"
+      }
+    },
+    "baby": {
+      "title": "Baby & Kinderen",
+      "subcategories": {
+        "baby-fashion": "Baby & Kinder Mode",
+        "nursery-sleep": "Babykamer & Slaap",
+        "baby-travel": "Reizen & Vervoer",
+        "baby-safety": "Baby Veiligheid",
+        "baby-care": "Babyverzorging",
+        "baby-food": "Babyvoeding",
+        "baby-toys": "Baby Speelgoed"
+      }
+    },
+    "health": {
+      "title": "Gezondheid & Schoonheid",
+      "subcategories": {
+        "perfume": "Parfum & Geuren",
+        "personal-care": "Persoonlijke Verzorging",
+        "cosmetics-skincare": "Cosmetica & Huidverzorging",
+        "beauty-gift-sets": "Schoonheid Geschenksets",
+        "adult-products": "Volwassen Producten"
+      }
+    },
+    "sports": {
+      "title": "Sport & Buiten",
+      "subcategories": {
+        "sportswear": "Sportkleding",
+        "sports-equipment": "Sportuitrusting",
+        "outdoor-recreation": "Buitenactiviteiten",
+        "travel-gear": "Reisuitrusting",
+        "bicycles": "Fietsen & Accessoires"
+      }
+    },
+    "office": {
+      "title": "Kantoor & School",
+      "subcategories": {
+        "office-supplies": "Kantoorbenodigdheden",
+        "school-supplies": "Schoolbenodigdheden",
+        "planners-calendars": "Planners & Kalenders",
+        "journals-memory-books": "Dagboeken & Herinneringsboeken",
+        "greeting-cards": "Wenskaarten",
+        "magazines-puzzle-books": "Tijdschriften & Puzzelboeken",
+        "photo-albums": "Fotoalbums",
+        "gift-wrapping": "Cadeauverpakking"
+      }
+    },
+    "food": {
+      "title": "Eten & Drinken",
+      "subcategories": {
+        "breakfast-snacks": "Ontbijt & Snacks",
+        "condiments": "Kruiden & Sauzen",
+        "soups-preserves": "Soepen & Ingelegde Gerechten",
+        "sauces": "Sauzen",
+        "pasta-rice": "Pasta & Rijst",
+        "sweets-cookies": "Zoetigheden & Koekjes",
+        "coffee-tea": "Koffie & Thee",
+        "beverages": "Dranken",
+        "sweeteners": "Zoetstoffen"
+      }
+    },
+    "home": {
+      "title": "Huis & Keuken",
+      "subcategories": {
+        "home-decor": "Huisdecoratie",
+        "home-storage": "Huisopslag",
+        "window-textiles": "Raamtextiel",
+        "furniture": "Meubels",
+        "kitchen-appliances": "Keukenapparatuur",
+        "cookware-dining": "Keukengerei & Tafelen",
+        "smart-home-devices": "Slimme apparaten"
+      }
+    },
+    "garden": {
+      "title": "Tuin & Doe-Het-Zelf",
+      "subcategories": {
+        "diy-tools": "Doe-Het-Zelf Gereedschap",
+        "sustainable-living": "Duurzaam Wonen",
+        "home-security": "Huishoudbeveiliging",
+        "kitchen-improvements": "Keukenverbeteringen",
+        "bathroom-cleaning": "Badkamer & Schoonmaak",
+        "plants-gardening": "Planten & Tuinieren",
+        "garden-furniture": "Tuinmeubelen",
+        "garden-tools": "Tuingereedschap"
+      }
+    },
+    "pets": {
+      "title": "Huisdieren",
+      "subcategories": {
+        "cat-supplies": "Huisdierbenodigdheden",
+        "dog-supplies": "Hondbenodigdheden",
+        "fish-aquarium": "Vissen & Aquaria"
+      }
+    },
+    "automotive": {
+      "title": "Auto's & Motoren",
+      "subcategories": {
+        "car-maintenance": "Auto-onderhoud",
+        "car-parts": "Auto Onderdelen",
+        "motorcycle-gear": "Motoruitrusting",
+        "scooters": "Scooters"
+      }
+    }
+  },
+  "founding_advisor": "Word een Oprichtend Adviseur voor Icon & Bespaar 60% ({{spots}} Spots Over)",
+  "find_brands": "Vind je favoriete merken gemakkelijk in meer dan {{shops}} winkels",
+  "reason_brands": {
+    "content_1": "Er is een reden waarom de {{brands}} die ",
+    "content_2": "JIJ KENT ",
+    "content_3": "naar ",
+    "content_4": "Vysta ",
+    "content_5": "komen voor Google & YouTube Ads..."
+  },
+  "introduce_items": {
+    "search": {
+      "title": "Zoeken",
+      "content": "Vind je hart's verlangen door prijzen te vergelijken van duizenden winkels op één plek"
+    },
+    "order": {
+      "title": "Bestellen",
+      "content": "Bestel je product eenvoudig door je favoriete handelaar tegen de laagste prijs te selecteren"
+    },
+    "enjoy": {
+      "title": "Genieten",
+      "content": "Geniet van je product wetende dat je het voor de beste prijs hebt gekocht"
+    }
+  },
+  "popular_brands": "Populaire Merken",
+  "top_products": "Top Producten",
+  "go_to_shop": "Ga naar de winkel",
+  "offers": "{{offers}} aanbiedingen",
+  "impressum": "Impressum",
+  "faq": "FAQ",
+  "about_us": "Over ons",
+  "merchants": "Handelaars",
+  "brands": "Merken",
+  "our_services": "Onze Diensten",
+  "comparison_shopping_platform": "Vergelijkingswinkelplatform",
+  "managed_ads": "Beheerde Advertenties",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Webshop Registreren",
+  "contact_us": "Neem Contact Op",
+  "privacy_policy": "Privacybeleid",
+  "terms_conditions": "Algemene voorwaarden",
+  "product": {
+    "result_summary": "{{current}} van {{total}} resultaten van {{retailers}} winkels",
+    "num_of_shops": "Aantal winkels",
+    "num_of_brands": "Aantal merken",
+    "filter": "Filter",
+    "clear_filter": "Filter wissen",
+    "apply": "Toepassen",
+    "brands": "Merken",
+    "shops": "Winkels",
+    "discounts": "Kortingen",
+    "sort_by": "Sorteren op",
+    "relevance": "Relevantie",
+    "asc": "Prijs oplopend",
+    "desc": "Prijs aflopend",
+    "new": "Nieuw toegevoegd"
+  }
+}

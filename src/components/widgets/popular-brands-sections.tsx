@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { BRAND_PROPERTIES } from "src/constants/brand-properties";
 import { Brand } from "../ui";
+import { useTranslation } from "react-i18next";
 
 export const PopularBrands: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -31,9 +32,11 @@ export const PopularBrands: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div className="w-[100%] px-[20px] md:px-[60px] lg:px-[100px] flex flex-col gap-[20px] max-w-[1440px] mx-auto">
-      <h2 className="text-2xl font-bold">Popular Brands</h2>
+      <h2 className="text-2xl font-bold">{t("popular_brands")}</h2>
       <div
         ref={scrollContainerRef}
         className="flex items-center justify-between gap-[14px] overflow-x-auto scroll-smooth whitespace-nowrap"

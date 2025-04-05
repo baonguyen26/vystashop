@@ -2,27 +2,27 @@ import { DropdownMenuItem } from "src/components/ui/dropdown/dropdown-menu";
 
 export const languagesItems: DropdownMenuItem[] = [
   {
-    value: "0",
+    value: "en",
     name: "English",
     },
     {
-    value: "1",
+    value: "nl",
     name: "Nederlands",
     },
     {
-    value: "2",
+    value: "de",
     name: "Deutsch",
     },  
     {
-    value: "3",
+    value: "fi",
     name: "Suomi",
     },
     {
-    value: "4",
+    value: "no",
     name: "Norsk",
     },
     {
-    value: "5",
+    value: "it",
     name: "Italiano",
     }
 ];

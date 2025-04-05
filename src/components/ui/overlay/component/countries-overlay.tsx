@@ -2,9 +2,12 @@ import { LocalIcon } from "src/assets/local-icon";
 import {  LanguageDropdown } from "../../dropdown";
 import { Button } from "../../button";
 import { useOverlay } from "../use-overlay";
+import { useTranslation } from "react-i18next";
 
 export const CountryOverlay = () => {
   const { dismiss } = useOverlay();
+
+  const { t  } = useTranslation();
 
   return (
     <div className="flex w-full flex-col justify-center gap-[16px] rounded-[16px] h-[300px] px-[20px] bg-white">
@@ -51,7 +54,7 @@ export const CountryOverlay = () => {
           e.stopPropagation();
           dismiss();
         }}
-       className="h-[48px] font-bold bg-[#007DC2]">Apply</Button>
+       className="h-[48px] font-bold bg-[#007DC2]">{t("product.apply")}</Button>
     </div>
   );
 };

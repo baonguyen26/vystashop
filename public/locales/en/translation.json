@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Categories",
+    "gaming": {
+      "title": "Gaming",
+      "subcategories": {
+        "video-games": "Video Games",
+        "gaming-consoles": "Gaming Consoles",
+        "gaming-accessories": "Gaming Accessories"
+      }
+    },
+    "entertainment": {
+      "title": "Music, Movies & TV",
+      "subcategories": {
+        "music": "Music",
+        "movies-series": "Movies & Series"
+      }
+    },
+    "electronics": {
+      "title": "Electronics",
+      "subcategories": {
+        "computers-accessories": "Computers & Accessories",
+        "audio-video": "Audio & Video",
+        "cameras-photography": "Cameras & Photography",
+        "phones": "Phones & Accessories",
+        "tablets": "Tablets",
+        "appliances": "Home Appliances",
+        "kitchen-electronics": "Kitchen Electronics",
+        "smart-home": "Smart Home",
+        "personal-care-electronics": "Personal Care Electronics"
+      }
+    },
+    "toys": {
+      "title": "Toys & Games",
+      "subcategories": {
+        "indoor-toys": "Indoor Toys",
+        "outdoor-toys": "Outdoor Toys"
+      }
+    },
+    "hobby": {
+      "title": "Hobby & Party",
+      "subcategories": {
+        "hobbies-crafts": "Hobbies & Crafts",
+        "party-costumes": "Party Supplies & Costumes"
+      }
+    },
+    "baby": {
+      "title": "Baby & Child",
+      "subcategories": {
+        "baby-fashion": "Baby & Children's Fashion",
+        "nursery-sleep": "Nursery & Sleep",
+        "baby-travel": "Travel & Transport",
+        "baby-safety": "Baby Safety",
+        "baby-care": "Baby Care",
+        "baby-food": "Baby Food",
+        "baby-toys": "Baby Toys"
+      }
+    },
+    "health": {
+      "title": "Health & Beauty",
+      "subcategories": {
+        "perfume": "Perfume & Fragrances",
+        "personal-care": "Personal Care",
+        "cosmetics-skincare": "Cosmetics & Skincare",
+        "beauty-gift-sets": "Gift Sets",
+        "adult-products": "Adult Products"
+      }
+    },
+    "sports": {
+      "title": "Sports & Outdoors",
+      "subcategories": {
+        "sportswear": "Sportswear",
+        "sports-equipment": "Sports Equipment",
+        "outdoor-recreation": "Outdoor Recreation",
+        "travel-gear": "Travel Gear",
+        "bicycles": "Bicycles & Accessories"
+      }
+    },
+    "office": {
+      "title": "Office & School",
+      "subcategories": {
+        "office-supplies": "Office Supplies",
+        "school-supplies": "School Supplies",
+        "planners-calendars": "Planners & Calendars",
+        "journals-memory-books": "Journals & Memory Books",
+        "greeting-cards": "Greeting Cards",
+        "magazines-puzzle-books": "Magazines & Puzzle Books",
+        "photo-albums": "Photo Albums",
+        "gift-wrapping": "Gift Wrapping"
+      }
+    },
+    "food": {
+      "title": "Food & Drink",
+      "subcategories": {
+        "breakfast-snacks": "Breakfast & Snacks",
+        "condiments": "Condiments & Toppings",
+        "soups-preserves": "Soups & Preserves",
+        "sauces": "Sauces & Dressings",
+        "pasta-rice": "Pasta & Rice",
+        "sweets-cookies": "Sweets & Cookies",
+        "coffee-tea": "Coffee & Tea",
+        "beverages": "Beverages",
+        "sweeteners": "Sweeteners"
+      }
+    },
+    "home": {
+      "title": "Home & Kitchen",
+      "subcategories": {
+        "home-decor": "Home Decor",
+        "home-storage": "Home Storage",
+        "window-textiles": "Window Treatments & Textiles",
+        "furniture": "Furniture",
+        "kitchen-appliances": "Kitchen Appliances",
+        "cookware-dining": "Cookware & Dining",
+        "smart-home-devices": "Smart Home Devices"
+      }
+    },
+    "garden": {
+      "title": "Garden & DIY",
+      "subcategories": {
+        "diy-tools": "DIY Tools",
+        "sustainable-living": "Sustainable Living",
+        "home-security": "Home Security",
+        "kitchen-improvements": "Kitchen Improvements",
+        "bathroom-cleaning": "Bathroom & Cleaning",
+        "plants-gardening": "Plants & Gardening",
+        "garden-furniture": "Garden Furniture & Decor",
+        "garden-tools": "Garden Tools & Equipment"
+      }
+    },
+    "pets": {
+      "title": "Pets",
+      "subcategories": {
+        "cat-supplies": "Cat Supplies",
+        "dog-supplies": "Dog Supplies",
+        "fish-aquarium": "Fish & Aquarium"
+      }
+    },
+    "automotive": {
+      "title": "Automotive",
+      "subcategories": {
+        "car-maintenance": "Car Maintenance",
+        "car-parts": "Car Parts & Accessories",
+        "motorcycle-gear": "Motorcycle Gear",
+        "scooters": "Scooters & Accessories"
+      }
+    }
+  },
+  "founding_advisor": "Become a Founding Advisor to Icon & Save 60% ({{spots}} Spots Left)",
+  "find_brands": "Find your favourite brands easily in over {{shops}} shops",
+  "reason_brands": {
+    "content_1": "There's a reason why the {{brands}} that ",
+    "content_2": "YOU KNOW ",
+    "content_3": "are coming to ",
+    "content_4": "Vysta ",
+    "content_5": "for Google & Youtube Ads…"
+  },
+  "introduce_items": {
+    "search": {
+        "title": "Search",
+        "content": "Find your heart's desire by comparing prices from thousands of shops in one place"
+    },
+    "order": {
+        "title": "Order",
+        "content": "Order your product simply by selecting your preferred merchant at the lowest price"
+    },
+    "enjoy": {
+        "title": "Enjoy",
+        "content": "Enjoy your product knowing you've bought it at the best price"
+    }
+  },
+  "popular_brands": "Popular Brands",
+  "top_products": "Top Products",
+  "go_to_shop": "Go to shop",
+  "offers": "{{offers}} offers",
+  "impressum": "Impressum",
+  "faq": "FAQ",
+  "about_us": "About Us",
+  "merchants": "Merchants",
+  "brands": "Brands",
+  "our_services": "Our Services",
+  "comparison_shopping_platform": "Comparison Shopping Platform",
+  "managed_ads": "Managed Ads",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Register Webshop",
+  "contact_us": "Contact Us",
+  "privacy_policy": "Privacy Policy",
+  "terms_conditions": "Terms and Conditions",
+  "product": {
+    "result_summary": "{{current}} of {{total}} results from {{retailers}} retailers",
+    "num_of_shops": "Num of shops",
+    "num_of_brands": "Num of brands",
+    "filter": "Filter",
+    "clear_filter": "Clear Filter",
+    "apply": "Apply",
+    "brands": "Brands",
+    "shops": "Shops",
+    "discounts": "Discounts",
+    "sort_by": "Sort by",
+    "relevance": "Relevance",
+    "asc": "Price ascending",
+    "desc": "Price desending",
+    "new": "Newly Added"
+  }
+}
