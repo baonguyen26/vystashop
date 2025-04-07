@@ -2,6 +2,10 @@ import { CheckBox } from "../../input";
 import { checkboxItemProps } from "../../input";
 import { useState } from "react";
 import { InputSearchLocal } from "../../input";
+import { QUERY_KEY } from "src/constants/query-key";
+import { useEffect, useRef } from "react";
+import { useSearchParamsFilter } from "src/hooks";
+import { useSearchParams } from "react-router-dom";
 
 export type ShopFilterProps = {
   className?: string;
@@ -9,12 +13,41 @@ export type ShopFilterProps = {
 };
 
 export const ShopFilter = ({ className, items }: ShopFilterProps) => {
-    const [selectedValue, setSelectedValue] = useState<string | null>(null);
-    const [filteredItems, setFilteredItems] = useState<checkboxItemProps[]>(items);
-  
-    const handleChange = ({ value }: checkboxItemProps) => {
-      setSelectedValue((prev) => (prev === value ? null : value)); 
-    };
+     const [selectedValue, setSelectedValue] = useState<string | null>("");
+     const [filteredItems, setFilteredItems] = useState<checkboxItemProps[]>(items);
+   
+     const { setValues, deleteKey } = useSearchParamsFilter(QUERY_KEY.SHOP);
+     const [searchParams] = useSearchParams();
+   
+     const prevTitleRef = useRef<string | null>(searchParams.get(QUERY_KEY.TITLE));
+   
+     useEffect(() => {
+       const currentTitle = searchParams.get(QUERY_KEY.TITLE); 
+       const prevTitle = prevTitleRef.current; 
+   
+       if (currentTitle !== prevTitle) {
+         setSelectedValue(null);
+         deleteKey();
+       }
+       prevTitleRef.current = currentTitle;
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+     }, [searchParams]); 
+   
+     useEffect(() => {
+       if (selectedValue === null) {
+         deleteKey();
+       } else if (selectedValue !== "") {
+         setValues(selectedValue);
+       }
+       return () => {
+         deleteKey();
+       }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+     }, [selectedValue]);
+   
+     const handleChange = ({ value }: checkboxItemProps) => {
+       setSelectedValue((prev) => (prev === value ? null : value));
+     };
   
     return (
       <div  className={className}>
@@ -46,6 +79,4 @@ export const ShopFilter = ({ className, items }: ShopFilterProps) => {
       </div>
     );
   };
-  
-  
   
