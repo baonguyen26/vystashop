@@ -1,6 +1,6 @@
 import { LocalIcon } from "src/assets/local-icon";
 import {
-  CountriesDropdown,
+  // CountriesDropdown,
   LanguageDropdown,
   CategoriesDropdown,
 } from "src/components/ui";
@@ -61,7 +61,7 @@ export const AppHeader = () => {
               display(<CountryOverlay />);
             }}
              className={gapStyles({ mobile: isMobile })}>
-              <CountriesDropdown className="text-white pointer-events-none"/>
+              <LanguageDropdown className="text-white pointer-events-none"/>
             </div>
           </>
         ) : (
@@ -80,9 +80,9 @@ export const AppHeader = () => {
               <LanguageDropdown
                 className={"text-white"}
               />
-              <CountriesDropdown
+              {/* <CountriesDropdown
                 className={"text-white"}
-              />
+              /> */}
             </div>
           </>
         )}

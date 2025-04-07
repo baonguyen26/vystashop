@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Kategoriat",
+    "gaming": {
+      "title": "Pelit",
+      "subcategories": {
+        "video-games": "Videopelit",
+        "gaming-consoles": "Pelikonsole",
+        "gaming-accessories": "Pelikonsolin tarvikkeet"
+      }
+    },
+    "entertainment": {
+      "title": "Musiikki, Elokuvat & TV",
+      "subcategories": {
+        "music": "Musiikki",
+        "movies-series": "Elokuvat & Sarjat"
+      }
+    },
+    "electronics": {
+      "title": "Elektroniikka",
+      "subcategories": {
+        "computers-accessories": "Tietokoneet & Tarvikkeet",
+        "audio-video": "Ääni & Video",
+        "cameras-photography": "Kamerat & Valokuvaus",
+        "phones": "Puhelimet & Tarvikkeet",
+        "tablets": "Tabletit",
+        "appliances": "Kodinkoneet",
+        "kitchen-electronics": "Keittiöelektroniikka",
+        "smart-home": "Älykoti",
+        "personal-care-electronics": "Henkilökohtaisen hoidon elektroniikka"
+      }
+    },
+    "toys": {
+      "title": "Lelut & Pelit",
+      "subcategories": {
+        "indoor-toys": "Sisälelut",
+        "outdoor-toys": "Ulkolelut"
+      }
+    },
+    "hobby": {
+      "title": "Harrastus & Juhla",
+      "subcategories": {
+        "hobbies-crafts": "Harrastus & Käsityöt",
+        "party-costumes": "Juhla-asut & Tarvikkeet"
+      }
+    },
+    "baby": {
+      "title": "Vauva & Lapsi",
+      "subcategories": {
+        "baby-fashion": "Vauva & Lasten Muoti",
+        "nursery-sleep": "Vauvanhuone & Uni",
+        "baby-travel": "Matkustus & Kuljetus",
+        "baby-safety": "Vauvaturvallisuus",
+        "baby-care": "Vauvanhoito",
+        "baby-food": "Vauvanruoka",
+        "baby-toys": "Vauvilelut"
+      }
+    },
+    "health": {
+      "title": "Terveys & Kauneus",
+      "subcategories": {
+        "perfume": "Hajuvedet & Tuoksut",
+        "personal-care": "Henkilökohtainen hoito",
+        "cosmetics-skincare": "Kosmetiikka & Ihonhoito",
+        "beauty-gift-sets": "Kauneuslahjapakkaukset",
+        "adult-products": "Aikuisille tarkoitettuja tuotteita"
+      }
+    },
+    "sports": {
+      "title": "Urheilu & Ulkoilu",
+      "subcategories": {
+        "sportswear": "Urheiluvaatteet",
+        "sports-equipment": "Urheiluvälineet",
+        "outdoor-recreation": "Ulkoilu & Vapaa-aika",
+        "travel-gear": "Matkavarusteet",
+        "bicycles": "Polkupyörät & Tarvikkeet"
+      }
+    },
+    "office": {
+      "title": "Toimisto & Koulu",
+      "subcategories": {
+        "office-supplies": "Toimistotarvikkeet",
+        "school-supplies": "Koulutarvikkeet",
+        "planners-calendars": "Suunnittelijat & Kalenterit",
+        "journals-memory-books": "Muistikirjat & Muistokirjat",
+        "greeting-cards": "Onnittelukortit",
+        "magazines-puzzle-books": "Aikakauslehdet & Arvoituskirjat",
+        "photo-albums": "Valokuva-albumit",
+        "gift-wrapping": "Lahjapakkaus"
+      }
+    },
+    "food": {
+      "title": "Ruoat & Juomat",
+      "subcategories": {
+        "breakfast-snacks": "Aamiainen & Välipalat",
+        "condiments": "Mausteet & Lisukkeet",
+        "soups-preserves": "Keitot & Säilykkeet",
+        "sauces": "Kastikkeet & Majoneesit",
+        "pasta-rice": "Pasta & Riisi",
+        "sweets-cookies": "Makeiset & Keksit",
+        "coffee-tea": "Kahvi & Tee",
+        "beverages": "Juomat",
+        "sweeteners": "Makeutusaineet"
+      }
+    },
+    "home": {
+      "title": "Koti & Keittiö",
+      "subcategories": {
+        "home-decor": "Kodinsisustus",
+        "home-storage": "Kodinsäilytys",
+        "window-textiles": "Ikkunatekstiilit",
+        "furniture": "Huonekalut",
+        "kitchen-appliances": "Keittiölaitteet",
+        "cookware-dining": "Keittiövälineet & Ruokailu",
+        "smart-home-devices": "Älykodin laitteet"
+      }
+    },
+    "garden": {
+      "title": "Puutarha & Tee-Se-Itse",
+      "subcategories": {
+        "diy-tools": "Itse tehtävät työkalut",
+        "sustainable-living": "Kestävä elämä",
+        "home-security": "Kodin turvallisuus",
+        "kitchen-improvements": "Keittiön parannukset",
+        "bathroom-cleaning": "Kylpyhuoneen siivous",
+        "plants-gardening": "Kasvit & Puutarhanhoito",
+        "garden-furniture": "Puutarhakalusteet & Sisustus",
+        "garden-tools": "Puutarhatyökalut & Välineet"
+      }
+    },
+    "pets": {
+      "title": "Lemmikit",
+      "subcategories": {
+        "cat-supplies": "Kissan tarvikkeet",
+        "dog-supplies": "Koiran tarvikkeet",
+        "fish-aquarium": "Kala & Akvaario"
+      }
+    },
+    "automotive": {
+      "title": "Ajoneuvot",
+      "subcategories": {
+        "car-maintenance": "Auton huolto",
+        "car-parts": "Autonosat & Tarvikkeet",
+        "motorcycle-gear": "Moottoripyörävarusteet",
+        "scooters": "Skootterit & Tarvikkeet"
+      }
+    }
+  },
+  "founding_advisor": "Tule Iconin perustajaneuvonantajaksi ja säästä 60 % ({{spots}} paikkaa jäljellä)",
+  "find_brands": "Löydä suosikkibrändisi helposti yli {{shops}} kaupasta",
+  "reason_brands": {
+    "content_1": "On syy, miksi {{brands}}, jotka ",
+    "content_2": "TUNNET ",
+    "content_3": "tulevat ",
+    "content_4": "Vysta ",
+    "content_5": "Google- ja YouTube-mainoksille…"
+  },
+  "introduce_items": {
+    "search": {
+      "title": "Haku",
+      "content": "Löydä sydämesi halu vertaamalla hintoja tuhansista kaupoista yhdessä paikassa"
+    },
+    "order": {
+      "title": "Tilaus",
+      "content": "Tee tilauksesi valitsemalla suosikkikauppasi alimmalla hinnalla"
+    },
+    "enjoy": {
+      "title": "Nauti",
+      "content": "Nauti tuotteestasi tietäen, että ostit sen parhaalla hinnalla"
+    }
+  },
+  "popular_brands": "Suositut brändit",
+  "top_products": "Top-tuotteet",
+  "go_to_shop": "Mene kauppaan",
+  "offers": "{{offers}} tarjoukset",
+  "impressum": "Impressum",
+  "faq": "UKK",
+  "about_us": "Tietoa meistä",
+  "merchants": "Kauppiaat",
+  "brands": "Brändit",
+  "our_services": "Palvelumme",
+  "comparison_shopping_platform": "Vertailukauppapaikka",
+  "managed_ads": "Hallinnoidut mainokset",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Rekisteröi verkkokauppa",
+  "contact_us": "Ota yhteyttä",
+  "privacy_policy": "Tietosuojakäytäntö",
+  "terms_conditions":"Ehdot ja ehdot",
+  "product": {
+    "result_summary": "{{current}} / {{total}} tulosta {{retailers}} jälleenmyyjältä",
+    "num_of_shops": "Kauppojen määrä",
+    "num_of_brands": "Brändien määrä",
+    "filter": "Suodatin",
+    "clear_filter": "Tyhjennä suodatin",
+    "apply": "Käytä",
+    "brands": "Brändit",
+    "shops": "Kaupat",
+    "discounts": "Alennukset",
+    "sort_by": "Järjestä",
+    "relevance": "Osuvuus",
+    "asc": "Hinta nouseva",
+    "desc": "Hinta laskeva",
+    "new": "Äskettäin lisätty"
+  }
+}

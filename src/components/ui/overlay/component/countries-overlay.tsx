@@ -1,10 +1,13 @@
 import { LocalIcon } from "src/assets/local-icon";
-import { CountriesDropdown, LanguageDropdown } from "../../dropdown";
+import {  LanguageDropdown } from "../../dropdown";
 import { Button } from "../../button";
 import { useOverlay } from "../use-overlay";
+import { useTranslation } from "react-i18next";
 
 export const CountryOverlay = () => {
   const { dismiss } = useOverlay();
+
+  const { t  } = useTranslation();
 
   return (
     <div className="flex w-full flex-col justify-center gap-[16px] rounded-[16px] h-[300px] px-[20px] bg-white">
@@ -17,7 +20,7 @@ export const CountryOverlay = () => {
       >
         <LocalIcon iconName="ic_cancel" />
       </div>
-      <div className="flex items-center gap-[10px]">
+      {/* <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon
             iconName="ic_location"
@@ -31,7 +34,7 @@ export const CountryOverlay = () => {
           arrowType="black"
           className={"flex-grow h-full border-1 border-gray-400 rounded-[8px]"}
         />
-      </div>
+      </div> */}
       <div className="flex items-center gap-[10px]">
         <div className="flex items-center justify-center w-[54px] h-[54px] rounded-[4px] bg-[#007DC2]">
           <LocalIcon
@@ -51,7 +54,7 @@ export const CountryOverlay = () => {
           e.stopPropagation();
           dismiss();
         }}
-       className="h-[48px] font-bold bg-[#007DC2]">Apply</Button>
+       className="h-[48px] font-bold bg-[#007DC2]">{t("product.apply")}</Button>
     </div>
   );
 };

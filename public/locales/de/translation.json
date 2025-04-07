@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Kategorien",
+    "gaming": {
+      "title": "Gaming",
+      "subcategories": {
+        "video-games": "Videospiele",
+        "gaming-consoles": "Spielkonsolen",
+        "gaming-accessories": "Gaming-Zubehör"
+      }
+    },
+    "entertainment": {
+      "title": "Musik, Filme & TV",
+      "subcategories": {
+        "music": "Musik",
+        "movies-series": "Filme & Serien"
+      }
+    },
+    "electronics": {
+      "title": "Elektronik",
+      "subcategories": {
+        "computers-accessories": "Computer & Zubehör",
+        "audio-video": "Audio & Video",
+        "cameras-photography": "Kameras & Fotografie",
+        "phones": "Telefone & Zubehör",
+        "tablets": "Tablets",
+        "appliances": "Haushaltsgeräte",
+        "kitchen-electronics": "Küchengeräte",
+        "smart-home": "Smart Home",
+        "personal-care-electronics": "Elektronik für die persönliche Pflege"
+      }
+    },
+    "toys": {
+      "title": "Spielzeug & Spiele",
+      "subcategories": {
+        "indoor-toys": "Indoor-Spielzeug",
+        "outdoor-toys": "Outdoor-Spielzeug"
+      }
+    },
+    "hobby": {
+      "title": "Hobby & Party",
+      "subcategories": {
+        "hobbies-crafts": "Hobbys & Basteln",
+        "party-costumes": "Partybedarf & Kostüme"
+      }
+    },
+    "baby": {
+      "title": "Baby & Kind",
+      "subcategories": {
+        "baby-fashion": "Baby- & Kinderbekleidung",
+        "nursery-sleep": "Kinderzimmer & Schlafen",
+        "baby-travel": "Reisen & Transport",
+        "baby-safety": "Babysicherheit",
+        "baby-care": "Baby Pflege",
+        "baby-food": "Babynahrung",
+        "baby-toys": "Babyspielzeug"
+      }
+    },
+    "health": {
+      "title": "Gesundheit & Schönheit",
+      "subcategories": {
+        "perfume": "Parfüm & Düfte",
+        "personal-care": "Körperpflege",
+        "cosmetics-skincare": "Kosmetik & Hautpflege",
+        "beauty-gift-sets": "Geschenksets für Schönheit",
+        "adult-products": "Produkte für Erwachsene"
+      }
+    },
+    "sports": {
+      "title": "Sport & Outdoor",
+      "subcategories": {
+        "sportswear": "Sportbekleidung",
+        "sports-equipment": "Sportgeräte",
+        "outdoor-recreation": "Outdoor Freizeit",
+        "travel-gear": "Reisegepäck",
+        "bicycles": "Fahrräder & Zubehör"
+      }
+    },
+    "office": {
+      "title": "Büro & Schule",
+      "subcategories": {
+        "office-supplies": "Bürobedarf",
+        "school-supplies": "Schulbedarf",
+        "planners-calendars": "Planer & Kalender",
+        "journals-memory-books": "Notizbücher & Erinnerungsalben",
+        "greeting-cards": "Grußkarten",
+        "magazines-puzzle-books": "Zeitschriften & Rätselhefte",
+        "photo-albums": "Fotoalben",
+        "gift-wrapping": "Geschenkverpackung"
+      }
+    },
+    "food": {
+      "title": "Essen & Trinken",
+      "subcategories": {
+        "breakfast-snacks": "Frühstück & Snacks",
+        "condiments": "Gewürze & Toppings",
+        "soups-preserves": "Suppen & Konserven",
+        "sauces": "Saucen & Dressings",
+        "pasta-rice": "Pasta & Reis",
+        "sweets-cookies": "Süßigkeiten & Kekse",
+        "coffee-tea": "Kaffee & Tee",
+        "beverages": "Getränke",
+        "sweeteners": "Süßstoffe"
+      }
+    },
+    "home": {
+      "title": "Haus & Küche",
+      "subcategories": {
+        "home-decor": "Dekoration",
+        "home-storage": "Haushaltsorganisation",
+        "window-textiles": "Fensterbehandlungen & Textilien",
+        "furniture": "Möbel",
+        "kitchen-appliances": "Küchengeräte",
+        "cookware-dining": "Kochen & Speisen",
+        "smart-home-devices": "Smart Home Geräte"
+      }
+    },
+    "garden": {
+      "title": "Garten & Heimwerken",
+      "subcategories": {
+        "diy-tools": "Werkzeuge für Heimwerker",
+        "sustainable-living": "Nachhaltiges Leben",
+        "home-security": "Haussicherheit",
+        "kitchen-improvements": "Küchenverbesserungen",
+        "bathroom-cleaning": "Bad & Reinigung",
+        "plants-gardening": "Pflanzen & Gartenarbeit",
+        "garden-furniture": "Gartenmöbel & Dekor",
+        "garden-tools": "Gartenwerkzeuge & Ausrüstung"
+      }
+    },
+    "pets": {
+      "title": "Haustiere",
+      "subcategories": {
+        "cat-supplies": "Katzenbedarf",
+        "dog-supplies": "Hundebedarf",
+        "fish-aquarium": "Fisch & Aquarium"
+      }
+    },
+    "automotive": {
+      "title": "Automobil",
+      "subcategories": {
+        "car-maintenance": "Auto Wartung",
+        "car-parts": "Auto Teile & Zubehör",
+        "motorcycle-gear": "Motorrad Zubehör",
+        "scooters": "Roller & Zubehör"
+      }
+    }
+  },
+  "founding_advisor": "Werden Sie ein Gründungsberater für Icon und sparen Sie 60 % ({{spots}} Plätze übrig)",
+  "find_brands": "Finden Sie Ihre Lieblingsmarken einfach in über {{shops}} Geschäften",
+  "reason_brands": {
+    "content_1": "Es gibt einen Grund, warum die {{brands}}, die ",
+    "content_2": "SIE KENNEN, ",
+    "content_3": "zu ",
+    "content_4": "Vysta ",
+    "content_5": "für Google- und YouTube-Anzeigen kommen …"
+  },
+  "introduce_items": {
+    "search": {
+      "title": "Suche",
+      "content": "Finden Sie Ihr Herzverlangen, indem Sie Preise aus Tausenden von Geschäften an einem Ort vergleichen"
+    },
+    "order": {
+      "title": "Bestellen",
+      "content": "Bestellen Sie Ihr Produkt einfach, indem Sie den bevorzugten Händler zum niedrigsten Preis auswählen"
+    },
+    "enjoy": {
+      "title": "Genießen",
+      "content": "Genießen Sie Ihr Produkt, in dem Wissen, dass Sie es zum besten Preis gekauft haben"
+    }
+  },
+  "popular_brands": "Beliebte Marken",
+  "top_products": "Top Produkte",
+  "go_to_shop": "Zum Shop",
+  "offers": "{{offers}} Angebote",
+  "impressum": "Impressum",
+  "faq": "FAQ",
+  "about_us": "Über uns",
+  "merchants": "Händler",
+  "brands": "Marken",
+  "our_services": "Unsere Dienstleistungen",
+  "comparison_shopping_platform": "Vergleichs-Shopping-Plattform",
+  "managed_ads": "Verwaltete Anzeigen",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Webshop registrieren",
+  "contact_us": "Kontaktieren Sie uns",
+  "privacy_policy": "Datenschutzerklärung",
+  "terms_conditions": "Allgemeine Geschäftsbedingungen",
+  "product": {
+    "result_summary": "{{current}} von {{total}} Ergebnissen von {{retailers}} Einzelhändlern",
+    "num_of_shops": "Anzahl der Geschäfte",
+    "num_of_brands": "Anzahl der Marken",
+    "filter": "Filter",
+    "clear_filter": "Filter zurücksetzen",
+    "apply": "Anwenden",
+    "brands": "Marken",
+    "shops": "Shops",
+    "discounts": "Rabatte",
+    "sort_by": "Sortieren nach",
+    "relevance": "Relevanz",
+    "asc": "Preis aufsteigend",
+    "desc": "Preis absteigend",
+    "new": "Neu hinzugefügt"
+  }
+}
