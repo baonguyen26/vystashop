@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
 import { categories } from "src/constants/category-properties";
+import { useCategoryContext } from "src/stores/context/CategoryContext";
 
 export const CategoryMobile = ({ onClose }: { onClose: () => void }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const { selectedCategoryName, setSelectedCategoryName } =
+    useCategoryContext();
   const [viewingSubcategory, setViewingSubcategory] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (selectedCategoryName) {
+      setViewingSubcategory(true);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -13,11 +24,25 @@ export const CategoryMobile = ({ onClose }: { onClose: () => void }) => {
     };
   }, []);
 
+  const handleCategoryClick = (categoryName: string) => {
+    setSelectedCategoryName(categoryName);
+    setViewingSubcategory(true);
+  };
+
+  const handleSubcategoryClick = (subcategoryId: string) => {
+    navigate(`/c/${subcategoryId.toLowerCase()}`);
+    onClose();
+  };
+
+  const handleBack = () => {
+    setViewingSubcategory(false);
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col category-section">
       <div className="flex items-center justify-between px-4 py-2">
         {viewingSubcategory ? (
-          <button onClick={() => setViewingSubcategory(false)}>
+          <button onClick={handleBack}>
             <LocalIcon
               className="rotate-180"
               iconName="ic_arrow_category"
@@ -46,11 +71,10 @@ export const CategoryMobile = ({ onClose }: { onClose: () => void }) => {
             {categories.map((category) => (
               <div
                 key={category.id}
-                className="flex gap-5 py-2 items-center border-b border-gray-300"
-                onClick={() => {
-                  setSelectedCategory(category.name);
-                  setViewingSubcategory(true);
-                }}
+                className={`flex gap-5 py-2 items-center border-b border-gray-300 cursor-pointer ${
+                  selectedCategoryName === category.name ? "bg-gray-100" : ""
+                }`}
+                onClick={() => handleCategoryClick(category.name)}
               >
                 {category.icon}
                 {category.name}
@@ -65,13 +89,16 @@ export const CategoryMobile = ({ onClose }: { onClose: () => void }) => {
           </div>
         ) : (
           <div className="py-2">
-            <h5 className="font-bold text-sm mb-2 mt-4">{selectedCategory}</h5>
+            <h5 className="font-bold text-sm mb-2 mt-4">
+              {selectedCategoryName}
+            </h5>
             {categories
-              .find((cat) => cat.name === selectedCategory)
+              .find((cat) => cat.name === selectedCategoryName)
               ?.subcategories.map((sub) => (
                 <div
                   key={sub.id}
-                  className="p-3 border-b border-gray-300"
+                  className="p-3 border-b border-gray-300 cursor-pointer hover:underline hover:text-blue-400"
+                  onClick={() => handleSubcategoryClick(sub.id)}
                 >
                   {sub.name}
                 </div>

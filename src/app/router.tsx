@@ -26,6 +26,13 @@ export const createRouter = () => {
             return { Component: ProductResultRouter };
           },
         },
+        {
+          path: "c/:category",
+          lazy: async () => {
+            const { ProductResultRouter } = await import("./routes/app/product-result");
+            return { Component: ProductResultRouter };
+          },
+        }
       ],
     },
     {

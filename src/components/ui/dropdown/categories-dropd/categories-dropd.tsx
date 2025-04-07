@@ -1,14 +1,27 @@
 import { useEffect, useState } from "react";
 import { LocalIcon } from "src/assets/local-icon";
-import { CategoryDesktop } from "src/components/widgets/category/category-section";
+import { CategoryDesktop } from "src/components/widgets/category/category-desktop";
 import { useMediaQuery } from "react-responsive";
 import { CategoryMobile } from "src/components/widgets/category/category-mobile";
+import { CategoryContext } from "src/stores/context/CategoryContext";
 
 const categoryEventTarget = new EventTarget();
 
 export const CategoriesDropdown = () => {
   const [selectedCategory, setSelectedCategory] = useState<boolean>(false);
   const isMobile = useMediaQuery({ query: "(max-width: 900px)" });
+
+  const [selectedCategoryName, setSelectedCategoryName] = useState<
+    string | null
+  >(localStorage.getItem("selectedCategory"));
+
+  useEffect(() => {
+    if (selectedCategoryName) {
+      localStorage.setItem("selectedCategory", selectedCategoryName);
+    } else {
+      localStorage.removeItem("selectedCategory");
+    }
+  }, [selectedCategoryName]);
 
   const toggleExpanded = () => {
     if (!selectedCategory) {
@@ -35,7 +48,9 @@ export const CategoriesDropdown = () => {
   }, []);
 
   return (
-    <>
+    <CategoryContext.Provider
+      value={{ selectedCategoryName, setSelectedCategoryName }}
+    >
       {isMobile ? (
         <div>
           <div
@@ -73,10 +88,10 @@ export const CategoriesDropdown = () => {
           {isMobile ? (
             <CategoryMobile onClose={() => setSelectedCategory(false)} />
           ) : (
-            <CategoryDesktop />
+            <CategoryDesktop onClose={() => setSelectedCategory(false)} />
           )}
         </div>
       )}
-    </>
+    </CategoryContext.Provider>
   );
 };
