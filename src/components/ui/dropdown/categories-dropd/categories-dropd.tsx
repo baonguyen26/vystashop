@@ -69,7 +69,7 @@ export const CategoriesDropdown = () => {
       ) : (
         <div
           onClick={toggleExpanded}
-          className="flex items-center gap-[16px] w-[143px] px-[15px] py-[10px] rounded-[46px] bg-[#00A1EA] hover:cursor-pointer category-section"
+          className="flex items-center gap-[16px] min:w-[143px] max:w-[160px] px-[15px] py-[10px] rounded-[46px] bg-[#00A1EA] hover:cursor-pointer category-section"
         >
           <LocalIcon
             iconName="ic_menu"
