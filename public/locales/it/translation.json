@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Categorie",
+    "gaming": {
+      "title": "Giochi",
+      "subcategories": {
+        "video-games": "Videogiochi",
+        "gaming-consoles": "Console da gioco",
+        "gaming-accessories": "Accessori per videogiochi"
+      }
+    },
+    "entertainment": {
+      "title": "Musica, Film & TV",
+      "subcategories": {
+        "music": "Musica",
+        "movies-series": "Film & Serie TV"
+      }
+    },
+    "electronics": {
+      "title": "Elettronica",
+      "subcategories": {
+        "computers-accessories": "Computer & Accessori",
+        "audio-video": "Audio & Video",
+        "cameras-photography": "Fotocamere & Fotografia",
+        "phones": "Telefoni & Accessori",
+        "tablets": "Tablet",
+        "appliances": "Elettrodomestici",
+        "kitchen-electronics": "Elettronica da cucina",
+        "smart-home": "Casa intelligente",
+        "personal-care-electronics": "Elettronica per la cura della persona"
+      }
+    },
+    "toys": {
+      "title": "Giocattoli & Giochi",
+      "subcategories": {
+        "indoor-toys": "Giocattoli per interni",
+        "outdoor-toys": "Giocattoli per esterni"
+      }
+    },
+    "hobby": {
+      "title": "Hobby & Festa",
+      "subcategories": {
+        "hobbies-crafts": "Hobby & Artigianato",
+        "party-costumes": "Festa & Costumi"
+      }
+    },
+    "baby": {
+      "title": "Bambino & Infanzia",
+      "subcategories": {
+        "baby-fashion": "Moda bambino & ragazzo",
+        "nursery-sleep": "Camera del bambino & Sonno",
+        "baby-travel": "Viaggio & Trasporto",
+        "baby-safety": "Sicurezza bambino",
+        "baby-care": "Cura del bambino",
+        "baby-food": "Alimenti per bambini",
+        "baby-toys": "Giocattoli per bambini"
+      }
+    },
+    "health": {
+      "title": "Salute & Bellezza",
+      "subcategories": {
+        "perfume": "Profumi",
+        "personal-care": "Cura della persona",
+        "cosmetics-skincare": "Cosmetici & Cura della pelle",
+        "beauty-gift-sets": "Set regalo bellezza",
+        "adult-products": "Prodotti per adulti"
+      }
+    },
+    "sports": {
+      "title": "Sport & Outdoor",
+      "subcategories": {
+        "sportswear": "Abbigliamento sportivo",
+        "sports-equipment": "Attrezzature sportive",
+        "outdoor-recreation": "Attività all'aperto",
+        "travel-gear": "Attrezzatura da viaggio",
+        "bicycles": "Biciclette & Accessori"
+      }
+    },
+    "office": {
+      "title": "Ufficio & Scuola",
+      "subcategories": {
+        "office-supplies": "Forniture per ufficio",
+        "school-supplies": "Forniture scolastiche",
+        "planners-calendars": "Planner & Calendari",
+        "journals-memory-books": "Diari & Libri dei ricordi",
+        "greeting-cards": "Biglietti di auguri",
+        "magazines-puzzle-books": "Riviste & Libri di puzzle",
+        "photo-albums": "Album fotografici",
+        "gift-wrapping": "Carta regalo"
+      }
+    },
+    "food": {
+      "title": "Cibo & Bevande",
+      "subcategories": {
+        "breakfast-snacks": "Colazione & Spuntini",
+        "condiments": "Condimenti & Salse",
+        "soups-preserves": "Zuppe & Conserve",
+        "sauces": "Salse",
+        "pasta-rice": "Pasta & Riso",
+        "sweets-cookies": "Dolci & Biscotti",
+        "coffee-tea": "Caffè & Tè",
+        "beverages": "Bevande",
+        "sweeteners": "Dolcificanti"
+      }
+    },
+    "home": {
+      "title": "Casa & Cucina",
+      "subcategories": {
+        "home-decor": "Decorazione casa",
+        "home-storage": "Storage casa",
+        "window-textiles": "Tessuti per finestre",
+        "furniture": "Mobili",
+        "kitchen-appliances": "Elettrodomestici da cucina",
+        "cookware-dining": "Utensili da cucina & Tavola",
+        "smart-home-devices": "Dispositivi smart home"
+      }
+    },
+    "garden": {
+      "title": "Giardino & Fai da te",
+      "subcategories": {
+        "diy-tools": "Attrezzi fai da te",
+        "sustainable-living": "Vita sostenibile",
+        "home-security": "Sicurezza domestica",
+        "kitchen-improvements": "Miglioramenti della cucina",
+        "bathroom-cleaning": "Bagno & Pulizia",
+        "plants-gardening": "Piante & Giardinaggio",
+        "garden-furniture": "Arredamento da giardino",
+        "garden-tools": "Attrezzi da giardino"
+      }
+    },
+    "pets": {
+      "title": "Animali Domestici",
+      "subcategories": {
+        "cat-supplies": "Accessori per gatti",
+        "dog-supplies": "Accessori per cani",
+        "fish-aquarium": "Pesci & Acquari"
+      }
+    },
+    "automotive": {
+      "title": "Automobili",
+      "subcategories": {
+        "car-maintenance": "Manutenzione auto",
+        "car-parts": "Parti auto & Accessori",
+        "motorcycle-gear": "Accessori moto",
+        "scooters": "Scooter"
+      }
+    }
+  },
+  "founding_advisor": "Diventa un Consulente Fondatore per Icon e Risparmia il 60% ({{spots}} Posti Rimasti)",
+  "find_brands": "Trova facilmente i tuoi marchi preferiti in oltre {{shops}} negozi",
+  "reason_brands": {
+    "content_1": "C'è un motivo per cui i {{brands}} che ",
+    "content_2": "CONOSCI ",
+    "content_3": "stanno venendo a ",
+    "content_4": "Vysta ",
+    "content_5": "per Google e YouTube Ads..."
+  },
+  "introduce_items": {
+    "search": {
+      "title": "Cerca",
+      "content": "Trova ciò che desideri confrontando i prezzi di migliaia di negozi in un unico posto"
+    },
+    "order": {
+      "title": "Ordina",
+      "content": "Ordina il tuo prodotto semplicemente selezionando il negoziante preferito al prezzo più basso"
+    },
+    "enjoy": {
+      "title": "Goditi",
+      "content": "Goditi il tuo prodotto sapendo di averlo acquistato al miglior prezzo"
+    }
+  },
+  "popular_brands": "Marche Popolari",
+  "top_products": "Prodotti Top",
+  "go_to_shop": "Vai al negozio",
+  "offers": "{{offers}} offerte",
+  "impressum": "Impressum",
+  "faq": "FAQ",
+  "about_us": "Chi Siamo",
+  "merchants": "Commercianti",
+  "brands": "Marchi",
+  "our_services": "I Nostri Servizi",
+  "comparison_shopping_platform": "Piattaforma di Shopping Comparativo",
+  "managed_ads": "Annunci Gestiti",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Registrati al Webshop",
+  "contact_us": "Contattaci",
+  "privacy_policy": "Informativa sulla privacy",
+  "terms_conditions": "Termini e condizioni",
+  "product": {
+    "result_summary": "{{current}} di {{total}} risultati da {{retailers}} rivenditori",
+    "num_of_shops": "Numero di negozi",
+    "num_of_brands": "Numero di marche",
+    "filter": "Filtro",
+    "clear_filter": "Cancella filtro",
+    "apply": "Applica",
+    "brands": "Marche",
+    "shops": "Negozi",
+    "discounts": "Sconti",
+    "sort_by": "Ordina per",
+    "relevance": "Rilevanza",
+    "asc": "Prezzo crescente",
+    "desc": "Prezzo decrescente",
+    "new": "Appena aggiunti"
+  }
+}

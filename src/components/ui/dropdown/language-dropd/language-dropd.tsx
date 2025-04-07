@@ -1,6 +1,7 @@
 import { LocalIcon } from "src/assets/local-icon";
 import { DropdownMenu } from "../dropdown-menu";
 import { languagesItems } from "src/constants/language";
+import { useTranslation } from "react-i18next";
 
 export const LanguageDropdown = ({
   className,
@@ -11,6 +12,8 @@ export const LanguageDropdown = ({
   arrowType?: "default" | "black";
   overlay?: boolean;
 }) => {
+  const { i18n } = useTranslation();
+
   return (
     <DropdownMenu
       arrowType={arrowType}
@@ -25,6 +28,7 @@ export const LanguageDropdown = ({
       }
       items={languagesItems}
       onChange={(item) => {
+        i18n.changeLanguage(item.value);
         // setValues(item.value);
         console.log(item);
       }}

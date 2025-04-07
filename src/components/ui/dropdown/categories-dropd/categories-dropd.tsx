@@ -3,10 +3,12 @@ import { LocalIcon } from "src/assets/local-icon";
 import { CategoryDesktop } from "src/components/widgets/category/category-section";
 import { useMediaQuery } from "react-responsive";
 import { CategoryMobile } from "src/components/widgets/category/category-mobile";
+import { useTranslation } from "react-i18next";
 
 const categoryEventTarget = new EventTarget();
 
 export const CategoriesDropdown = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<boolean>(false);
   const isMobile = useMediaQuery({ query: "(max-width: 900px)" });
 
@@ -60,7 +62,7 @@ export const CategoriesDropdown = () => {
             height={"auto"}
           />
           <span className="text-[16px] text-white font-[400] leading-[24px]">
-            Categories
+            {t('categories.title')}
           </span>
         </div>
       )}

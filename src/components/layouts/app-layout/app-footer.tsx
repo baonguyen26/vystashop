@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
 // import { CountriesDropdown } from "src/components/ui";
@@ -8,6 +9,12 @@ import {
 } from "src/constants/footer-content";
 
 export const AppFooter = () => {
+  const { t } = useTranslation();
+
+  const getTranslatedKey = (title: string) => {
+    return title.toLowerCase().replace(/\s+/g, '_');
+  };
+
   return (
     <footer className="bg-gray-100 ">
       <div className="w-[100%] py-5 md:py-13 flex flex-col justify-between px-[20px] md:px-[60px] md:flex-row lg:flex-row lg:px-[100px] max-w-[1440px] mx-auto">
@@ -15,15 +22,14 @@ export const AppFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
             {FIRST_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0">
+              <div className="pl-4 md:pl-0" key={index}>
                 <Link
                   to={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm"
-                  key={index}
                 >
-                  {item.title}
+                  {t(getTranslatedKey(item.title))}
                 </Link>
               </div>
             ))}
@@ -32,15 +38,14 @@ export const AppFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
             {SECOND_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0">
+              <div className="pl-4 md:pl-0" key={index}>
                 <Link
                   to={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm"
-                  key={index}
                 >
-                  {item.title}
+                  {t(getTranslatedKey(item.title))}
                 </Link>
               </div>
             ))}
@@ -86,7 +91,7 @@ export const AppFooter = () => {
             rel="noopener noreferrer"
             className="underline"
           >
-            Privacy Policy
+            {t("privacy_policy")}
           </Link>{" "}
           -
           <Link
@@ -95,7 +100,7 @@ export const AppFooter = () => {
             rel="noopener noreferrer"
             className="underline"
           >
-            Terms and Conditions
+            {t("terms_conditions")}
           </Link>
         </p>
       </div>

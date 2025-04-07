@@ -2,6 +2,7 @@ import { memo, useState } from "react";
 import { LocalIcon } from "src/assets/local-icon";
 import { IProduct } from "src/types/product.type";
 import { Button } from "../button";
+import { useTranslation } from "react-i18next";
 
 interface ProductCardProps {
   product: IProduct;
@@ -22,6 +23,8 @@ const ImageChecker = ({ url }: { url: string }) => {
 };
 
 const ProductCard = ({ product, className }: ProductCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={`snap-center flex-shrink-0 overflow-hidden flex flex-nowrap flex-col gap-[10px] ${className}`}
@@ -52,7 +55,7 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
           onClick={() => window.open(product.url, "_blank")}
         >
           <p className="text-[14px] sm:text-[16px] font-[500] leading-[16px]">
-            Go to shop
+            {t("go_to_shop")}
           </p>
           <span>
             <LocalIcon
@@ -62,9 +65,9 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
           </span>
         </Button>
 
-        <p className="w-[100%] flex items-center justify-between text-[12px] font-[700] text-[#2D9CDB]">
+        <p className="w-[100%] flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB]">
           <a href={product.url}>
-            <span>5 ofers</span>
+            <span>{t("offers", {offers: 5})}</span>
           </a>
           <a href={product.url}>
             <span>$434.99 - $513.99</span>

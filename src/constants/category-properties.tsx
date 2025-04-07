@@ -95,7 +95,7 @@ export const categories: Category[] = [
 
   {
     name: "Toys & Games",
-    id: "toys-games",
+    id: "toys",
     imageKey: CATEGORY_IMAGES.TOYS,
     icon: (
       <LocalImage
@@ -112,7 +112,7 @@ export const categories: Category[] = [
 
   {
     name: "Hobby & Party",
-    id: "hobby-party",
+    id: "hobby",
     imageKey: CATEGORY_IMAGES.HOBBY,
     icon: (
       <LocalImage
@@ -129,7 +129,7 @@ export const categories: Category[] = [
 
   {
     name: "Baby & Child",
-    id: "baby-child",
+    id: "baby",
     imageKey: CATEGORY_IMAGES.BABY,
     icon: (
       <LocalImage
@@ -151,7 +151,7 @@ export const categories: Category[] = [
 
   {
     name: "Health & Beauty",
-    id: "health-beauty",
+    id: "health",
     imageKey: CATEGORY_IMAGES.HEALTH,
     icon: (
       <LocalImage
@@ -170,7 +170,7 @@ export const categories: Category[] = [
   },
   {
     name: "Sports & Outdoors",
-    id: "sports-outdoors",
+    id: "sports",
     imageKey: CATEGORY_IMAGES.SPORTS,
     icon: (
       <LocalImage
@@ -190,7 +190,7 @@ export const categories: Category[] = [
 
   {
     name: "Office & School",
-    id: "office-school",
+    id: "office",
     imageKey: CATEGORY_IMAGES.OFFICE,
     icon: (
       <LocalImage
@@ -213,7 +213,7 @@ export const categories: Category[] = [
 
   {
     name: "Food & Drink",
-    id: "food-drink",
+    id: "food",
     imageKey: CATEGORY_IMAGES.FOOD,
     icon: (
       <LocalImage
@@ -237,7 +237,7 @@ export const categories: Category[] = [
 
   {
     name: "Home & Kitchen",
-    id: "home-kitchen",
+    id: "home",
     imageKey: CATEGORY_IMAGES.LIFESTYLE,
     icon: (
       <LocalImage
@@ -259,7 +259,7 @@ export const categories: Category[] = [
 
   {
     name: "Garden & DIY",
-    id: "garden-diy",
+    id: "garden",
     imageKey: CATEGORY_IMAGES.GARDEN,
     icon: (
       <LocalImage
