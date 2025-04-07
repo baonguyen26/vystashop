@@ -1,11 +1,11 @@
 export type BrandProperties = {
   brand_icon:
-    | "apple_brand"
-    | "nike_brand"
-    | "dyson_brand"
-    | "lego_brand"
-    | "aeg_brand"
-    | "michael_kors_brand";
+    | "ic_rothys"
+    | "ic_puravida"
+    | "ic_bestbuy"
+    | "ic_adidas"
+    | "ic_apple"
+    | "ic_nike";
   brand_name: string;
   brand_color: string;
   width: number;
@@ -14,45 +14,45 @@ export type BrandProperties = {
 
 export const BRAND_PROPERTIES: BrandProperties[] = [
   {
-    brand_icon: "apple_brand",
-    brand_name: "Apple",
+    brand_icon: "ic_rothys",
+    brand_name: "ROTHY'S",
     brand_color: "#EEEEEE",
-    width: 45,
+    width: 100,
     height: 50,
   },
   {
-    brand_icon: "nike_brand",
-    brand_name: "Nike",
+    brand_icon: "ic_puravida",
+    brand_name: "Puravida",
     brand_color: "#FCEBE5",
-    width: 125,
-    height: 45,
+    width: 140,
+    height: 25,
   },
   {
-    brand_icon: "dyson_brand",
-    brand_name: "Dyson",
+    brand_icon: "ic_bestbuy",
+    brand_name: "BEST BUY",
     brand_color: "#EEEEEE",
     width: 140,
     height: 55,
   },
   {
-    brand_icon: "lego_brand",
-    brand_name: "Lego",
+    brand_icon: "ic_adidas",
+    brand_name: "Adidas",
     brand_color: "#FCF7E5",
-    width: 56,
+    width: 80,
     height: 56,
   },
   {
-    brand_icon: "aeg_brand",
-    brand_name: "AEG",
+    brand_icon: "ic_apple",
+    brand_name: "Apple",
     brand_color: "#E5F1FC",
-    width: 83,
-    height: 31,
+    width: 120,
+    height: 60,
   },
   {
-    brand_icon: "michael_kors_brand",
-    brand_name: "Michael Kors",
+    brand_icon: "ic_nike",
+    brand_name: "Nike",
     brand_color: "#EEEEEE",
-    width: 173,
-    height: 18,
+    width: 180,
+    height: 40,
   },
 ];

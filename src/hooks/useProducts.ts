@@ -5,10 +5,10 @@ import { cleanUrl } from "src/utils/cn";
 
 export const fetchProducts = async (url: string): Promise<{ data: IProduct[]; total: number }> => {
     const response =  await apiClient.get<IProduct[]>(`${url}`, { withCredentials: false });
-    
+
     const totalUrl = cleanUrl(url);
     const total = await apiClient.get<IProduct[]>(`${totalUrl}`, { withCredentials: false });
-    
+
     return { data: response.data, total: total.data.length };
 };
 

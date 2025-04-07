@@ -35,12 +35,6 @@ import {
   ic_search_black,
   ic_search_blue,
   ic_uk,
-  apple_brand,
-  nike_brand,
-  dyson_brand,
-  lego_brand,
-  aeg_brand,
-  michael_kors_brand,
   facebook,
   instagram,
   linkedin,
@@ -48,7 +42,13 @@ import {
   google,
   arrow_icon,
   ic_close,
-  ic_arrow_category
+  ic_arrow_category,
+  ic_rothys,
+  ic_puravida,
+  ic_bestbuy,
+  ic_adidas,
+  ic_apple,
+  ic_nike,
 } from ".";
 
 const icon = {
@@ -86,12 +86,6 @@ const icon = {
   ic_search_black,
   ic_search_blue,
   ic_uk,
-  apple_brand,
-  nike_brand,
-  dyson_brand,
-  lego_brand,
-  aeg_brand,
-  michael_kors_brand,
   facebook,
   instagram,
   linkedin,
@@ -99,7 +93,13 @@ const icon = {
   google,
   arrow_icon,
   ic_close,
-  ic_arrow_category
+  ic_arrow_category,
+  ic_rothys,
+  ic_puravida,
+  ic_bestbuy,
+  ic_adidas,
+  ic_apple,
+  ic_nike,
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {

@@ -19,4 +19,5 @@ export interface IProduct {
     offerId: string;
     targetCountry: string;
     url: string;
+    category?: string;
 }
