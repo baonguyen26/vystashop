@@ -41,7 +41,7 @@ export const ProductsList = () => {
   const totalProducts = data?.total || 0;
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center">
       {isLoading ? (
         <Spinner />
       ) : products.length === 0 ? (
