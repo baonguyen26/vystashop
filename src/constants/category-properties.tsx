@@ -3,7 +3,7 @@ import { LocalImage } from "src/assets/local-image";
 
 export interface SubCategory {
   name: string;
-  id?: string;
+  id: string;
 }
 
 export interface Category {

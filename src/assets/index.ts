@@ -11,12 +11,6 @@ import ic_menu from "./ic-menu.svg?react";
 import ic_arrow_black from "./ic-arrow-black.svg?react";
 
 import arrow_icon from "./Arrow_left.svg?react";
-import apple_brand from "./apple_brand.svg?react";
-import nike_brand from "./nike_brand.svg?react";
-import dyson_brand from "./dyson_brand.svg?react";
-import lego_brand from "./lego_brand.svg?react";
-import aeg_brand from "./aeg_brand.svg?react";
-import michael_kors_brand from "./michael_kors_brand.svg?react";
 import facebook from "./facebook.svg?react";
 import instagram from "./instagram.svg?react";
 import twitter from "./twitter.svg?react";
@@ -48,9 +42,12 @@ import ic_sk from "./ic-sk.svg?react";
 import ic_es from "./ic-es.svg?react";
 import ic_se from "./ic-se.svg?react";
 import ic_ch from "./ic-ch.svg?react";
-
-
-
+import ic_rothys from "./ic-rothys.svg?react";
+import ic_puravida from "./ic-puravida.svg?react";
+import ic_bestbuy from "./ic-bestbuy.svg?react";
+import ic_adidas from "./ic-adidas.svg?react";
+import ic_apple from "./ic-apple.svg?react";
+import ic_nike from "./ic-nike.svg?react";
 
 export {
   ic_se,
@@ -88,19 +85,19 @@ export {
   ic_search_blue,
   ic_menu,
   arrow_icon,
-  apple_brand,
-  nike_brand,
-  dyson_brand,
-  lego_brand,
-  aeg_brand,
-  michael_kors_brand,
   facebook,
   instagram,
   twitter,
   linkedin,
   google,
   ic_close,
-  ic_arrow_category
+  ic_arrow_category,
+  ic_rothys,
+  ic_puravida,
+  ic_bestbuy,
+  ic_adidas,
+  ic_apple,
+  ic_nike,
 };
 
 //Category Image
