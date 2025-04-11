@@ -16,7 +16,6 @@ export const ProductResultMain = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const [isVisible, setIsVisible] = useState(false);
 
-
   return (
     <div className="w-full px-5">
       {isMobile ? (

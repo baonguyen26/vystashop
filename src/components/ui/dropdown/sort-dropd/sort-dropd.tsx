@@ -6,7 +6,7 @@ import { DropdownMenuItem } from "../dropdown-menu";
 import { useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 
-export const SortDropdown = ({className}:{className?: string}) => {
+export const SortDropdown = ({className, }:{className?: string}) => {
   const { setSearchParams } = useSearchParamsFilter(QUERY_KEY.SORT);
   const [searchParams] = useSearchParams();
   
@@ -45,6 +45,8 @@ export const SortDropdown = ({className}:{className?: string}) => {
       return prev;
     });
   };
+
+  
 
   return (
     <div className={`flex items-center gap-[10px] w-full mt-[20px] pb-[20px] ${className}`}>
