@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { LocalIcon } from "src/assets/local-icon";
 import { ProductCarousel } from "../ProductCarousel";
+import { useTranslation } from "react-i18next";
 
 export const TopProductSection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -17,10 +18,12 @@ export const TopProductSection = () => {
     }
   };
 
+   const { t } = useTranslation();
+
   return (
     <div className="w-[100%] px-[20px] md:px-[60px] lg:px-[100px] flex flex-col gap-[20px] max-w-[1440px] mx-auto">
       <div className="w-[100%] flex items-center justify-between">
-        <h2 className="text-[16px] sm:text-[24px] font-[700]">Top Products</h2>
+        <h2 className="text-[16px] sm:text-[24px] font-[700]">{t("top_products")}</h2>
         <div className="flex items-center gap-[20px]">
           <span onClick={scrollLeft}>
             <LocalIcon

@@ -16,5 +16,5 @@ export const boxIntroduceItems: BoxIntroduceProps[] = [
         icon: <LocalIcon iconName="ic_enjoy_blue" width={"auto"} height={"auto"} />,
         title:"Enjoy",
         text:"Enjoy your product knowing you've bought it at the best price"
-    }, 
-]     
+    },
+]

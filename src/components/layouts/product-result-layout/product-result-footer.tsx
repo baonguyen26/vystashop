@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
 import {
@@ -7,6 +8,12 @@ import {
 } from "src/constants/footer-content";
 
 export const ProductResultFooter = () => {
+  const { t } = useTranslation();
+
+  const getTranslatedKey = (title: string) => {
+    return title.toLowerCase().replace(/\s+/g, '_');
+  };
+
   return (
     <footer>
       <div className="py-13 px-[20px] md:px-[60px] lg:px-[100px] flex flex-col md:flex-row lg:flex-row justify-between">
@@ -21,7 +28,7 @@ export const ProductResultFooter = () => {
                   rel="noopener noreferrer"
                   className="text-sm"
                 >
-                  {item.title}
+                  {t(getTranslatedKey(item.title))}
                 </Link>
               </div>
             ))}
@@ -37,7 +44,7 @@ export const ProductResultFooter = () => {
                   rel="noopener noreferrer"
                   className="text-sm"
                 >
-                  {item.title}
+                  {t(getTranslatedKey(item.title))}
                 </Link>
               </div>
             ))}

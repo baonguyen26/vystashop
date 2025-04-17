@@ -1,10 +1,10 @@
 import { CheckBox, checkboxItemProps } from "../../input";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { InputSearchLocal } from "../../input";
 import { QUERY_KEY } from "src/constants/query-key";
 import { useSearchParamsFilter } from "src/hooks";
 import { useSearchParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export type BrandFilterProps = {
   items: checkboxItemProps[];
@@ -66,10 +66,12 @@ export const BrandFilter = ({
     [deleteKey, setValues]
   );
 
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <div>
-        <h1 className="text-[16px] font-[600] leading-[24px]">Brands</h1>
+        <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.brands")}</h1>
         <InputSearchLocal
           items={items}
           className="w-[208px] h-[36px] px-[6px]"
@@ -77,7 +79,7 @@ export const BrandFilter = ({
         />
       </div>
       <span className="text-[10px] font-[500] leading-[15px]">
-        Number of brands found: {filteredItems.length}
+        {t("product.num_of_brands")}: {filteredItems.length}
       </span>
       <div className="flex flex-col max-h-[170px] overflow-y-scroll">
         {filteredItems.map((item) => (

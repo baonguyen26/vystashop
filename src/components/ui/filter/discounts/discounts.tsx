@@ -1,6 +1,8 @@
 import { useSearchParamsFilter } from "src/hooks";
 import { QUERY_KEY } from "src/constants/query-key";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export type DiscountFilterItem = {
   value: string;
@@ -55,9 +57,11 @@ export const DiscountsFilter = ({
     }
   }, [selectedValueDefault]);
 
+  const { t } = useTranslation();
+
   return (
     <div className={`flex flex-col items-start gap-3 ${className}`}>
-      <h1 className="text-[16px] font-[600] leading-[24px]">Discounts</h1>
+      <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.discounts")}</h1>
       <div className="flex flex-col items-start gap-3">
         {items.map((item) => (
           <button

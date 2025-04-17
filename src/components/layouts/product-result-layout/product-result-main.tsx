@@ -11,10 +11,13 @@ import { ProductsList } from "src/features/result-feature";
 import { discountFilterAttribute } from "src/constants/discount-filter";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const ProductResultMain = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const [isVisible, setIsVisible] = useState(false);
+
+  const { t } = useTranslation();
 
   return (
     <div className="w-full px-5">
@@ -24,7 +27,7 @@ export const ProductResultMain = () => {
             <div className="flex flex-col items-start flex-nowrap w-full gap-[20px]">
               <div className="flex justify-between w-full py-[20px] border-b-1 border-gray-700">
                 <span className="text-[14px] font-[300]">
-                  ... of ... results from ... retailers
+                  {t("product.result_summary", {current: "...", total: "...", retailers: "..."})}
                 </span>
                 <button
                   onClick={(e) => {
@@ -33,7 +36,7 @@ export const ProductResultMain = () => {
                   }}
                   className="text-[14px] text-cyan-500 font-bold "
                 >
-                  Filter
+                  {t("product.filter")}
                 </button>
               </div>
               <ProductsList />

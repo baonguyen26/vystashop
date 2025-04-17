@@ -2,6 +2,7 @@ import { LocalIcon } from "src/assets/local-icon";
 import { BoxIntroduce, InputSearch } from "../ui";
 import { boxIntroduceItems } from "src/constants/box-intro";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
   const navigate = useNavigate();
@@ -10,6 +11,8 @@ export const HeroSection = () => {
     if (!value) return;
     navigate("/results?title=" + value);
   };
+
+  const { t } = useTranslation();
 
   return (
     <section className="relative flex flex-col items-center justify-center self-stretch bg-[#212225] px-[160px] py-[60px]">
@@ -24,24 +27,25 @@ export const HeroSection = () => {
                 height={"auto"}
               />
               <span className="text-[16px] font-[400] leading-[25px] sm:leading-[33.6px] text-white">
-                Become a Founding Advisor to Icon & Save 60% (4 Spots Left)
+                {t('founding_advisor', {spots: 4})}
               </span>
             </div>
             <span className="w-screen px-4 text-left text-[40px] font-[800] leading-[55px] tracking-[-2px] text-white sm:w-full lg:w-[825px] lg:px-0 lg:text-[50px] lg:text-center">
-              Find your favourite brands easily in over 4,500 shops
+              {t("find_brands", {shops: "4,500"})}
             </span>
             <span className="w-screen px-4 lg:px-0 text-left text-[18px] font-[400] leading-[24px] text-white sm:w-full lg:text-center">
-              There's a reason why the 7 & 8 figure brands that
-              <span className="font-[700] text-[#00A1EA]"> YOU KNOW </span>
-              are coming to
-              <span className="font-[700] text-[#00A1EA]"> Vysta </span>
-              for Google & Youtube Ads…
+            {t("reason_brands.content_1", {brands: "7 & 8 figure"})}
+              <span className="font-[700] text-[#00A1EA]"> {t("reason_brands.content_2")} </span>
+              {t("reason_brands.content_3")}
+              <span className="font-[700] text-[#00A1EA]"> {t("reason_brands.content_4")} </span>
+              {t("reason_brands.content_5")}
             </span>
           </div>
           <div className="flex justify-center w-full max-[640px]:px-2 max-[640px]:mt-[-50px]">
             <InputSearch
               className="max-[640px]:rounded-[8px] sm:w-[586px]"
               onClickHandler={handleSearch}
+              placeholder={t("introduce_items.search.title")}
             />
           </div>
         </div>
@@ -55,6 +59,8 @@ export const HeroSection = () => {
                   ? "sm:col-span-2 sm:justify-self-center lg:col-span-1"
                   : ""
               }
+              title={t(`introduce_items.${item.title.toLowerCase()}.title`)}
+              text={t(`introduce_items.${item.title.toLowerCase()}.content`)}
             />
           ))}
         </div>

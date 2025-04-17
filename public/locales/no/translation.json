@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "title": "Kategorier",
+    "gaming": {
+      "title": "Spill",
+      "subcategories": {
+        "video-games": "Videospill",
+        "gaming-consoles": "Spillkonsoller",
+        "gaming-accessories": "Spilltilbehør"
+      }
+    },
+    "entertainment": {
+      "title": "Musikk, Film & TV",
+      "subcategories": {
+        "music": "Musikk",
+        "movies-series": "Film & TV-serier"
+      }
+    },
+    "electronics": {
+      "title": "Elektronikk",
+      "subcategories": {
+        "computers-accessories": "Datamaskiner & Tilbehør",
+        "audio-video": "Audio & Video",
+        "cameras-photography": "Kamera & Fotografi",
+        "phones": "Telefoner & Tilbehør",
+        "tablets": "Tabletter",
+        "appliances": "Hvitevarer",
+        "kitchen-electronics": "Kjøkkenutstyr",
+        "smart-home": "Smart hjem",
+        "personal-care-electronics": "Elektronikk for personlig pleie"
+      }
+    },
+    "toys": {
+      "title": "Leker & Spill",
+      "subcategories": {
+        "indoor-toys": "Innendørsleker",
+        "outdoor-toys": "Uteleker"
+      }
+    },
+    "hobby": {
+      "title": "Hobby & Fest",
+      "subcategories": {
+        "hobbies-crafts": "Hobbyer & Håndverk",
+        "party-costumes": "Fest & Kostymer"
+      }
+    },
+    "baby": {
+      "title": "Baby & Barn",
+      "subcategories": {
+        "baby-fashion": "Baby & Barn Mode",
+        "nursery-sleep": "Barnerom & Søvn",
+        "baby-travel": "Reise & Transport",
+        "baby-safety": "Baby Sikkerhet",
+        "baby-care": "Babypleie",
+        "baby-food": "Babymat",
+        "baby-toys": "Babyleker"
+      }
+    },
+    "health": {
+      "title": "Helse & Skjønnhet",
+      "subcategories": {
+        "perfume": "Parfyme & Dufter",
+        "personal-care": "Personlig pleie",
+        "cosmetics-skincare": "Kosmetikk & Hudpleie",
+        "beauty-gift-sets": "Skjønnhetsgavepakker",
+        "adult-products": "Voksenprodukter"
+      }
+    },
+    "sports": {
+      "title": "Sport & Utendørs",
+      "subcategories": {
+        "sportswear": "Sportsbekledning",
+        "sports-equipment": "Sportsutstyr",
+        "outdoor-recreation": "Utendørsaktiviteter",
+        "travel-gear": "Reiseutstyr",
+        "bicycles": "Sykkler & Tilbehør"
+      }
+    },
+    "office": {
+      "title": "Kontor & Skole",
+      "subcategories": {
+        "office-supplies": "Kontorrekvisita",
+        "school-supplies": "Skoleutstyr",
+        "planners-calendars": "Planleggere & Kalendre",
+        "journals-memory-books": "Dagbøker & Minnesbøker",
+        "greeting-cards": "Gratulasjonskort",
+        "magazines-puzzle-books": "Magasiner & Puslespillbøker",
+        "photo-albums": "Fotoalbum",
+        "gift-wrapping": "Gaveinnpakning"
+      }
+    },
+    "food": {
+      "title": "Mat & Drikke",
+      "subcategories": {
+        "breakfast-snacks": "Frokost & Snacks",
+        "condiments": "Krydder & Sauser",
+        "soups-preserves": "Supper & Hermetikk",
+        "sauces": "Sauser",
+        "pasta-rice": "Pasta & Ris",
+        "sweets-cookies": "Søtsaker & Kjeks",
+        "coffee-tea": "Kaffe & Te",
+        "beverages": "Drikkevarer",
+        "sweeteners": "Søtningsmidler"
+      }
+    },
+    "home": {
+      "title": "Hjem & Kjøkken",
+      "subcategories": {
+        "home-decor": "Hjemmeinnredning",
+        "home-storage": "Hjemmeoppbevaring",
+        "window-textiles": "Vindu-tekstiler",
+        "furniture": "Møbler",
+        "kitchen-appliances": "Kjøkkenapparater",
+        "cookware-dining": "Kjøkkenutstyr & Borddekking",
+        "smart-home-devices": "Smart-hjem enheter"
+      }
+    },
+    "garden": {
+      "title": "Hage & Håndverk",
+      "subcategories": {
+        "diy-tools": "Verktøy for gjør-det-selv",
+        "sustainable-living": "Bærekraftig livsstil",
+        "home-security": "Hjemmesikkerhet",
+        "kitchen-improvements": "Kjøkkenforbedringer",
+        "bathroom-cleaning": "Baderomsrenhold",
+        "plants-gardening": "Planter & Hagearbeid",
+        "garden-furniture": "Hagemøbler",
+        "garden-tools": "Hageredskaper"
+      }
+    },
+    "pets": {
+      "title": "Husdyr",
+      "subcategories": {
+        "cat-supplies": "Katteutstyr",
+        "dog-supplies": "Hundutstyr",
+        "fish-aquarium": "Fisk & Akvarium"
+      }
+    },
+    "automotive": {
+      "title": "Biler & Motorsykler",
+      "subcategories": {
+        "car-maintenance": "Bilvedlikehold",
+        "car-parts": "Bildeler",
+        "motorcycle-gear": "Motorsykkelutstyr",
+        "scooters": "Scootere"
+      }
+    }
+  },
+  "founding_advisor": "Bli en Grunnleggerrådgiver for Icon og Spar 60% ({{spots}} Plasser Igjen)",
+  "find_brands": "Finn dine favorittmerker enkelt i over {{shops}} butikker",
+  "reason_brands": {
+    "content_1": "Det er en grunn til at {{brands}} som ",
+    "content_2": "DU KJENNER, ",
+    "content_3": "kommer til ",
+    "content_4": "Vysta ",
+    "content_5": "for Google & YouTube-annonser..."
+  },
+  "introduce_items": {
+    "search": {
+      "title": "Søk",
+      "content": "Finn ditt hjerteønske ved å sammenligne priser fra tusenvis av butikker på ett sted"
+    },
+    "order": {
+      "title": "Bestill",
+      "content": "Bestill produktet ditt enkelt ved å velge din foretrukne forhandler til laveste pris"
+    },
+    "enjoy": {
+      "title": "Nyt",
+      "content": "Nyt produktet ditt og vær trygg på at du har kjøpt det til beste pris"
+    }
+  },
+  "popular_brands": "Populære Merker",
+  "top_products": "Top Produkter",
+  "go_to_shop": "Gå til butikk",
+  "offers": "{{offers}} tilbud",
+  "impressum": "Impressum",
+  "faq": "FAQ",
+  "about_us": "Om Oss",
+  "merchants": "Selgere",
+  "brands": "Merker",
+  "our_services": "Våre Tjenester",
+  "comparison_shopping_platform": "Sammenligningsshopping Plattform",
+  "managed_ads": "Administrerte Annonser",
+  "premium_css": "Premium CSS",
+  "register_webshop": "Registrer Webshop",
+  "contact_us": "Kontakt Oss",
+  "privacy_policy": "Personvernpolicy",
+  "terms_conditions": "Vilkår og betingelser",
+  "product": {
+    "result_summary": "{{current}} av {{total}} resultater fra {{retailers}} forhandlere",
+    "num_of_shops": "Antall butikker",
+    "num_of_brands": "Antall merker",
+    "filter": "Filter",
+    "clear_filter": "Fjern filter",
+    "apply": "Bruk",
+    "brands": "Merker",
+    "shops": "Butikker",
+    "discounts": "Rabatter",
+    "sort_by": "Sorter etter",
+    "relevance": "Relevans",
+    "asc": "Pris stigende",
+    "desc": "Pris synkende",
+    "new": "Nylig lagt til"
+  }
+}

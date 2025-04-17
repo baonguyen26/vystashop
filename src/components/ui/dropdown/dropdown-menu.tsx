@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { LocalIcon } from "src/assets/local-icon";
 
 const dropdownEventTarget = new EventTarget();
@@ -18,6 +19,7 @@ export type DropdownMenuProps = {
   icon?: React.ReactNode;
   arrowType?: "default" | "black";
   overlay?: boolean;
+  translateValue?: boolean;
 };
 
 export const DropdownMenu = ({
@@ -29,10 +31,18 @@ export const DropdownMenu = ({
   icon,
   arrowType = "default",
   overlay,
+  translateValue
 }: DropdownMenuProps) => {
+  const savedLanguage = localStorage.getItem("selectedLanguage");
+  
+  const initialLanguageIndex = savedLanguage
+    ? items.findIndex(item => item.value === savedLanguage)
+    : defaultItemIndex;
+  const validIndex = initialLanguageIndex === -1 ? defaultItemIndex : initialLanguageIndex;
+
   const [isExpanded, setExpanded] = useState<boolean>(defaultExpanded);
   const [selectedItem, setSelectedItem] = useState<DropdownMenuItem>(
-    items[defaultItemIndex]
+    items[validIndex]
   );
 
   const toggleExpanded = () => {
@@ -59,6 +69,14 @@ export const DropdownMenu = ({
     };
   }, []);
 
+  const handleLanguageChange = (item: DropdownMenuItem, index: number) => {
+    setSelectedItem(item);
+    localStorage.setItem("selectedLanguage", item.value);
+    onChange(item, index);
+  };
+
+  const { t } = useTranslation();
+
   return (
     <div
       className={`relative flex flex-col gap-y-2 text-[16px] font-[400]
@@ -83,7 +101,7 @@ export const DropdownMenu = ({
               {overlay ? (selectedItem.icon ? "Countries" : "Languages") : null}
             </span>
             <span className={`${overlay ? "font-[600]" : ""}`}>
-              {selectedItem.name}
+              {translateValue ? t(`product.${selectedItem.value}`) : selectedItem.name}
             </span>
           </div>
           <LocalIcon
@@ -112,8 +130,7 @@ export const DropdownMenu = ({
               key={index}
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedItem(item);
-                onChange(item, index);
+                handleLanguageChange(item, index);
                 setExpanded(false);
               }}
               className={`flex items-center gap-1 rounded-md px-4 py-2 text-left
@@ -122,7 +139,7 @@ export const DropdownMenu = ({
               role="menuitem"
             >
               {!overlay && item.icon && item.icon}
-              {item.name}
+              {translateValue ? t(`product.${item.value}`) : item.name}
             </button>
           ))}
         </div>

@@ -8,6 +8,7 @@ import { discountFilterAttribute } from "src/constants/discount-filter";
 import { LocalIcon } from "src/assets/local-icon";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export const FilterMobile = ({
   open,
@@ -49,6 +50,8 @@ export const FilterMobile = ({
     setClear((prev) => prev + 1);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-white z-[100] flex flex-col gap-[20px] p-[40px] overflow-y-auto ${
@@ -72,7 +75,7 @@ export const FilterMobile = ({
 
       <div className="w-full h-full gap-3.5">
         <div className="flex justify-between items-center w-full">
-          <span>Filter</span>
+          <span>{t("product.filter")}</span>
           <LocalIcon
             iconName="ic_cancel"
             onClick={() => {
@@ -92,13 +95,13 @@ export const FilterMobile = ({
             handleClose();
           }}
           className="w-[50%] h-[40px]">
-            Clear Filter
+            {t("product.clear_filter")}
           </button>
           <button
             className="w-[50%] h-[40px] rounded-[999px] bg-[#72d3da]"
             onClick={handleClose}
           >
-            Apply
+            {t("product.apply")}
           </button>
         </div>
       </div>
