@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export const SortDropdown = ({className}:{className?: string}) => {
+export const SortDropdown = ({className, }:{className?: string}) => {
   const { setSearchParams } = useSearchParamsFilter(QUERY_KEY.SORT);
   const [searchParams] = useSearchParams();
   

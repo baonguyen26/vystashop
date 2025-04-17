@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 
 export const apiClient = axios.create({
-    baseURL: "https://67cf1677823da0212a815bc7.mockapi.io/api/v1/products",
+    baseURL: "https://67cf1677823da0212a815bc7.mockapi.io/api/v1/product",
     withCredentials: true,
 });
 

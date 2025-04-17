@@ -1,5 +1,7 @@
 import { forwardRef, useRef } from "react";
 import { LocalIcon } from "src/assets/local-icon";
+import { QUERY_KEY } from "src/constants/query-key";
+import { useSearchParamsFilter } from "src/hooks";
 
 type InputSearchProps = {
   className?: string;
@@ -7,12 +9,14 @@ type InputSearchProps = {
   onClickHandler?: (value: string) => void;
 };
 
+
 export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
   function InputSearch(
     { className, placeholder = "Search", onClickHandler, ...props },
     ref
   ) {
     const inputRef = useRef<HTMLInputElement>(null);
+    const {getValueAsString} = useSearchParamsFilter(QUERY_KEY.TITLE);
 
     const handleClick = () => {
       const value = inputRef.current?.value.trim();
@@ -26,6 +30,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
         handleClick();
       }
     };
+    
+    if (inputRef.current) {
+      inputRef.current.value = getValueAsString() || "";
+    }
 
     return (
       <div
