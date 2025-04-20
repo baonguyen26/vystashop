@@ -1,57 +1,61 @@
 import { useSearchParamsFilter } from "src/hooks";
 import { QUERY_KEY } from "src/constants/query-key";
-import { useState } from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export type discountFilterItems = {
+export type DiscountFilterItem = {
   value: string;
   name: string;
 };
 
-type discountFilterProps = {
-  items: discountFilterItems[];
-  defaultSelected?: string;
+type DiscountFilterProps = {
+  items: DiscountFilterItem[];
   className?: string;
+  selectedValueDefault?: string | null;
+  onClear?: number;
 };
-
 export const DiscountsFilter = ({
   items,
-  defaultSelected = "",
   className = "",
-}: discountFilterProps) => {
-  const [selected, setSelected] = useState<string>(defaultSelected);
-  const { setValues, deleteKey } = useSearchParamsFilter(QUERY_KEY.DISCOUNT);
+  selectedValueDefault = null,
+  onClear = 0,
+}: DiscountFilterProps) => {
+  const [selectedValue, setSelectedValue] = useState<string | null>(selectedValueDefault);
+  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(QUERY_KEY.DISCOUNT);
+  const selected = getValueAsString() || "";
 
-  const [searchParams] = useSearchParams();
-  const prevTitleRef = useRef<string | null>(searchParams.get(QUERY_KEY.TITLE));
-
-  useEffect(() => {
-    const currentTitle = searchParams.get(QUERY_KEY.TITLE);
-    const prevTitle = prevTitleRef.current;
-
-    if (currentTitle !== prevTitle) {
-      setSelected("");
+  const handleSelect = (item: DiscountFilterItem) => {
+    if (selectedValue === item.value) {
+      setSelectedValue(null);
+      deleteKey();
+      return;
     }
-    prevTitleRef.current = currentTitle;
-  }, [searchParams]);
+    setSelectedValue(item.value);
+    setValues(item.value);
+  };
 
   useEffect(() => {
-    if (selected === "") {
+    if (onClear > 0) {
+      setSelectedValue("");
       deleteKey();
     }
-
-    // return () => {
-    //   deleteKey();
-    // }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onClear, deleteKey]);
+  // Cập nhật state nếu URL có sẵn value
+  useEffect(() => {
+    if (selected) {
+      setSelectedValue(selected);
+    } else {
+      setSelectedValue(null);
+    }
   }, [selected]);
 
-  const handleSelect = (item: discountFilterItems) => {
-    setSelected((prev) => (prev === item.value ? "" : item.value));
-    return selected === item.value ? deleteKey() : setValues(item.value);
-  };
+  // Cập nhật state nếu prop selectedValueDefault thay đổi
+  useEffect(() => {
+    if (selectedValueDefault !== null) {
+      setSelectedValue(selectedValueDefault);
+    }
+  }, [selectedValueDefault]);
 
   const { t } = useTranslation();
 
@@ -59,9 +63,9 @@ export const DiscountsFilter = ({
     <div className={`flex flex-col items-start gap-3 ${className}`}>
       <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.discounts")}</h1>
       <div className="flex flex-col items-start gap-3">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <button
-            key={index}
+            key={item.value}
             onClick={(e) => {
               e.stopPropagation();
               handleSelect(item);

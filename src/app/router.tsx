@@ -27,10 +27,10 @@ export const createRouter = () => {
           },
         },
         {
-          path: "c/:category",
-          lazy: async () => {
-            const { ProductResultRouter } = await import("./routes/app/product-result");
-            return { Component: ProductResultRouter };
+          path: "compare/:name/:id",
+          lazy: async () => { 
+            const { CompareRouter } = await import("./routes/app/compare");
+            return { Component: CompareRouter };
           },
         }
       ],

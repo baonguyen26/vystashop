@@ -1,5 +1,5 @@
 import { CheckBox, checkboxItemProps } from "../../input";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { InputSearchLocal } from "../../input";
 import { QUERY_KEY } from "src/constants/query-key";
 import { useSearchParamsFilter } from "src/hooks";
@@ -9,44 +9,62 @@ import { useTranslation } from "react-i18next";
 export type BrandFilterProps = {
   items: checkboxItemProps[];
   className?: string;
+  onClear?: number;
 };
 
-export const BrandFilter = ({ items, className }: BrandFilterProps) => {
+export const BrandFilter = ({
+  items,
+  className,
+  onClear = 0,
+}: BrandFilterProps) => {
+  const [filteredItems, setFilteredItems] =
+    useState<checkboxItemProps[]>(items);
   const [selectedValue, setSelectedValue] = useState<string | null>("");
-  const [filteredItems, setFilteredItems] = useState<checkboxItemProps[]>(items);
 
-  const { setValues, deleteKey } = useSearchParamsFilter(QUERY_KEY.BRAND);
+  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(QUERY_KEY.BRAND);
   const [searchParams] = useSearchParams();
-
   const prevTitleRef = useRef<string | null>(searchParams.get(QUERY_KEY.TITLE));
+  const currentTitle = searchParams.get(QUERY_KEY.TITLE);
+  const selected = getValueAsString() || "";
 
   useEffect(() => {
-    const currentTitle = searchParams.get(QUERY_KEY.TITLE); 
-    const prevTitle = prevTitleRef.current; 
+    if (onClear > 0) {
+      setSelectedValue("");
+      deleteKey();
+    }
+  }, [onClear, deleteKey]);
+  
 
-    if (currentTitle !== prevTitle) {
+  useEffect(() => {
+    if (selected) {
+      setSelectedValue(selected);
+    } else {
+      setSelectedValue(null);
+    }
+  }, [selected]);
+
+  useEffect(() => {
+    if (currentTitle !== prevTitleRef.current) {
+      prevTitleRef.current = currentTitle;
       setSelectedValue(null);
       deleteKey();
     }
-    prevTitleRef.current = currentTitle;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]); 
+  }, [currentTitle, deleteKey]);
 
-  useEffect(() => {
-    if (selectedValue === null) {
-      deleteKey();
-    } else if (selectedValue !== "") {
-      setValues(selectedValue);
-    }
-    return () => {
-      deleteKey();
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedValue]);
-
-  const handleChange = ({ value }: checkboxItemProps) => {
-    setSelectedValue((prev) => (prev === value ? null : value));
-  };
+  const handleChange = useCallback(
+    ({ value }: checkboxItemProps) => {
+      setSelectedValue((prev) => {
+        const newValue = prev === value ? null : value;
+        if (newValue === null) {
+          deleteKey();
+        } else if (newValue !== "") {
+          setValues(newValue);
+        }
+        return newValue;
+      });
+    },
+    [deleteKey, setValues]
+  );
 
   const { t } = useTranslation();
 
@@ -57,9 +75,7 @@ export const BrandFilter = ({ items, className }: BrandFilterProps) => {
         <InputSearchLocal
           items={items}
           className="w-[208px] h-[36px] px-[6px]"
-          onChange={(filteredItems) => {
-            setFilteredItems(filteredItems);
-          }}
+          onChange={setFilteredItems}
         />
       </div>
       <span className="text-[10px] font-[500] leading-[15px]">

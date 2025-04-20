@@ -18,6 +18,7 @@ export const FilterMobile = ({
   setOpen: (item: boolean) => void;
 }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const [clear, setClear] = useState(0);
 
   useEffect(() => {
     if (open) {
@@ -41,12 +42,12 @@ export const FilterMobile = ({
   const clearFilter = () => {
     const searchName = window.location.search;
     const value = searchName.split("&")[0];
-    console.log(value);
     
     if (value) {
       const newUrl = `${window.location.pathname}${value}`;
       window.history.pushState({}, "", newUrl);
     }
+    setClear((prev) => prev + 1);
   };
 
   const { t } = useTranslation();
@@ -84,9 +85,9 @@ export const FilterMobile = ({
           />
         </div>
         <SortDropdown className="flex-col items-start" />
-        <DiscountsFilter items={discountFilterAttribute} />
-        <BrandFilter items={brandFilterAttributes} />
-        <ShopFilter items={ShopFilterAttributes} />
+        <DiscountsFilter items={discountFilterAttribute} onClear={clear}/>
+        <BrandFilter items={brandFilterAttributes} onClear={clear}/>
+        <ShopFilter items={ShopFilterAttributes} onClear={clear}/>
         <div className="flex items-center justify-center py-5">
           <button 
           onClick = {() => {
