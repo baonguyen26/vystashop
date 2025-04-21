@@ -48,7 +48,8 @@ import ic_bestbuy from "./ic-bestbuy.svg?react";
 import ic_adidas from "./ic-adidas.svg?react";
 import ic_apple from "./ic-apple.svg?react";
 import ic_nike from "./ic-nike.svg?react";
-
+import ic_link from "./ic-link.svg?react";
+import ic_arrow_offer from "./ic-arrow-offer.svg?react";
 export {
   ic_se,
   ic_cz,
@@ -98,6 +99,8 @@ export {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer
 };
 
 //Category Image

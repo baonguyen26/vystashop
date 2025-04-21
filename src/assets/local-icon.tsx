@@ -49,6 +49,8 @@ import {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer
 } from ".";
 
 const icon = {
@@ -100,6 +102,8 @@ const icon = {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
