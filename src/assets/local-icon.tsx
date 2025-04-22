@@ -49,9 +49,13 @@ import {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_arrow_white,
+  ic_star_gray,
 } from ".";
 
 const icon = {
+  ic_star_gray,
+  ic_arrow_white,
   ic_se,
   ic_cz,
   ic_dk,

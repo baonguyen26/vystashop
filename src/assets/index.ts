@@ -48,8 +48,12 @@ import ic_bestbuy from "./ic-bestbuy.svg?react";
 import ic_adidas from "./ic-adidas.svg?react";
 import ic_apple from "./ic-apple.svg?react";
 import ic_nike from "./ic-nike.svg?react";
+import ic_arrow_white from "./ic-arrow-white.svg?react";
+import ic_star_gray from "./ic-star-gray.svg?react";
 
 export {
+  ic_star_gray,
+  ic_arrow_white,
   ic_se,
   ic_cz,
   ic_dk,
