@@ -186,11 +186,18 @@
   "contact_us": "Ota yhteyttä",
   "privacy_policy": "Tietosuojakäytäntö",
   "terms_conditions":"Ehdot ja ehdot",
+  "where_to_buy": "Mistä ostaa",
+  "price_dynamics": "Hinnan kehitys",
+  "price_history": "Hintahistoria",
+  "create_alert": "Luo hälytys",
+  "fetching_price_data": "Haetaan hintahistoriaa",
+  "go_to_our_top_choice": "Mene parhaaseen vaihtoehtoomme",
   "product": {
     "result_summary": "{{current}} / {{total}} tulosta {{retailers}} jälleenmyyjältä",
     "num_of_shops": "Kauppojen määrä",
     "num_of_brands": "Brändien määrä",
     "filter": "Suodatin",
+    "filter_by": "Suodata",
     "clear_filter": "Tyhjennä suodatin",
     "apply": "Käytä",
     "brands": "Brändit",
@@ -200,6 +207,12 @@
     "relevance": "Osuvuus",
     "asc": "Hinta nouseva",
     "desc": "Hinta laskeva",
-    "new": "Äskettäin lisätty"
+    "new": "Äskettäin lisätty",
+    "free_shipping": "Ilmainen toimitus",
+    "rating": "Arvostelu",
+    "item_price": "Tuotteen hinta",
+    "store_rating": "Myymälän arvostelu",
+    "related_products": "Samankaltaiset tuotteet",
+    "best_offers": "Parhaat tarjoukset"
   }
 }

@@ -15,7 +15,7 @@ export const ProductResultFooter = () => {
   };
 
   return (
-    <footer>
+    <footer className="bg-gray-100">
       <div className="py-13 px-[20px] md:px-[60px] lg:px-[100px] flex flex-col md:flex-row lg:flex-row justify-between">
         <div className="flex flex-col gap-5 md:flex-row lg:flex-row md:gap-20">
           <div className="flex flex-col gap-4">

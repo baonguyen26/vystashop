@@ -9,6 +9,8 @@ import ic_search_black from "./ic-search-black.svg?react";
 import ic_search_blue from "./ic-search-blue.svg?react";
 import ic_menu from "./ic-menu.svg?react";
 import ic_arrow_black from "./ic-arrow-black.svg?react";
+import ic_clock from "./ic-clock.svg?react";
+import ic_filter from "./ic-filter.svg?react";
 
 import arrow_icon from "./Arrow_left.svg?react";
 import facebook from "./facebook.svg?react";
@@ -48,8 +50,14 @@ import ic_bestbuy from "./ic-bestbuy.svg?react";
 import ic_adidas from "./ic-adidas.svg?react";
 import ic_apple from "./ic-apple.svg?react";
 import ic_nike from "./ic-nike.svg?react";
+import ic_link from "./ic-link.svg?react";
+import ic_arrow_offer from "./ic-arrow-offer.svg?react";
+import ic_arrow_white from "./ic-arrow-white.svg?react";
+import ic_star_gray from "./ic-star-gray.svg?react";
 
 export {
+  ic_star_gray,
+  ic_arrow_white,
   ic_se,
   ic_cz,
   ic_dk,
@@ -98,6 +106,10 @@ export {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer,
+  ic_clock,
+  ic_filter
 };
 
 //Category Image

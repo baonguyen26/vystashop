@@ -186,11 +186,18 @@
   "contact_us": "Kontakt Oss",
   "privacy_policy": "Personvernpolicy",
   "terms_conditions": "Vilkår og betingelser",
+  "where_to_buy": "Hvor kjøpe",
+  "price_dynamics": "Prisdynamikk",
+  "price_history": "Prishistorikk",
+  "create_alert": "Opprett varsel",
+  "fetching_price_data": "Henter prisdata",
+  "go_to_our_top_choice": "Gå til vårt toppvalg",
   "product": {
     "result_summary": "{{current}} av {{total}} resultater fra {{retailers}} forhandlere",
     "num_of_shops": "Antall butikker",
     "num_of_brands": "Antall merker",
     "filter": "Filter",
+    "filter_by": "Filtrer etter",
     "clear_filter": "Fjern filter",
     "apply": "Bruk",
     "brands": "Merker",
@@ -200,6 +207,12 @@
     "relevance": "Relevans",
     "asc": "Pris stigende",
     "desc": "Pris synkende",
-    "new": "Nylig lagt til"
+    "new": "Nylig lagt til",
+    "free_shipping": "Gratis frakt",
+    "rating": "Vurdering",
+    "item_price": "Varepris",
+    "store_rating": "Butikkvurdering",
+    "related_products": "Relaterte produkter",
+    "best_offers": "Beste tilbud"
   }
 }

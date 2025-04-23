@@ -49,9 +49,17 @@ import {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer,
+  ic_arrow_white,
+  ic_star_gray,
+  ic_clock,
+  ic_filter
 } from ".";
 
 const icon = {
+  ic_star_gray,
+  ic_arrow_white,
   ic_se,
   ic_cz,
   ic_dk,
@@ -100,6 +108,10 @@ const icon = {
   ic_adidas,
   ic_apple,
   ic_nike,
+  ic_link,
+  ic_arrow_offer,
+  ic_clock,
+  ic_filter
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {

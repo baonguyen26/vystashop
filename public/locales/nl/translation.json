@@ -186,11 +186,18 @@
   "contact_us": "Neem Contact Op",
   "privacy_policy": "Privacybeleid",
   "terms_conditions": "Algemene voorwaarden",
+  "where_to_buy": "Waar te kopen",
+  "price_dynamics": "Prijsdynamiek",
+  "price_history": "Prijsgeschiedenis",
+  "create_alert": "Melding aanmaken",
+  "fetching_price_data": "Historische prijsgegevens ophalen",
+  "go_to_our_top_choice": "Ga naar onze topkeuze",
   "product": {
     "result_summary": "{{current}} van {{total}} resultaten van {{retailers}} winkels",
     "num_of_shops": "Aantal winkels",
     "num_of_brands": "Aantal merken",
     "filter": "Filter",
+    "filter_by": "Filteren op",
     "clear_filter": "Filter wissen",
     "apply": "Toepassen",
     "brands": "Merken",
@@ -200,6 +207,12 @@
     "relevance": "Relevantie",
     "asc": "Prijs oplopend",
     "desc": "Prijs aflopend",
-    "new": "Nieuw toegevoegd"
+    "new": "Nieuw toegevoegd",
+    "free_shipping": "Gratis verzending",
+    "rating": "Beoordeling",
+    "item_price": "Artikelprijs",
+    "store_rating": "Winkelbeoordeling",
+    "related_products": "Gerelateerde producten",
+    "best_offers": "Beste aanbiedingen"
   }
 }

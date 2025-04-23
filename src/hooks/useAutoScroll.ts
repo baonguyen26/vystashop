@@ -12,8 +12,8 @@ export const useAutoScroll = (
         scrollRef.current.scrollLeft += scrollRef.current.clientWidth;
 
         if (
-          scrollRef.current!.scrollLeft + scrollRef.current!.clientWidth ==
-          scrollRef.current?.scrollWidth
+          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
+          scrollRef.current.scrollWidth
         ) {
           scrollRef.current.scrollLeft = 0;
         }
