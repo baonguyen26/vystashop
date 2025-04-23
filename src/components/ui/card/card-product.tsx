@@ -3,10 +3,12 @@ import { LocalIcon } from "src/assets/local-icon";
 import { IProduct } from "src/types/product.type";
 import { Button } from "../button";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
-  product: IProduct;
+  product: (IProduct & { offers: number });
   className?: string;
+  haveOffer?: boolean;
 }
 
 const ImageChecker = ({ url }: { url: string }) => {
@@ -22,8 +24,13 @@ const ImageChecker = ({ url }: { url: string }) => {
   );
 };
 
-const ProductCard = ({ product, className }: ProductCardProps) => {
+const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleClickOffer = () => {
+    navigate(`/compare/${product.title}/${product.id}`)
+  }
 
   return (
     <div
@@ -65,14 +72,15 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
           </span>
         </Button>
 
-        <p className="w-[100%] flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB]">
-          <a href={product.url}>
-            <span>{t("offers", {offers: 5})}</span>
-          </a>
-          <a href={product.url}>
+        {haveOffer && 
+          <p 
+            className="w-[100%] flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB] cursor-pointer"
+            onClick={handleClickOffer}
+          >
+            <span>{t("offers", { offers: product.offers })}</span>
             <span>$434.99 - $513.99</span>
-          </a>
-        </p>
+          </p>
+        }
       </div>
     </div>
   );

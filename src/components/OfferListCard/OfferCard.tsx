@@ -1,6 +1,7 @@
 import { Offer } from "./types";
 import { Button } from "../ui";
 import { LocalIcon } from "src/assets/local-icon";
+import { useTranslation } from "react-i18next";
 
 interface OfferCardProps {
   offer: Offer;
@@ -8,17 +9,19 @@ interface OfferCardProps {
 }
 
 export const OfferCard = ({ offer, isHighestRated }: OfferCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={`w-full md:w-[80%] bg-white shadow-md rounded-xl p-4 flex flex-col gap-3 ${isHighestRated ? "border-2 border-blue-500" : ""}`}
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-start sm:items-center gap-2">
-          <img
+          {offer.shopImage && <img
             src={offer.shopImage}
             alt="Merchant"
             className="w-12 h-12 object-contain"
-          />
+          />}
           <div className="flex flex-col">
             <p className="font-semibold text-base">{offer.shop}</p>
             <div className="flex items-center gap-2 flex-wrap">
@@ -52,7 +55,7 @@ export const OfferCard = ({ offer, isHighestRated }: OfferCardProps) => {
             {offer.title}
           </p>
           {offer.freeShipping && (
-            <p className="text-sm text-green-600 font-medium">Free Shipping</p>
+            <p className="text-sm text-green-600 font-medium">{t("product.free_shipping")}</p>
           )}
         </div>
 
@@ -67,7 +70,7 @@ export const OfferCard = ({ offer, isHighestRated }: OfferCardProps) => {
               className="bg-[linear-gradient(100deg,#00A1EA_3.97%,#0D7AAF_95.64%)] text-white px-4 py-2 rounded font-semibold text-sm"
               onClick={() => window.open(offer.url, "_blank")}
             >
-              Go to the shop
+              {t("go_to_shop")}
               <LocalIcon
                 iconName="ic_link"
                 width={16}

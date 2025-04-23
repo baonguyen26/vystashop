@@ -40,7 +40,7 @@ export const TopProductSection = () => {
         </div>
       </div>
 
-      <ProductCarousel scrollRef={carouselRef} />
+      <ProductCarousel scrollRef={carouselRef} haveOffer={true} />
     </div>
   );
 };

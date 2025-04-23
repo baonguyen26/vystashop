@@ -29,8 +29,8 @@ export const createRouter = () => {
         {
           path: "compare/:name/:id",
           lazy: async () => {
-            const { CompareRouter } = await import("./routes/app/compare");
-            return { Component: CompareRouter };
+            const { CompareProductRouter } = await import("./routes/app/compare-product");
+            return { Component: CompareProductRouter }
           },
         },
         {
@@ -38,13 +38,6 @@ export const createRouter = () => {
           lazy: async () => {
             const { ProductResultRouter } = await import("./routes/app/product-result");
             return { Component: ProductResultRouter };
-          },
-        },
-        {
-          path: "offers",
-          lazy: async () => {
-            const { OfferListCard } = await import("../components/OfferListCard/OfferListCard");
-            return { Component: OfferListCard };
           },
         }
       ],

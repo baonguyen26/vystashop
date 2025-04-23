@@ -186,11 +186,18 @@
   "contact_us": "Kontaktieren Sie uns",
   "privacy_policy": "Datenschutzerklärung",
   "terms_conditions": "Allgemeine Geschäftsbedingungen",
+  "where_to_buy": "Wo kaufen",
+  "price_dynamics": "Preisdynamik",
+  "price_history": "Preisentwicklung",
+  "create_alert": "Alarm erstellen",
+  "fetching_price_data": "Preishistorie wird geladen",
+  "go_to_our_top_choice": "Zu unserer Top-Auswahl gehen",
   "product": {
     "result_summary": "{{current}} von {{total}} Ergebnissen von {{retailers}} Einzelhändlern",
     "num_of_shops": "Anzahl der Geschäfte",
     "num_of_brands": "Anzahl der Marken",
     "filter": "Filter",
+    "filter_by": "Filtern nach",
     "clear_filter": "Filter zurücksetzen",
     "apply": "Anwenden",
     "brands": "Marken",
@@ -200,6 +207,12 @@
     "relevance": "Relevanz",
     "asc": "Preis aufsteigend",
     "desc": "Preis absteigend",
-    "new": "Neu hinzugefügt"
+    "new": "Neu hinzugefügt",
+    "free_shipping": "Kostenloser Versand",
+    "rating": "Bewertung",
+    "item_price": "Artikelpreis",
+    "store_rating": "Shop-Bewertung",
+    "related_products": "Ähnliche Produkte",
+    "best_offers": "Beste Angebote"
   }
 }

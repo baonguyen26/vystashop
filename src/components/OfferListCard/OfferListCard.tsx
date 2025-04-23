@@ -1,10 +1,15 @@
 import { useState } from "react";
-import { offerList } from "src/constants/offer-list";
 import { OfferCard } from "./OfferCard";
 import { FilterSortBar } from "./FilterSortBar";
 import { MobileFilterModal } from "./MobileFilterModal";
+import { LocalIcon } from "src/assets/local-icon";
+import { IProduct } from "src/types/product.type";
 
-export const OfferListCard = () => {
+interface OfferListCardProps {
+  offerList: IProduct[];
+}
+
+export const OfferListCard = ({ offerList }: OfferListCardProps) => {
   const [filterHighRating, setFilterHighRating] = useState(false);
   const [filterFreeShipping, setFilterFreeShipping] = useState(false);
   const [sortBy, setSortBy] = useState<"price" | "rating">("price");
@@ -29,7 +34,7 @@ export const OfferListCard = () => {
     });
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center gap-4 bg-[#f5f5f5] p-4">
+    <div className="w-full flex flex-col items-center gap-4 bg-[#f5f5f5] p-4">
       <FilterSortBar
         filterFreeShipping={filterFreeShipping}
         filterHighRating={filterHighRating}
@@ -39,12 +44,12 @@ export const OfferListCard = () => {
         onToggleRating={() => setFilterHighRating(!filterHighRating)}
       />
 
-      <div className="md:hidden w-full flex justify-end mb-2">
+      <div className="md:hidden w-full flex justify-start">
         <button
-          className="text-sm px-3 py-1 border border-gray-300 rounded bg-white shadow"
+          className="text-sm p-2 border-1 border-gray-300 rounded bg-white shadow"
           onClick={() => setShowMobileFilter(true)}
         >
-          Filter & Sort
+          <LocalIcon iconName="ic_filter" width={28} height={28} className="text-gray-600"/>
         </button>
       </div>
 
