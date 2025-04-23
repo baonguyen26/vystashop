@@ -83,8 +83,11 @@ export const AppFooter = () => {
         </div>
       </div>
       <div className="py-6 px-[20px] md:px-[60px]">
-        <p className="text-xs text-center text-[##3A4B55]">
-          Copyright © 2020-2025 -Vysta. -
+        <p className="flex flex-col text-xs text-center text-[##3A4B55]">
+          <span>Copyright © 2020-2025</span>
+          <span>Vysta.</span>
+          <span>Hunt Ford & Co Accountants, Osborne House 143-145 Stanwell Road, Ashford, Middlesex, United Kingdom</span>
+          <div>
           <Link
             to="https://growwithvysta.com/"
             target="_blank"
@@ -102,6 +105,8 @@ export const AppFooter = () => {
           >
             {t("terms_conditions")}
           </Link>
+          </div>
+
         </p>
       </div>
     </footer>
