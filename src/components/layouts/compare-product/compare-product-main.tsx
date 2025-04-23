@@ -10,7 +10,6 @@ import { BestOffer, ProductDetail } from "src/components/ui";
 export const CompareProductMain = () => {
   const { id } = useParams();
   const { data, isLoading } = useProduct(`/${id}`);
-  console.log(data?.product);
   
   const scrolRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<"where" | "dynamics">("where");
@@ -18,7 +17,7 @@ export const CompareProductMain = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-[60px]">
+    <div className="px-[40px] py-[60px]">
       <div className="flex justify-center gap-[10px] pb-[40px]">
         {data?.product && <ProductDetail product={data.product} />}
         <div className="flex flex-col gap-[15px] max-[960px]:hidden">

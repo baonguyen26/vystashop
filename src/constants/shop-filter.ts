@@ -1,28 +1,44 @@
 import { checkboxItemProps } from "src/components/ui";
 
 export const ShopFilterAttributes: checkboxItemProps[] = [
-    {
-        value: "Kickz",
-        name: "Kickz"
-    },
-    {
-        value: "JD Sports",
-        name: "JD Sports"
-    },
-    {
-        value: "Foot Locker",
-        name: "Foot Locker"
-    },
-    {
-        value: "Nike",
-        name: "Nike"
-    },
-    {
-        value: "Debenhams",
-        name: "Debenhams"
-    },
-    {
-        value: "Secret Sales",
-        name: "Secret Sales"
-    }
+    { value: "About You", name: "About You" },
+    { value: "Activewear Group", name: "Activewear Group" },
+    { value: "Amazon", name: "Amazon" },
+    { value: "Atall4golf", name: "Atall4golf" },
+    { value: "Autodoc", name: "Autodoc" },
+    { value: "Back Market", name: "Back Market" },
+    { value: "Back to the Office", name: "Back to the Office" },
+    { value: "Board Game", name: "Board Game" },
+    { value: "BT", name: "BT" },
+    { value: "Buy Car Parts", name: "Buy Car Parts" },
+    { value: "Cellbes", name: "Cellbes" },
+    { value: "Conrad", name: "Conrad" },
+    { value: "Deubaxxl", name: "Deubaxxl" },
+    { value: "Ellos", name: "Ellos" },
+    { value: "EMP Shop", name: "EMP Shop" },
+    { value: "Euroffice", name: "Euroffice" },
+    { value: "Foot District", name: "Foot District" },
+    { value: "Foot Locker", name: "Foot Locker" },
+    { value: "Fyndiq", name: "Fyndiq" },
+    { value: "Ginza", name: "Ginza" },
+    { value: "Hatstore", name: "Hatstore" },
+    { value: "Holdit", name: "Holdit" },
+    { value: "HH Workwear", name: "HH Workwear" },
+    { value: "Laptops Direct", name: "Laptops Direct" },
+    { value: "Mainline Menswear", name: "Mainline Menswear" },
+    { value: "Manomano", name: "Manomano" },
+    { value: "Nike", name: "Nike" },
+    { value: "Office", name: "Office" },
+    { value: "Office Stationery", name: "Office Stationery" },
+    { value: "Padelpoint", name: "Padelpoint" },
+    { value: "Quzo", name: "Quzo" },
+    { value: "Skruvat", name: "Skruvat" },
+    { value: "Spartoo", name: "Spartoo" },
+    { value: "Sports Direct", name: "Sports Direct" },
+    { value: "Toner Giant", name: "Toner Giant" },
+    { value: "UK Office Direct", name: "UK Office Direct" },
+    { value: "Waterstones", name: "Waterstones" },
+    { value: "Winparts", name: "Winparts" },
+    { value: "Zoro", name: "Zoro" },
+    { value: "365 Games", name: "365 Games" }
 ];

@@ -1,28 +1,27 @@
 import { checkboxItemProps } from "src/components/ui";
-
 export const brandFilterAttributes: checkboxItemProps[] = [
-    {
-        value: "Nike",
-        name: "Nike"
-    },
-    {
-        value: "Lorna Shore",
-        name: "Lorna Shore"
-    },
-    {
-        value: "B CAR",
-        name: "B CAR"
-    },
-    {
-        value: "Colop",
-        name: "Colop"
-    },
-    {
-        value: "Clearance",
-        name: "Clearance"
-    },
-    {
-        value: "Bud Ducks",
-        name: "Bud Ducks"
-    }
+    { value: "Ajusa", name: "Ajusa" },
+    { value: "Apple", name: "Apple" },
+    { value: "Asmodee UK", name: "Asmodee UK" },
+    { value: "Audi", name: "Audi" },
+    { value: "Aurora", name: "Aurora" },
+    { value: "Centresoft", name: "Centresoft" },
+    { value: "Deuba®", name: "Deuba®" },
+    { value: "Diederichs", name: "Diederichs" },
+    { value: "Freequent", name: "Freequent" },
+    { value: "Gamestop", name: "Gamestop" },
+    { value: "Generic", name: "Generic" },
+    { value: "Golf Pride", name: "Golf Pride" },
+    { value: "Hassle", name: "Hassle" },
+    { value: "Heimdall", name: "Heimdall" },
+    { value: "Helly Hansen", name: "Helly Hansen" },
+    { value: "Hewlett Packard", name: "Hewlett Packard" },
+    { value: "Holdit", name: "Holdit" },
+    { value: "Hori", name: "Hori" },
+    { value: "Inf", name: "Inf" },
+    { value: "Levi's", name: "Levi's" },
+    { value: "Lorna Shore", name: "Lorna Shore" },
+    { value: "Monzana®", name: "Monzana®" },
+    { value: "Nike", name: "Nike" },
+    { value: "Nike Golf", name: "Nike Golf" }
 ];

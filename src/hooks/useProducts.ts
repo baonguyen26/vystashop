@@ -35,7 +35,8 @@ export const fetchProductOffer = async (url: string): Promise<{ product: IProduc
 
     const offerId = product.offerId;
     const offerRes  = await apiClient.get<IProduct[]>(`?offerId=${offerId}`, { withCredentials: false });
-    const offers = offerRes.data.filter(p => p.id != product.id);
+    const offers = offerRes.data
+    // .filter(p => p.id != product.id);
 
     return {
         product: product,

@@ -30,11 +30,13 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
       {isMobile ? (
         <div className="flex flex-col items-start w-full gap-[20px]">
           <div className="flex">
-            {image && <img
-              className="w-[70px] h-[70px] "
-              src={image}
-              alt="img"
-            />}
+            {image && (
+              <img
+                className="w-[70px] h-[70px] "
+                src={image}
+                alt="img"
+              />
+            )}
             <div className="flex flex-col">
               <span className="text-[18px] text-[#3a4b55] leading-[32px] tracking-tighter">
                 {title}
@@ -50,11 +52,13 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
             </span>
             <div className="flex flex-col gap-[34px] w-full px-[20px] py-[20px] border-1 border-gray-400 rounded-[6px] shadow-2xl border-b-4">
               <div className="flex items-center gap-[10px]">
-                {shopImage && <img
-                  className="w-[30px] h-[30px]"
-                  src={shopImage}
-                  alt="shop img"
-                />}
+                {shopImage && (
+                  <img
+                    className="w-[30px] h-[30px]"
+                    src={shopImage}
+                    alt="shop img"
+                  />
+                )}
                 <span className="text-[16px] font-[500] leading-[20px]">
                   At {shop} ★ {rating}
                 </span>
@@ -65,7 +69,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                    {`${t("go_to_our_top_choice")} - £${price.value}`}
+                  {`${t("go_to_our_top_choice")} - £${price.value}`}
                 </a>
               </Button>
               <div className="flex items-center justify-between">
@@ -116,11 +120,13 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
             </span>
             <div className="flex flex-col gap-[34px] w-full px-[20px] py-[20px] border-1 border-gray-400 rounded-[6px] shadow-2xl border-b-4">
               <div className="flex items-center gap-[10px]">
-                {shopImage && <img
-                  className="w-[30px] h-[30px]"
-                  src={shopImage}
-                  alt="shop img"
-                />}
+                {shopImage && (
+                  <img
+                    className="w-[30px] h-[30px]"
+                    src={shopImage}
+                    alt="shop img"
+                  />
+                )}
                 <span className="text-[16px] font-[500] leading-[20px]">
                   At {shop} ★ {rating}
                 </span>
@@ -137,12 +143,14 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap w-[230px]">
                   {payments.map((payment, index) => (
-                    <img
-                      key={index}
-                      className="w-[45px] h-[35px] border-1 border-gray-200"
-                      src={payment}
-                      alt="payment icon"
-                    />
+                    <figure className="flex items-center justify-center overflow-hidden w-[45px] h-[35px] border-1 border-gray-200">
+                      <img
+                        className="max-w-[100%] max-h-[100%] bg-contain"
+                        key={index}
+                        src={payment}
+                        alt="payment icon"
+                      />
+                    </figure>
                   ))}
                 </div>
                 {freeShipping && (

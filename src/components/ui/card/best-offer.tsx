@@ -19,7 +19,7 @@ export const BestOffer = ({
     >
       <div
         className={`flex items-center justify-between gap-[20px] px-[20px] w-[100%] h-[85px] border-1 rounded-2xl ${
-          active ? "border-[#01A4B4]" : "border-gray-400"
+          active ? "border-[#01A4B4] border-2" : "border-gray-400"
         }`}
       >
         <div className="flex flex-col gap-[3px]">
