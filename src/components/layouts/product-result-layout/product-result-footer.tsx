@@ -11,7 +11,7 @@ export const ProductResultFooter = () => {
   const { t } = useTranslation();
 
   const getTranslatedKey = (title: string) => {
-    return title.toLowerCase().replace(/\s+/g, '_');
+    return title.toLowerCase().replace(/\s+/g, "_");
   };
 
   return (
@@ -21,7 +21,10 @@ export const ProductResultFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
             {FIRST_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0" key={index}>
+              <div
+                className="pl-4 md:pl-0"
+                key={index}
+              >
                 <Link
                   to={item.url}
                   target="_blank"
@@ -37,7 +40,10 @@ export const ProductResultFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
             {SECOND_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0" key={index}>
+              <div
+                className="pl-4 md:pl-0"
+                key={index}
+              >
                 <Link
                   to={item.url}
                   target="_blank"
@@ -81,25 +87,32 @@ export const ProductResultFooter = () => {
         </div>
       </div>
       <div className="py-6 px-[20px] md:px-[60px]">
-        <p className="text-xs text-center text-[##3A4B55]">
-          Copyright © 2020-2025 -Vysta. -
-          <Link
-            to="https://growwithvysta.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Privacy Policy
-          </Link>{" "}
-          -
-          <Link
-            to="https://growwithvysta.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Terms and Conditions
-          </Link>
+        <p className="flex flex-col text-xs text-center text-[##3A4B55]">
+          <span>Copyright © 2020-2025</span>
+          <span>Vysta.</span>
+          <span>
+            Hunt Ford & Co Accountants, Osborne House 143-145 Stanwell Road,
+            Ashford, Middlesex, United Kingdom
+          </span>
+          <div>
+            <Link
+              to="https://growwithvysta.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Privacy Policy
+            </Link>{" "}
+            -
+            <Link
+              to="https://growwithvysta.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Terms and Conditions
+            </Link>
+          </div>
         </p>
       </div>
     </footer>

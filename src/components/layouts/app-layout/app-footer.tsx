@@ -12,7 +12,7 @@ export const AppFooter = () => {
   const { t } = useTranslation();
 
   const getTranslatedKey = (title: string) => {
-    return title.toLowerCase().replace(/\s+/g, '_');
+    return title.toLowerCase().replace(/\s+/g, "_");
   };
 
   return (
@@ -22,7 +22,10 @@ export const AppFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta</p>
             {FIRST_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0" key={index}>
+              <div
+                className="pl-4 md:pl-0"
+                key={index}
+              >
                 <Link
                   to={item.url}
                   target="_blank"
@@ -38,7 +41,10 @@ export const AppFooter = () => {
           <div className="flex flex-col gap-4">
             <p className="font-medium">Vysta Business</p>
             {SECOND_COLUMN_CONTENT.map((item, index) => (
-              <div className="pl-4 md:pl-0" key={index}>
+              <div
+                className="pl-4 md:pl-0"
+                key={index}
+              >
                 <Link
                   to={item.url}
                   target="_blank"
@@ -86,27 +92,29 @@ export const AppFooter = () => {
         <p className="flex flex-col text-xs text-center text-[##3A4B55]">
           <span>Copyright © 2020-2025</span>
           <span>Vysta.</span>
-          <span>Hunt Ford & Co Accountants, Osborne House 143-145 Stanwell Road, Ashford, Middlesex, United Kingdom</span>
+          <span>
+            Hunt Ford & Co Accountants, Osborne House 143-145 Stanwell Road,
+            Ashford, Middlesex, United Kingdom
+          </span>
           <div>
-          <Link
-            to="https://growwithvysta.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            {t("privacy_policy")}
-          </Link>{" "}
-          -
-          <Link
-            to="https://growwithvysta.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            {t("terms_conditions")}
-          </Link>
+            <Link
+              to="https://growwithvysta.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              {t("privacy_policy")}
+            </Link>{" "}
+            -
+            <Link
+              to="https://growwithvysta.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              {t("terms_conditions")}
+            </Link>
           </div>
-
         </p>
       </div>
     </footer>
