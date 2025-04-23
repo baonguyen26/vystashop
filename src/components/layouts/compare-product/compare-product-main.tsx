@@ -9,8 +9,8 @@ import { BestOffer, ProductDetail } from "src/components/ui";
 
 export const CompareProductMain = () => {
   const { id } = useParams();
-  const { data, isLoading } = useProduct(`/${id}`);
-  
+  const { data } = useProduct(`/${id}`);
+
   const scrolRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<"where" | "dynamics">("where");
 

@@ -1,7 +1,6 @@
 import { useSearchParamsFilter } from "src/hooks";
 import { QUERY_KEY } from "src/constants/query-key";
-import { useEffect, useState, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export type DiscountFilterItem = {

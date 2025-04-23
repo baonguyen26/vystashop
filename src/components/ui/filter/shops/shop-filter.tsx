@@ -5,7 +5,7 @@ import { QUERY_KEY } from "src/constants/query-key";
 import { useSearchParamsFilter } from "src/hooks";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+
 
 export type ShopFilterProps = {
   items: checkboxItemProps[];
@@ -27,7 +27,7 @@ export const ShopFilter = ({ items, className, onClear = 0 }: ShopFilterProps) =
       deleteKey();
     }
   }, [onClear, deleteKey]);
-  
+
 
   useEffect(() => {
     if (selected) {
