@@ -1,6 +1,6 @@
 import {
   BrandFilter,
-  DiscountsFilter,
+  // DiscountsFilter,
   FilterMobile,
   ShopFilter,
   SortDropdown,
@@ -8,10 +8,12 @@ import {
 import { brandFilterAttributes } from "src/constants/brand-filter";
 import { ShopFilterAttributes } from "src/constants/shop-filter";
 import { ProductsList } from "src/features/result-feature";
-import { discountFilterAttribute } from "src/constants/discount-filter";
+// import { discountFilterAttribute } from "src/constants/discount-filter";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { RatingFilter } from "src/components/ui/filter/rating";
+import { ratingFilterAttribute } from "src/constants/rating-filter";
 
 export const ProductResultMain = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
@@ -50,7 +52,8 @@ export const ProductResultMain = () => {
             <div className="hiden md:flex flex-col flex-nowrap bg-white w-[208px] pb-4 md:pt-[62px] gap-[10px]">
               <BrandFilter items={brandFilterAttributes} />
               <ShopFilter items={ShopFilterAttributes} />
-              <DiscountsFilter items={discountFilterAttribute} />
+              {/* <DiscountsFilter items={discountFilterAttribute} /> */}
+              <RatingFilter items={ratingFilterAttribute} />
             </div>
             <div className="flex flex-col items-start flex-nowrap md:w-[calc(100%-208px)] gap-[20px]">
               <SortDropdown className="justify-end border-b-1 border-gray-600" />

@@ -1,6 +1,6 @@
-import { discountFilterItems } from "src/components/ui";
+import { DiscountFilterItem } from "src/components/ui";
 
-export const discountFilterAttribute: discountFilterItems[]= [
+export const discountFilterAttribute: DiscountFilterItem[]= [
     {
         value: "10",
         name: "0 - 10%"

@@ -5,7 +5,7 @@ export interface Offer {
   payments: string[];
   title: string;
   freeShipping: boolean;
-  price: { value: string };
+  price: number;
   url: string;
 }
 // Dùng type tạm thời để xử lí typescript, sau ni sẽ dùng type của product

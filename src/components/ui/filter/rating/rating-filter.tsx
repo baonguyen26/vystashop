@@ -3,24 +3,24 @@ import { QUERY_KEY } from "src/constants/query-key";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export type DiscountFilterItem = {
+export type RatingFilterItem = {
   value: string;
   name: string;
 };
 
 type DiscountFilterProps = {
-  items: DiscountFilterItem[];
+  items: RatingFilterItem[];
   className?: string;
 };
-export const DiscountsFilter = ({
+export const RatingFilter = ({
   items,
   className = "",
 }: DiscountFilterProps) => {
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
-  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(QUERY_KEY.DISCOUNT);
+  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(QUERY_KEY.RATING);
   const selected = getValueAsString();
 
-  const handleSelect = (item: DiscountFilterItem) => {
+  const handleSelect = (item: RatingFilterItem) => {
     if (selectedValue === item.value) {
       setSelectedValue(null);
       deleteKey();
@@ -51,10 +51,10 @@ export const DiscountsFilter = ({
               e.stopPropagation();
               handleSelect(item);
             }}
-            className={selected === item.value ? "font-bold" : "font-normal"}
-            role="discount-filter"
+            className={selected === item.value ? "font-bold" : "font-[300]"}
+            role="rating-filter"
           >
-            {item.name}
+            ★ {item.name}
           </button>
         ))}
       </div>

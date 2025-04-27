@@ -69,7 +69,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {`${t("go_to_our_top_choice")} - £${price.value}`}
+                  {`${t("go_to_our_top_choice")} - £${price}`}
                 </a>
               </Button>
               <div className="flex items-center justify-between">
@@ -137,7 +137,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {`${t("go_to_our_top_choice")} - £${price.value}`}
+                  {`${t("go_to_our_top_choice")} - £${price}`}
                 </a>
               </Button>
               <div className="flex items-center justify-between">

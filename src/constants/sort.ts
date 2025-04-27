@@ -12,9 +12,5 @@ export const SORT:DropdownMenuItem[]  = [
     {
         value: "desc",
         name: "Price descending"
-    },
-    {
-        value: "new",
-        name: "Newly Added"
     }
 ];

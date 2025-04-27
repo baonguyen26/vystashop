@@ -18,10 +18,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike Golf",
     "condition": "new",
-    "price": {
-      "value": "312.00",
-      "currency": "GBP"
-    },
+    "price": 312.00,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -44,10 +41,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "369.95",
-      "currency": "GBP"
-    },
+    "price": 369.95,
     "isSale": false,
     "freeShipping": false,
     "category": "sportswear",
@@ -70,10 +64,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Gofl Pride",
     "condition": "new",
-    "price": {
-      "value": "145.99",
-      "currency": "GBP"
-    },
+    "price": 145.99,
     "isSale": true,
     "freeShipping": true,
     "category": "sportswear",
@@ -96,10 +87,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Golf Pride",
     "condition": "new",
-    "price": {
-      "value": "5.99",
-      "currency": "GBP"
-    },
+    "price": 5.99,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -128,10 +116,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Golf Pride",
     "condition": "new",
-    "price": {
-      "value": "212.95",
-      "currency": "GBP"
-    },
+    "price": 212.95,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -154,10 +139,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "193.65",
-      "currency": "GBP"
-    },
+    "price":193.65,
     "isSale": false,
     "freeShipping": false,
     "category": "sportswear",
@@ -186,10 +168,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "16.99",
-      "currency": "GBP"
-    },
+    "price": 16.99,
     "isSale": true,
     "freeShipping": true,
     "category": "sportswear",

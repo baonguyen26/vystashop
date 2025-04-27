@@ -5,9 +5,10 @@ export enum QUERY_KEY {
   BRAND = "brand",
   SHOP = "shop",
   PRICE = "price",
-  SORT = "sort",
+  SORT = "sortBy",
   ORDER = "order",
   DISCOUNT = "discount",
   PAGE = "page",
+  RATING ="rating",
 }
  

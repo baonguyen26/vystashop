@@ -11,10 +11,7 @@ export interface IProduct {
   availability: string;
   brand: string;
   condition: string;
-  price: {
-    value: string;
-    currency: string;
-  };
+  price: number;
   freeShipping: boolean;
   isSale: boolean;
   category?: string;
@@ -22,14 +19,13 @@ export interface IProduct {
   shopImage: string;
   rating: string;
   payments: string[];
+  firstPrice?: number;
+  lastPrice?: number;
 }
 
 export type BestOfferItem = {
   shop: string;
-  price: {
-    value: string;
-    currency: string;
-  };
+  price: number;
   freeShipping: boolean;
   rating: string;
   url: string;

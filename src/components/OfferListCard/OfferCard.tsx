@@ -61,7 +61,7 @@ export const OfferCard = ({ offer, isHighestRated }: OfferCardProps) => {
 
         <div className="flex items-center justify-between gap-3">
           <span className="text-base font-bold text-gray-900">
-            £{offer.price.value}
+            £{offer.price}
           </span>
 
           {/* Desktop */}

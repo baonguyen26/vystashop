@@ -29,8 +29,6 @@ export const LanguageDropdown = ({
       items={languagesItems}
       onChange={(item) => {
         i18n.changeLanguage(item.value);
-        // setValues(item.value);
-        console.log(item);
       }}
       className={className}
       overlay={overlay}
