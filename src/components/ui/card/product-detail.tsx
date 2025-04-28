@@ -53,11 +53,13 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
             <div className="flex flex-col gap-[34px] w-full px-[20px] py-[20px] border-1 border-gray-400 rounded-[6px] shadow-2xl border-b-4">
               <div className="flex items-center gap-[10px]">
                 {shopImage && (
-                  <img
-                    className="w-[30px] h-[30px]"
+                 <figure className="flex items-center justify-center overflow-hidden w-[30px] h-[30px]">
+                   <img
+                    className="max-w-[100%] max-h-[100%] bg-contain"
                     src={shopImage}
                     alt="shop img"
                   />
+                 </figure>
                 )}
                 <span className="text-[16px] font-[500] leading-[20px]">
                   At {shop} ★ {rating}
@@ -75,12 +77,14 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap gap-[4px] w-[230px]">
                   {payments.map((payment, index) => (
-                    <img
-                      key={index}
-                      className="w-[45px] h-[35px] border-1 border-gray-200"
-                      src={payment}
-                      alt="payment icon"
-                    />
+                    <figure className="flex items-center justify-center overflow-hidden w-[45px] h-[35px] border-1 border-gray-200">
+                      <img
+                        className="max-w-[100%] max-h-[100%] bg-contain"
+                        key={index}
+                        src={payment}
+                        alt="payment icon"
+                      />
+                  </figure>
                   ))}
                 </div>
                 {freeShipping && (
@@ -121,11 +125,13 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
             <div className="flex flex-col gap-[34px] w-full px-[20px] py-[20px] border-1 border-gray-400 rounded-[6px] shadow-2xl border-b-4">
               <div className="flex items-center gap-[10px]">
                 {shopImage && (
-                  <img
-                    className="w-[30px] h-[30px]"
+                  <figure className="flex items-center justify-center overflow-hidden w-[30px] h-[30px]">
+                    <img
+                    className="max-w-[100%] max-h-[100%] bg-contain"
                     src={shopImage}
                     alt="shop img"
                   />
+                  </figure>
                 )}
                 <span className="text-[16px] font-[500] leading-[20px]">
                   At {shop} ★ {rating}

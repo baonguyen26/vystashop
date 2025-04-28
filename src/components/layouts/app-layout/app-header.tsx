@@ -18,7 +18,7 @@ const headerStyles = cva("bg-[#212225] relative", {
   },
 });
 
-const navStyles = cva("flex justify-between items-center", {
+const navStyles = cva("container-header flex justify-between items-center", {
   variants: {
     mobile: {
       true: "",

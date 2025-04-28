@@ -42,7 +42,7 @@ export const RatingFilter = ({
 
   return (
     <div className={`flex flex-col items-start gap-3 ${className}`}>
-      <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.discounts")}</h1>
+      <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.rating")}</h1>
       <div className="flex flex-col items-start gap-3">
         {items.map((item) => (
           <button

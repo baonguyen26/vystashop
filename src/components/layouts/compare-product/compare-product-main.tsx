@@ -19,7 +19,7 @@ export const CompareProductMain = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="px-[40px] py-[60px]">
+    <main className="sm:px-[40px] px-[10px] py-[60px]">
       <div className="flex justify-center gap-[10px] pb-[40px]">
         {isLoading ? (
           <>
@@ -141,6 +141,6 @@ export const CompareProductMain = () => {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 };

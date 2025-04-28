@@ -41,7 +41,7 @@ export const FilterMobile = ({
 
   const clearFilter = () => {
     const searchParams = new URLSearchParams(window.location.search);
-    [QUERY_KEY.BRAND, QUERY_KEY.SHOP, QUERY_KEY.DISCOUNT, QUERY_KEY.ORDER, QUERY_KEY.SORT].forEach(key => {
+    [QUERY_KEY.BRAND, QUERY_KEY.SHOP, QUERY_KEY.DISCOUNT, QUERY_KEY.ORDER, QUERY_KEY.SORT, QUERY_KEY.RATING].forEach(key => {
       searchParams.delete(key);
     });
     navigate(`?${searchParams.toString()}`, { replace: true });

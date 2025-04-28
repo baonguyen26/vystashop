@@ -22,7 +22,7 @@ export const ProductResultMain = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full px-5">
+    <main className="w-full px-[30px]">
       {isMobile ? (
         <>
           <div className="flex w-full gap-[30px] max-w-[1440px] mb-[40px] mx-auto">
@@ -62,6 +62,6 @@ export const ProductResultMain = () => {
           </div>
         </>
       )}
-    </div>
+    </main>
   );
 };
