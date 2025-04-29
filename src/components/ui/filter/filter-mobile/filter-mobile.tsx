@@ -1,14 +1,18 @@
 import { BrandFilter } from "../brands";
-import { DiscountsFilter } from "../discounts";
+// import { DiscountsFilter } from "../discounts";
 import { ShopFilter } from "../shops";
 import { SortDropdown } from "../../dropdown";
 import { brandFilterAttributes } from "src/constants/brand-filter";
 import { ShopFilterAttributes } from "src/constants/shop-filter";
-import { discountFilterAttribute } from "src/constants/discount-filter";
+// import { discountFilterAttribute } from "src/constants/discount-filter";
 import { LocalIcon } from "src/assets/local-icon";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { QUERY_KEY } from "src/constants/query-key";
+import { useNavigate } from "react-router-dom";
+import { RatingFilter } from "../rating";
+import { ratingFilterAttribute } from "src/constants/rating-filter";
 
 export const FilterMobile = ({
   open,
@@ -18,14 +22,10 @@ export const FilterMobile = ({
   setOpen: (item: boolean) => void;
 }) => {
   const [isClosing, setIsClosing] = useState(false);
-  const [clear, setClear] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = open ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -36,24 +36,21 @@ export const FilterMobile = ({
     setTimeout(() => {
       setOpen(false);
       setIsClosing(false);
-    }, 600);
+    }, 400);
   };
 
   const clearFilter = () => {
-    const searchName = window.location.search;
-    const value = searchName.split("&")[0];
-    
-    if (value) {
-      const newUrl = `${window.location.pathname}${value}`;
-      window.history.pushState({}, "", newUrl);
-    }
-    setClear((prev) => prev + 1);
+    const searchParams = new URLSearchParams(window.location.search);
+    [QUERY_KEY.BRAND, QUERY_KEY.SHOP, QUERY_KEY.DISCOUNT, QUERY_KEY.ORDER, QUERY_KEY.SORT, QUERY_KEY.RATING].forEach(key => {
+      searchParams.delete(key);
+    });
+    navigate(`?${searchParams.toString()}`, { replace: true });
   };
-
   const { t } = useTranslation();
 
   return (
     <div
+      // key={Date.now()}
       className={`fixed top-0 left-0 w-full h-full bg-white z-[100] flex flex-col gap-[20px] p-[40px] overflow-y-auto ${
         open && !isClosing ? "slide-in" : "slide-out"
       }`}
@@ -84,10 +81,11 @@ export const FilterMobile = ({
             }}
           />
         </div>
-        <SortDropdown className="flex-col items-start" />
-        <DiscountsFilter items={discountFilterAttribute} onClear={clear}/>
-        <BrandFilter items={brandFilterAttributes} onClear={clear}/>
-        <ShopFilter items={ShopFilterAttributes} onClear={clear}/>
+        <SortDropdown className="flex-col items-start"  />
+        {/* <DiscountsFilter items={discountFilterAttribute} /> */}
+        <RatingFilter items={ratingFilterAttribute} />
+        <BrandFilter items={brandFilterAttributes} />
+        <ShopFilter items={ShopFilterAttributes} />
         <div className="flex items-center justify-center py-5">
           <button 
           onClick = {() => {

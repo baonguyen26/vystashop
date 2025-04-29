@@ -18,10 +18,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike Golf",
     "condition": "new",
-    "price": {
-      "value": "312.00",
-      "currency": "GBP"
-    },
+    "price": 312.00,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -29,7 +26,9 @@ const data: (IProduct & { offers: number })[] = [
     "shopImage": "",
     "rating": "5",
     "payments": [],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 271.73,
+    "lastPrice": 312
   },
   {
     "createdAt": "2025-03-09T19:37:07.217Z",
@@ -44,10 +43,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "369.95",
-      "currency": "GBP"
-    },
+    "price": 369.95,
     "isSale": false,
     "freeShipping": false,
     "category": "sportswear",
@@ -55,7 +51,9 @@ const data: (IProduct & { offers: number })[] = [
     "shopImage": "",
     "rating": "4",
     "payments": [],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 330.93,
+    "lastPrice": 369.95
   },
   {
     "createdAt": "2025-03-09T23:44:22.673Z",
@@ -70,10 +68,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Gofl Pride",
     "condition": "new",
-    "price": {
-      "value": "145.99",
-      "currency": "GBP"
-    },
+    "price": 145.99,
     "isSale": true,
     "freeShipping": true,
     "category": "sportswear",
@@ -81,7 +76,9 @@ const data: (IProduct & { offers: number })[] = [
     "shopImage": "",
     "rating": "5",
     "payments": [],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 129.8,
+    "lastPrice": 145.99
   },
   {
     "createdAt": "2025-03-09T23:14:17.758Z",
@@ -96,10 +93,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Golf Pride",
     "condition": "new",
-    "price": {
-      "value": "5.99",
-      "currency": "GBP"
-    },
+    "price": 5.99,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -113,7 +107,9 @@ const data: (IProduct & { offers: number })[] = [
       "https://www.logo.wine/a/logo/Amazon_Pay/Amazon_Pay-Logo.wine.svg",
       "https://images.seeklogo.com/logo-png/21/1/american-express-logo-png_seeklogo-214694.png"
     ],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 5.6,
+    "lastPrice": 5.99
   },
   {
     "createdAt": "2025-03-09T21:34:41.488Z",
@@ -128,10 +124,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Golf Pride",
     "condition": "new",
-    "price": {
-      "value": "212.95",
-      "currency": "GBP"
-    },
+    "price": 212.95,
     "isSale": true,
     "freeShipping": false,
     "category": "sportswear",
@@ -139,7 +132,9 @@ const data: (IProduct & { offers: number })[] = [
     "shopImage": "",
     "rating": "5",
     "payments": [],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 154.44,
+    "lastPrice": 212.95
   },
   {
     "createdAt": "2025-03-09T21:03:35.319Z",
@@ -154,10 +149,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "193.65",
-      "currency": "GBP"
-    },
+    "price":193.65,
     "isSale": false,
     "freeShipping": false,
     "category": "sportswear",
@@ -171,7 +163,9 @@ const data: (IProduct & { offers: number })[] = [
       "https://www.logo.wine/a/logo/Amazon_Pay/Amazon_Pay-Logo.wine.svg",
       "https://images.seeklogo.com/logo-png/21/1/american-express-logo-png_seeklogo-214694.png"
     ],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 171.54,
+    "lastPrice": 193.65
   },
   {
     "createdAt": "2025-03-10T05:35:02.404Z",
@@ -186,10 +180,7 @@ const data: (IProduct & { offers: number })[] = [
     "availability": "in stock",
     "brand": "Nike",
     "condition": "new",
-    "price": {
-      "value": "16.99",
-      "currency": "GBP"
-    },
+    "price": 16.99,
     "isSale": true,
     "freeShipping": true,
     "category": "sportswear",
@@ -197,7 +188,9 @@ const data: (IProduct & { offers: number })[] = [
     "shopImage": "",
     "rating": "4.9",
     "payments": [],
-    "offers": 1
+    "offers": 1,
+    "firstPrice": 15.6,
+    "lastPrice": 16.99
   },
 ];
 

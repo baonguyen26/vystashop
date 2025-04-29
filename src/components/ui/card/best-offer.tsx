@@ -42,7 +42,7 @@ export const BestOffer = ({
         </div>
         <div className="flex flex-col">
           <span className="text-[16px] font-[700] leading-[24px] ">
-            £{price.value}
+            £{price}
           </span>
           <span className="text-[12px] leading-[18px]">
             {freeShipping ? "Free shipping" : "Shipping cost apply"}

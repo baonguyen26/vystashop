@@ -55,6 +55,7 @@ export const ProductsList = () => {
             const params = new URLSearchParams(location.search);
             params.set("p", newPage.toString());
             window.history.pushState(null, "", `?${params.toString()}`);
+            window.scrollTo(0, 0);
           }}
           totalProducts={totalProducts}
         />

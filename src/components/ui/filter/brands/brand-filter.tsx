@@ -5,9 +5,11 @@ import { QUERY_KEY } from "src/constants/query-key";
 import { useSearchParamsFilter } from "src/hooks";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
 
 export type BrandFilterProps = {
-  items: checkboxItemProps[];
+  items?: checkboxItemProps[];
   className?: string;
   onClear?: number;
 };
@@ -15,25 +17,23 @@ export type BrandFilterProps = {
 export const BrandFilter = ({
   items,
   className,
-  onClear = 0,
 }: BrandFilterProps) => {
-  const [filteredItems, setFilteredItems] =
-    useState<checkboxItemProps[]>(items);
+  const [filteredItems, setFilteredItems] =useState<checkboxItemProps[]>(items ? items : []);
   const [selectedValue, setSelectedValue] = useState<string | null>("");
 
-  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(QUERY_KEY.BRAND);
+  const { setValues, deleteKey, getValueAsString } = useSearchParamsFilter(
+    QUERY_KEY.BRAND
+  );
   const [searchParams] = useSearchParams();
   const prevTitleRef = useRef<string | null>(searchParams.get(QUERY_KEY.TITLE));
   const currentTitle = searchParams.get(QUERY_KEY.TITLE);
   const selected = getValueAsString() || "";
 
   useEffect(() => {
-    if (onClear > 0) {
-      setSelectedValue("");
-      deleteKey();
-    }
-  }, [onClear, deleteKey]);
-  
+    // Reset state khi items thay đổi (khi remount)
+    setFilteredItems(items || []);
+    setSelectedValue(null);
+  }, [items]);
 
   useEffect(() => {
     if (selected) {
@@ -71,9 +71,11 @@ export const BrandFilter = ({
   return (
     <div className={className}>
       <div>
-        <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.brands")}</h1>
+        <h1 className="text-[16px] font-[600] leading-[24px]">
+          {t("product.brands")}
+        </h1>
         <InputSearchLocal
-          items={items}
+          items={items as checkboxItemProps[]}
           className="w-[208px] h-[36px] px-[6px]"
           onChange={setFilteredItems}
         />
@@ -82,7 +84,7 @@ export const BrandFilter = ({
         {t("product.num_of_brands")}: {filteredItems.length}
       </span>
       <div className="flex flex-col max-h-[170px] overflow-y-scroll">
-        {filteredItems.map((item) => (
+        {filteredItems.length > 0 ? filteredItems.map((item) => (
           <CheckBox
             key={item.value}
             value={item.value as string}
@@ -90,7 +92,15 @@ export const BrandFilter = ({
             checked={selectedValue === item.value}
             onChange={handleChange}
           />
-        ))}
+        )) : (
+          <Box>
+          <Skeleton />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation={false} />
+        </Box>
+        )}
       </div>
     </div>
   );
