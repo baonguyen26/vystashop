@@ -27,7 +27,7 @@ export const createRouter = () => {
           },
         },
         {
-          path: "compare/:name/:id",
+          path: "compare/:id",
           lazy: async () => {
             const { CompareProductRouter } = await import("./routes/app/compare-product");
             return { Component: CompareProductRouter }

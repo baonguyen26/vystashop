@@ -29,7 +29,7 @@ export const OfferListCard = ({ offerList }: OfferListCardProps) => {
     })
     .sort((a, b) => {
       return sortBy === "price"
-        ? parseFloat(a.price.value) - parseFloat(b.price.value)
+        ? a.price - b.price
         : parseFloat(b.rating || "0") - parseFloat(a.rating || "0");
     });
 

@@ -29,7 +29,7 @@ const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
   const navigate = useNavigate();
 
   const handleClickOffer = () => {
-    navigate(`/compare/${product.title}/${product.id}`)
+    navigate(`/compare/${product.id}`)
   }
 
   return (
@@ -52,7 +52,7 @@ const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
             {product.brand}
           </p>
           <p className="text-[#1B2328] text-[16px] font-[600]">
-            {product.price.value}
+            £{product.price}
           </p>
         </div>
       </a>
@@ -74,11 +74,11 @@ const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
 
         {haveOffer && 
           <p 
-            className="w-[100%] flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB] cursor-pointer"
+            className="w-[100%] underline flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB] cursor-pointer"
             onClick={handleClickOffer}
           >
-            <span>{t("offers", { offers: product.offers })}</span>
-            <span>$434.99 - $513.99</span>
+            <span>{t("offers", { offers: product.offers})}</span>
+            <span>${product.firstPrice} - ${product.lastPrice}</span>
           </p>
         }
       </div>

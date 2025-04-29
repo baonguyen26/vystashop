@@ -6,10 +6,12 @@ import { LocalIcon } from "../../../assets/local-icon";
 import { useProduct } from "src/hooks/useProducts";
 import { useParams } from "react-router-dom";
 import { BestOffer, ProductDetail } from "src/components/ui";
+import { Box } from "@mui/material";
+import { Skeleton } from "@mui/material";
 
 export const CompareProductMain = () => {
   const { id } = useParams();
-  const { data } = useProduct(`/${id}`);
+  const { data, isLoading } = useProduct(`/${id}`);
 
   const scrolRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<"where" | "dynamics">("where");
@@ -17,26 +19,74 @@ export const CompareProductMain = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="px-[40px] py-[60px]">
+    <main className="sm:px-[40px] px-[10px] py-[60px]">
       <div className="flex justify-center gap-[10px] pb-[40px]">
-        {data?.product && <ProductDetail product={data.product} />}
+        {isLoading ? (
+          <>
+            <Box
+              sx={{
+                padding: "30px",
+                display: "flex",
+                gap: "20px",
+                width: "60%",
+                "@media (max-width: 960px)": {
+                  width: "100%",
+                },
+              }}
+            >
+              <Skeleton
+                variant="rectangular"
+                width="55%"
+                sx={{
+                  padding: "30px",
+                  display: "flex",
+                  gap: "20px",
+                  width: "55%",
+                  height: "300px",
+                  "@media (max-width: 960px)": {
+                    width: "100%",
+                    height: "250px",
+                  },
+                }}
+              >
+                <div style={{ paddingTop: "57%" }} />
+              </Skeleton>
+              <Box sx={{ width: "60%" }}>
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton height="120px" />
+                <Skeleton height="50px" />
+              </Box>
+            </Box>
+          </>
+        ) : (
+          data?.product && <ProductDetail product={data.product} />
+        )}
         <div className="flex flex-col gap-[15px] max-[960px]:hidden">
           <span className="text-[20px] font-[700] leading-[30px] uppercase">
             {t("product.best_offers")}
           </span>
           <div className="flex flex-col gap-[5px] max-h-[450px] overflow-y-auto">
-            {data?.offers.map((item, key) => (
-              <BestOffer
-                key={key}
-                product={item}
-                active={item.id === id}
-              />
-            ))}
+            {isLoading ? (
+              <>
+                  <Skeleton variant="rectangular" width='350px' height='85px' />
+                  <Skeleton variant="rectangular" width='350px' height='85px'/>
+              </>
+            ) : (
+              data?.offers.map((item, key) => (
+                <BestOffer
+                  key={key}
+                  product={item}
+                  active={item.id === id}
+                />
+              ))
+            )}
           </div>
         </div>
       </div>
 
-        {/*  */}
+      {/*  */}
       <div className="w-full flex flex-col items-center bg-white">
         <div className="w-[90%] md:w-[78%] flex justify-center">
           <span
@@ -91,6 +141,6 @@ export const CompareProductMain = () => {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 };

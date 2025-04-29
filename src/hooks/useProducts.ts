@@ -17,7 +17,7 @@ export const fetchProducts = async (url: string): Promise<{ data: (IProduct & {o
                 withCredentials: false,
             });
 
-            const offerCount = offerRes.data.filter((p) => p.id !== product.id).length;
+            const offerCount = offerRes.data.length;
     
             return {
                 ...product,
