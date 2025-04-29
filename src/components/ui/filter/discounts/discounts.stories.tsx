@@ -15,7 +15,7 @@ export const Default: Story = {
       { value: "11", name: "10 - 30%" },
       { value: "12", name: "20 - 60%" },
     ],
-    defaultSelected: "",
+    // defaultSelected: "",
     className: "",
   }
 };
