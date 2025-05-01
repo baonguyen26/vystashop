@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { LocalIcon } from "src/assets/local-icon";
-// import { CountriesDropdown } from "src/components/ui";
 import {
   FIRST_COLUMN_CONTENT,
   LOGO_FOOTER_CONTENT,
@@ -90,7 +89,7 @@ export const AppFooter = () => {
           </div>
         </div>
         <div className="py-6 px-[20px] md:px-[60px]">
-          <p className="flex flex-col text-xs text-center text-[##3A4B55]">
+          <div className="flex flex-col text-xs text-center text-[##3A4B55]">
             <span>Copyright © 2020-2025</span>
             <span>Vysta.</span>
             <span>
@@ -116,7 +115,7 @@ export const AppFooter = () => {
                 {t("terms_conditions")}
               </Link>
             </div>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

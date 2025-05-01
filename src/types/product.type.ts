@@ -1,4 +1,5 @@
 export interface IProduct {
+
   createdAt: string;
   id: string;
   offerId: string;
@@ -21,6 +22,9 @@ export interface IProduct {
   payments: string[];
   firstPrice?: number;
   lastPrice?: number;
+}
+export type Test = {
+  data: IProduct[];
 }
 
 export type BestOfferItem = {

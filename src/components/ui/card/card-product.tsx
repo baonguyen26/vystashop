@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
-  product: (IProduct & { offers: number });
+  product: (IProduct);
   className?: string;
   haveOffer?: boolean;
 }
@@ -72,12 +72,12 @@ const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
           </span>
         </Button>
 
-        {haveOffer && 
-          <p 
+        {haveOffer &&
+          <p
             className="w-[100%] underline flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB] cursor-pointer"
             onClick={handleClickOffer}
           >
-            <span>{t("offers", { offers: product.offers})}</span>
+            <span>{t("offers")}</span>
             <span>${product.firstPrice} - ${product.lastPrice}</span>
           </p>
         }

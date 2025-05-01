@@ -15,9 +15,9 @@ export const ProductResultFooter = () => {
   };
 
   return (
-    <footer className="bg-gray-100">
+    <footer className="bg-gray-100 ">
       <div className="container-footer">
-        <div className="py-13 px-[20px] md:px-[60px] lg:px-[100px] flex flex-col md:flex-row lg:flex-row justify-between">
+        <div className="w-[100%] py-5 md:py-13 flex flex-col justify-between px-[20px] md:px-[60px] md:flex-row lg:flex-row lg:px-[100px] max-w-[1440px] mx-auto">
           <div className="flex flex-col gap-5 md:flex-row lg:flex-row md:gap-20">
             <div className="flex flex-col gap-4">
               <p className="font-medium">Vysta</p>
@@ -59,6 +59,7 @@ export const ProductResultFooter = () => {
           </div>
 
           <div className="flex flex-col pt-10 md:pt-0 items-center gap-5">
+            {/* <CountriesDropdown className="w-[230px] border-1 border-gray-400 bg-white" itemType="full" arrowType="black"/> */}
             <div className="flex gap-4">
               {LOGO_FOOTER_CONTENT.map((item, index) => (
                 <Link
@@ -88,7 +89,7 @@ export const ProductResultFooter = () => {
           </div>
         </div>
         <div className="py-6 px-[20px] md:px-[60px]">
-          <p className="flex flex-col text-xs text-center text-[##3A4B55]">
+          <div className="flex flex-col text-xs text-center text-[##3A4B55]">
             <span>Copyright © 2020-2025</span>
             <span>Vysta.</span>
             <span>
@@ -114,7 +115,7 @@ export const ProductResultFooter = () => {
                 {t("terms_conditions")}
               </Link>
             </div>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -33,7 +33,7 @@ export const ProductResultMain = () => {
                 </span>
                 <button
                   onClick={(e) => {
-                    e.stopPropagation(); 
+                    e.stopPropagation();
                     setIsVisible((prev) => !prev);
                   }}
                   className="text-[14px] text-cyan-500 font-bold "
@@ -49,7 +49,7 @@ export const ProductResultMain = () => {
       ) : (
         <>
           <div className="flex justify-start gap-[30px] max-w-[1440px] mb-[40px] mx-auto">
-            <div className="hiden md:flex flex-col flex-nowrap bg-white w-[208px] pb-4 md:pt-[62px] gap-[10px]">
+            <div className="hidden md:flex flex-col flex-nowrap bg-white w-[208px] pb-4 md:pt-[62px] gap-[10px]">
               <BrandFilter items={brandFilterAttributes} />
               <ShopFilter items={ShopFilterAttributes} />
               {/* <DiscountsFilter items={discountFilterAttribute} /> */}
