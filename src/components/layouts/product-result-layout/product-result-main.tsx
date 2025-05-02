@@ -24,7 +24,7 @@ export const ProductResultMain = () => {
 
   const {getValueAsString} = useSearchParamsFilter(QUERY_KEY.TITLE);
 
-  const title = getValueAsString() || "";
+  const title = getValueAsString() || "a";
   const { data } = useGetFilterOptions(title);
   const option = data?.data;
 
