@@ -88,8 +88,8 @@ export const CompareProductHeader = () => {
               </a>
               <CategoriesDropdown />
             </div>
-            <InputSearch 
-              onClickHandler={handleSearch} 
+            <InputSearch
+              onClickHandler={handleSearch}
               className="max-[1110px]:hidden"
               placeholder={t("introduce_items.search.title")}
             />
@@ -100,9 +100,9 @@ export const CompareProductHeader = () => {
           </>
         )}
       </nav>
-      <InputSearch 
-        onClickHandler={handleSearch} 
-        className="flex max-[1110px]:rounded-[8px] max-[1110px]:flex min-[1110px]:hidden" 
+      <InputSearch
+        onClickHandler={handleSearch}
+        className="flex max-[1110px]:rounded-[8px] max-[1110px]:flex min-[1110px]:hidden"
         placeholder={t("introduce_items.search.title")}
       />
     </header>

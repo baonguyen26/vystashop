@@ -28,7 +28,8 @@ const data: (IProduct & { offers: number })[] = [
     "payments": [],
     "offers": 1,
     "firstPrice": 271.73,
-    "lastPrice": 312
+    "lastPrice": 312,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-09T19:37:07.217Z",
@@ -53,7 +54,8 @@ const data: (IProduct & { offers: number })[] = [
     "payments": [],
     "offers": 1,
     "firstPrice": 330.93,
-    "lastPrice": 369.95
+    "lastPrice": 369.95,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-09T23:44:22.673Z",
@@ -78,7 +80,8 @@ const data: (IProduct & { offers: number })[] = [
     "payments": [],
     "offers": 1,
     "firstPrice": 129.8,
-    "lastPrice": 145.99
+    "lastPrice": 145.99,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-09T23:14:17.758Z",
@@ -109,7 +112,8 @@ const data: (IProduct & { offers: number })[] = [
     ],
     "offers": 1,
     "firstPrice": 5.6,
-    "lastPrice": 5.99
+    "lastPrice": 5.99,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-09T21:34:41.488Z",
@@ -134,7 +138,8 @@ const data: (IProduct & { offers: number })[] = [
     "payments": [],
     "offers": 1,
     "firstPrice": 154.44,
-    "lastPrice": 212.95
+    "lastPrice": 212.95,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-09T21:03:35.319Z",
@@ -165,7 +170,8 @@ const data: (IProduct & { offers: number })[] = [
     ],
     "offers": 1,
     "firstPrice": 171.54,
-    "lastPrice": 193.65
+    "lastPrice": 193.65,
+    "numberOffers": 2
   },
   {
     "createdAt": "2025-03-10T05:35:02.404Z",
@@ -190,7 +196,8 @@ const data: (IProduct & { offers: number })[] = [
     "payments": [],
     "offers": 1,
     "firstPrice": 15.6,
-    "lastPrice": 16.99
+    "lastPrice": 16.99,
+    "numberOffers": 2
   },
 ];
 

@@ -30,7 +30,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
         handleClick();
       }
     };
-    
+
     if (inputRef.current) {
       inputRef.current.value = getValueAsString() || "";
     }

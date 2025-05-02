@@ -1,17 +1,22 @@
 import ProductCard from "../ui/card";
 import { IProduct } from "src/types/product.type";
 import { Key } from "react";
-// import { Pagination } from "../ui/pagination";
-// import { PRODUCTS_LIMIT } from "src/constants/TimeInterval";
+import { Pagination } from "../ui/pagination";
+import { PRODUCTS_LIMIT } from "src/constants/TimeInterval";
 
 interface ProductsProps {
   products: IProduct[];
-  currentPage?: number;
-  totalProducts?: number;
+  currentPage: number;
+  totalProducts: number;
   onPage: (page: number) => void;
 }
 
-export const ProductsSection = ({ products }: ProductsProps) => {
+export const ProductsSection = ({
+  products,
+  currentPage,
+  totalProducts,
+  onPage,
+}: ProductsProps) => {
   return (
     <>
       <div
@@ -28,7 +33,13 @@ export const ProductsSection = ({ products }: ProductsProps) => {
         ))}
       </div>
 
-      {/* {(totalProducts > PRODUCTS_LIMIT) && <Pagination totalPage={Math.ceil(totalProducts / 24)} currentPage={currentPage} onPage={onPage} />} */}
+      {totalProducts > PRODUCTS_LIMIT && (
+        <Pagination
+          totalPage={Math.ceil(totalProducts / 24)}
+          currentPage={currentPage}
+          onPage={onPage}
+        />
+      )}
     </>
   );
 };

@@ -5,7 +5,6 @@ import { useProducts } from "src/hooks/useProducts";
 import { PRODUCTS_LIMIT } from "src/constants/TimeInterval";
 import { categories } from "src/constants/category-properties";
 import { Spinner } from "src/components/ui/spinner/spinner";
-import { IProduct, Test } from "src/types/product.type";
 
 export const ProductsList = () => {
   const location = useLocation();
@@ -36,11 +35,9 @@ export const ProductsList = () => {
   };
 
   const queryString = buildQueryString();
-
   const { data, isLoading } = useProducts(queryString);
-  console.log("Test", data?.data);
-  const products = data?.data|| [];
-  // const totalProducts = data?.total || 0;
+  const products = data?.data || [];
+  const totalProducts = data?.total || 0;
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
@@ -59,7 +56,7 @@ export const ProductsList = () => {
             window.history.pushState(null, "", `?${params.toString()}`);
             window.scrollTo(0, 0);
           }}
-          // totalProducts={totalProducts}
+          totalProducts={totalProducts}
         />
       )}
     </div>

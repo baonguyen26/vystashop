@@ -77,7 +77,7 @@ const ProductCard = ({ product, className, haveOffer }: ProductCardProps) => {
             className="w-[100%] underline flex flex-col sm:flex-row items-start sm:items-center justify-between text-[12px] font-[700] text-[#2D9CDB] cursor-pointer"
             onClick={handleClickOffer}
           >
-            <span>{t("offers")}</span>
+            <span>{t("offers", { offers: product.numberOffers})}</span>
             <span>${product.firstPrice} - ${product.lastPrice}</span>
           </p>
         }

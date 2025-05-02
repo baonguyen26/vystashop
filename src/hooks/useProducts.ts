@@ -1,36 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "src/libs/api-client";
-import { IProduct, Test } from "src/types/product.type";
+import { IProduct } from "src/types/product.type";
 // import { cleanUrl } from "src/utils/cn";
 
-export const fetchProducts = async (url: string): Promise<Test> => {
-  const response = await apiClient.get<Test>(`${url}`, {
-    withCredentials: false,
-  });
-  const products = response.data;
-  // console.log(products);
-
-  return products;
-};
-
-export const fetchProductOffer = async (
+export const fetchProducts = async (
   url: string
-): Promise<{ product: IProduct; offers: IProduct[] }> => {
-  const productRes = await apiClient.get<IProduct>(url, {
-    withCredentials: false,
-  });
-  const product = productRes.data;
-
-  const offerId = product.offerId;
-  const offerRes = await apiClient.get<IProduct[]>(`?offerId=${offerId}`, {
-    withCredentials: false,
-  });
-  const offers = offerRes.data;
-  // .filter(p => p.id != product.id);
-
+): Promise<{ data: IProduct[]; total: number }> => {
+  const response = await apiClient.get<{ data: IProduct[]; total: number }>(
+    `${url}`
+  );
+  const { data: products, total } = response.data;
   return {
-    product: product,
-    offers,
+    data: products,
+    total: total,
   };
 };
 
@@ -39,6 +21,24 @@ export const useProducts = (url: string) => {
     queryKey: ["products", url],
     queryFn: () => fetchProducts(url),
   });
+};
+
+export const fetchProductOffer = async (
+  url: string
+): Promise<{ product: IProduct; offers: IProduct[] }> => {
+  const productRes = await apiClient.get<IProduct>(url);
+  const product = productRes.data;
+
+  const offerId = product.offerId;
+  const offerRes = await apiClient.get<{ data: IProduct[] }>(
+    `?offerId=${offerId}`
+  );
+  const offers = offerRes.data.data;
+
+  return {
+    product,
+    offers,
+  };
 };
 
 export const useProduct = (url: string) => {
