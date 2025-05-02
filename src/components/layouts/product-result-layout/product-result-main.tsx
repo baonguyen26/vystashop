@@ -24,13 +24,9 @@ export const ProductResultMain = () => {
 
   const {getValueAsString} = useSearchParamsFilter(QUERY_KEY.TITLE);
 
-  const title = getValueAsString();
-  let option;
-  if (title) {
-    const {data} = useGetFilterOptions(title);
-    option = data?.data;
-    console.log("option", option);
-  }
+  const title = getValueAsString() || "";
+  const { data } = useGetFilterOptions(title);
+  const option = data?.data;
 
   return (
     <main className="w-full px-[30px]">
