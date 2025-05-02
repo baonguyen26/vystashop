@@ -7,6 +7,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
+import { useTranslation } from "react-i18next";
 
 export type ShopFilterProps = {
   items?: checkboxItemProps[];
@@ -16,6 +17,7 @@ export const ShopFilter = ({
   items,
   className,
 }: ShopFilterProps) => {
+
   const [selectedValue, setSelectedValue] = useState<string | null>("");
   const [filteredItems, setFilteredItems] =
     useState<checkboxItemProps[]>(items ? items : []);
@@ -64,11 +66,12 @@ export const ShopFilter = ({
     },
     [deleteKey, setValues]
   );
+  const { t } = useTranslation();
 
   return (
     <div className={className}>
       <div>
-        <h1 className="text-[16px] font-[600] leading-[24px]">Shops</h1>
+        <h1 className="text-[16px] font-[600] leading-[24px]">{t("product.shops")}</h1>
         <InputSearchLocal
           items={items as checkboxItemProps[]}
           className="w-[208px] h-[36px] px-[6px]"
@@ -76,7 +79,7 @@ export const ShopFilter = ({
         />
       </div>
       <span className="text-[10px] font-[500] leading-[15px]">
-        Number of shops found: {filteredItems.length}
+      {t("product.num_of_shops")}: {filteredItems.length}
       </span>
       <div className="flex flex-col max-h-[170px] overflow-y-scroll">
         {filteredItems.length > 0 ? (
