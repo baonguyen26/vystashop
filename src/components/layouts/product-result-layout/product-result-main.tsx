@@ -5,8 +5,6 @@ import {
   ShopFilter,
   SortDropdown,
 } from "src/components/ui";
-import { brandFilterAttributes } from "src/constants/brand-filter";
-import { ShopFilterAttributes } from "src/constants/shop-filter";
 import { ProductsList } from "src/features/result-feature";
 // import { discountFilterAttribute } from "src/constants/discount-filter";
 import { useMediaQuery } from "react-responsive";
@@ -14,12 +12,25 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { RatingFilter } from "src/components/ui/filter/rating";
 import { ratingFilterAttribute } from "src/constants/rating-filter";
+import { useGetFilterOptions } from "src/features/api/filter-attribute";
+import { useSearchParamsFilter } from "src/hooks";
+import { QUERY_KEY } from "src/constants/query-key";
 
 export const ProductResultMain = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const [isVisible, setIsVisible] = useState(false);
 
   const { t } = useTranslation();
+
+  const {getValueAsString} = useSearchParamsFilter(QUERY_KEY.TITLE);
+
+  const title = getValueAsString();
+  let option;
+  if (title) {
+    const {data} = useGetFilterOptions(title);
+    option = data?.data;
+    console.log("option", option);
+  }
 
   return (
     <main className="w-full px-[30px]">
@@ -50,8 +61,8 @@ export const ProductResultMain = () => {
         <>
           <div className="flex justify-start gap-[30px] max-w-[1440px] mb-[40px] mx-auto">
             <div className="hidden md:flex flex-col flex-nowrap bg-white w-[208px] pb-4 md:pt-[62px] gap-[10px]">
-              <BrandFilter items={brandFilterAttributes} />
-              <ShopFilter items={ShopFilterAttributes} />
+              <BrandFilter items={option?.brands} />
+              <ShopFilter items={option?.shops} />
               {/* <DiscountsFilter items={discountFilterAttribute} /> */}
               <RatingFilter items={ratingFilterAttribute} />
             </div>

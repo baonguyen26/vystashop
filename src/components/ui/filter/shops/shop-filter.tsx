@@ -11,7 +11,6 @@ import Skeleton from '@mui/material/Skeleton';
 export type ShopFilterProps = {
   items?: checkboxItemProps[];
   className?: string;
-  onClear?: number;
 };
 export const ShopFilter = ({
   items,
