@@ -5,11 +5,12 @@ import "./index.css";
 import App from "./app";
 
 async function prepare() {
-  if (import.meta.env.DEV) {
-    const { worker } = await import("./mocks/browser");
-    await worker.start();
-  }
+  const { worker } = await import("./mocks/browser");
+  await worker.start({
+    onUnhandledRequest: "bypass", 
+  });
 }
+
 
 prepare().then(() => {
   createRoot(document.getElementById("root")!).render(
