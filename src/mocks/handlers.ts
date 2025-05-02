@@ -1,5 +1,7 @@
 import { http, HttpResponse } from "msw";
 import data from "../../data.json";
+import { checkboxItemProps } from "src/components/ui";
+
 
 export const handlers = [
   
@@ -13,6 +15,35 @@ export const handlers = [
 
     return HttpResponse.json(product);
   }),
+
+  http.get("/api/products/filters/:title", ({ params }) => {
+    const { title } = params;
+    const t = title as string;
+  
+    const filtered = data.filter((product) =>
+      t
+        ? product.title.toLowerCase().includes(t.toLowerCase())
+        : true
+    );
+  
+    const unique = <T>(arr: T[]) => Array.from(new Set(arr));
+  
+    const format = (arr: (string | null | undefined)[]): checkboxItemProps[] =>
+      unique(arr.filter(Boolean)).map((item) => ({
+        value: item!,
+        name: item!,
+      }));
+  
+    const brands = format(filtered.map((p) => p.brand));
+    const shops = format(filtered.map((p) => p.shop));
+  
+    return HttpResponse.json({
+      brands,
+      shops,
+    });
+  }),
+  
+  
 
   http.get("/api/products", ({ request }) => {
     const url = new URL(request.url);
